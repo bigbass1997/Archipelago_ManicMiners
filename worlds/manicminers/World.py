@@ -51,6 +51,7 @@ class ManicMinersWorld(World):
     start_sphere1_levels = []
     start_sphere2_levels = []
     nonstart_levels = []
+    extra_items = 0
     
     def generate_early(self) -> None:
         # Fix some potentially fatal option combinations
@@ -60,6 +61,7 @@ class ManicMinersWorld(World):
         self.start_sphere1_levels = []
         self.start_sphere2_levels = []
         self.nonstart_levels = []
+        self.extra_items = 0
         
         # Must have at least one campaign selected, default to LRR if all unticked
         if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 0) & (self.options.campaign_selection_lrrc == 0) & (self.options.campaign_selection_baz == 0)):
@@ -484,17 +486,21 @@ class ManicMinersWorld(World):
                 self.multiworld.itempool.append(self.create_item("Building Unlock: Super Teleport"))
                 self.multiworld.itempool.append(self.create_item("Building Unlock: Upgrade Station"))
                 number_items += 2
+                self.extra_items += 2
             if item_location_diffcount <= -15 and self.options.buildings_are_items:
                 self.multiworld.itempool.append(self.create_item("Building Unlock: Super Teleport"))
                 self.multiworld.itempool.append(self.create_item("Building Unlock: Upgrade Station"))
                 number_items += 2
+                self.extra_items += 2
             if item_location_diffcount <= -15 and self.options.items_are_items:
                 self.multiworld.itempool.append(self.create_item("Item Unlock: Dynamite"))
                 self.multiworld.itempool.append(self.create_item("Item Unlock: Electric Fence"))
                 number_items += 2
+                self.extra_items += 2
             if item_location_diffcount <= -15 and self.options.miner_cap:
                 self.multiworld.itempool.append(self.create_item("Miner Cap +5"))
                 number_items += 1
+                self.extra_items += 1
         
     def create_regions(self) -> None:
         Regions.create_and_connect_regions(self)

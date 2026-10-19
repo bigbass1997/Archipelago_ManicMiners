@@ -797,7 +797,7 @@ def create_all_items(world: ManicMinersWorld) -> None:
         # Then sneak in the lesser chance of STTs
         world.filler_list.append("Progressive Vehicle Unlock: Small Transport Truck")
 
-    number_of_items = len(itempool)
+    number_of_items = len(itempool) + world.extra_items
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
     needed_number_of_filler_items = number_of_unfilled_locations - number_of_items
     itempool += [world.create_filler() for _ in range(needed_number_of_filler_items)]
