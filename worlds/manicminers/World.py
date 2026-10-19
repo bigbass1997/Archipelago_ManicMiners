@@ -50,6 +50,8 @@ class ManicMinersWorld(World):
     
     logger = logging.getLogger("ManicMiners")
     
+    item_name_groups = Items.ITEM_GROUPS
+    
     filler_list = []
     start_sphere1_levels = []
     start_sphere2_levels = []
