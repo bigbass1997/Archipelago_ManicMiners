@@ -790,7 +790,7 @@ def create_all_items(world: ManicMinersWorld) -> None:
         for _ in range(5):
             itempool.append(world.create_item("Miner Cap +5"))
     
-    if world.options.no_infinite_stt:
+    if world.options.no_infinite_stt and (world.options.progressive_items == 2 or world.options.progressive_items == 3):
         # First make other items more common
         world.filler_list += world.filler_list
         world.filler_list += world.filler_list
