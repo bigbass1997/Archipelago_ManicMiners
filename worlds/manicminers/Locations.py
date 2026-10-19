@@ -1871,12 +1871,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_abreathoffreshair_partime.add_event("Par Time Beatable: LRR - A Breath Of Fresh Air", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_abreathoffreshair_crystaltarget.add_event("Crystal Target Beatable: LRR - A Breath Of Fresh Air", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_abreathoffreshair = get_location_names_with_ids(["Research Coordinates: LRR - A Breath Of Fresh Air"])
             region_lrr_abreathoffreshair.add_locations(locations_lrr_abreathoffreshair, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_abreathoffreshair = world.get_location("Research Coordinates: LRR - A Breath Of Fresh Air")
-                locations_lrr_abreathoffreshair.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_abreathoffreshair = world.get_location("Research Coordinates: LRR - A Breath Of Fresh Air")
+            locations_lrr_abreathoffreshair.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_airraiders:
         locations_lrr_airraiders = get_location_names_with_ids(["Clear: LRR - Air Raiders"])
         region_lrr_airraiders.add_locations(locations_lrr_airraiders, ManicMinersLocation)
@@ -1899,12 +1898,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_airraiders_partime.add_event("Par Time Beatable: LRR - Air Raiders", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_airraiders_crystaltarget.add_event("Crystal Target Beatable: LRR - Air Raiders", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_airraiders = get_location_names_with_ids(["Research Coordinates: LRR - Air Raiders"])
             region_lrr_airraiders.add_locations(locations_lrr_airraiders, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_airraiders = world.get_location("Research Coordinates: LRR - Air Raiders")
-                locations_lrr_airraiders.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_airraiders = world.get_location("Research Coordinates: LRR - Air Raiders")
+            locations_lrr_airraiders.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_backtobasics:
         locations_lrr_backtobasics = get_location_names_with_ids(["Clear: LRR - Back To Basics"])
         region_lrr_backtobasics.add_locations(locations_lrr_backtobasics, ManicMinersLocation)
@@ -1929,12 +1927,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_backtobasics_partime.add_event("Par Time Beatable: LRR - Back To Basics", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_backtobasics_crystaltarget.add_event("Crystal Target Beatable: LRR - Back To Basics", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_backtobasics = get_location_names_with_ids(["Research Coordinates: LRR - Back To Basics"])
             region_lrr_backtobasics.add_locations(locations_lrr_backtobasics, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_backtobasics = world.get_location("Research Coordinates: LRR - Back To Basics")
-                locations_lrr_backtobasics.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_backtobasics = world.get_location("Research Coordinates: LRR - Back To Basics")
+            locations_lrr_backtobasics.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_breathless:
         locations_lrr_breathless = get_location_names_with_ids(["Clear: LRR - Breathless"])
         region_lrr_breathless.add_locations(locations_lrr_breathless, ManicMinersLocation)
@@ -1955,12 +1952,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_breathless_partime.add_event("Par Time Beatable: LRR - Breathless", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_breathless_crystaltarget.add_event("Crystal Target Beatable: LRR - Breathless", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_breathless = get_location_names_with_ids(["Research Coordinates: LRR - Breathless"])
             region_lrr_breathless.add_locations(locations_lrr_breathless, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_breathless = world.get_location("Research Coordinates: LRR - Breathless")
-                locations_lrr_breathless.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_breathless = world.get_location("Research Coordinates: LRR - Breathless")
+            locations_lrr_breathless.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_dontpanic:
         locations_lrr_dontpanic = get_location_names_with_ids(["Clear: LRR - Don't Panic"])
         region_lrr_dontpanic.add_locations(locations_lrr_dontpanic, ManicMinersLocation)
@@ -1983,12 +1979,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_dontpanic_partime.add_event("Par Time Beatable: LRR - Don't Panic", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_dontpanic_crystaltarget.add_event("Crystal Target Beatable: LRR - Don't Panic", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_dontpanic = get_location_names_with_ids(["Research Coordinates: LRR - Don't Panic"])
             region_lrr_dontpanic.add_locations(locations_lrr_dontpanic, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_dontpanic = world.get_location("Research Coordinates: LRR - Don't Panic")
-                locations_lrr_dontpanic.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_dontpanic = world.get_location("Research Coordinates: LRR - Don't Panic")
+            locations_lrr_dontpanic.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_drillernight:
         locations_lrr_drillernight = get_location_names_with_ids(["Clear: LRR - Driller Night"])
         region_lrr_drillernight.add_locations(locations_lrr_drillernight, ManicMinersLocation)
@@ -2007,12 +2002,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_drillernight_partime.add_event("Par Time Beatable: LRR - Driller Night", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_drillernight_crystaltarget.add_event("Crystal Target Beatable: LRR - Driller Night", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_drillernight = get_location_names_with_ids(["Research Coordinates: LRR - Driller Night"])
             region_lrr_drillernight.add_locations(locations_lrr_drillernight, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_drillernight = world.get_location("Research Coordinates: LRR - Driller Night")
-                locations_lrr_drillernight.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_drillernight = world.get_location("Research Coordinates: LRR - Driller Night")
+            locations_lrr_drillernight.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_erodeworks:
         locations_lrr_erodeworks = get_location_names_with_ids(["Clear: LRR - Erode Works"])
         region_lrr_erodeworks.add_locations(locations_lrr_erodeworks, ManicMinersLocation)
@@ -2033,12 +2027,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_erodeworks_partime.add_event("Par Time Beatable: LRR - Erode Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_erodeworks_crystaltarget.add_event("Crystal Target Beatable: LRR - Erode Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_erodeworks = get_location_names_with_ids(["Research Coordinates: LRR - Erode Works"])
             region_lrr_erodeworks.add_locations(locations_lrr_erodeworks, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_erodeworks = world.get_location("Research Coordinates: LRR - Erode Works")
-                locations_lrr_erodeworks.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_erodeworks = world.get_location("Research Coordinates: LRR - Erode Works")
+            locations_lrr_erodeworks.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_explosiveaction:
         locations_lrr_explosiveaction = get_location_names_with_ids(["Clear: LRR - Explosive Action"])
         region_lrr_explosiveaction.add_locations(locations_lrr_explosiveaction, ManicMinersLocation)
@@ -2057,12 +2050,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_explosiveaction_partime.add_event("Par Time Beatable: LRR - Explosive Action", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_explosiveaction_crystaltarget.add_event("Crystal Target Beatable: LRR - Explosive Action", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_explosiveaction = get_location_names_with_ids(["Research Coordinates: LRR - Explosive Action"])
             region_lrr_explosiveaction.add_locations(locations_lrr_explosiveaction, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_explosiveaction = world.get_location("Research Coordinates: LRR - Explosive Action")
-                locations_lrr_explosiveaction.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_explosiveaction = world.get_location("Research Coordinates: LRR - Explosive Action")
+            locations_lrr_explosiveaction.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_fireandwater:
         locations_lrr_fireandwater = get_location_names_with_ids(["Clear: LRR - Fire And Water"])
         region_lrr_fireandwater.add_locations(locations_lrr_fireandwater, ManicMinersLocation)
@@ -2085,12 +2077,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_fireandwater_partime.add_event("Par Time Beatable: LRR - Fire And Water", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_fireandwater_crystaltarget.add_event("Crystal Target Beatable: LRR - Fire And Water", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_fireandwater = get_location_names_with_ids(["Research Coordinates: LRR - Fire And Water"])
             region_lrr_fireandwater.add_locations(locations_lrr_fireandwater, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_fireandwater = world.get_location("Research Coordinates: LRR - Fire And Water")
-                locations_lrr_fireandwater.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_fireandwater = world.get_location("Research Coordinates: LRR - Fire And Water")
+            locations_lrr_fireandwater.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_frozenfrenzy:
         locations_lrr_frozenfrenzy = get_location_names_with_ids(["Clear: LRR - Frozen Frenzy"])
         region_lrr_frozenfrenzy.add_locations(locations_lrr_frozenfrenzy, ManicMinersLocation)
@@ -2111,12 +2102,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_frozenfrenzy_partime.add_event("Par Time Beatable: LRR - Frozen Frenzy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_frozenfrenzy_crystaltarget.add_event("Crystal Target Beatable: LRR - Frozen Frenzy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_frozenfrenzy = get_location_names_with_ids(["Research Coordinates: LRR - Frozen Frenzy"])
             region_lrr_frozenfrenzy.add_locations(locations_lrr_frozenfrenzy, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_frozenfrenzy = world.get_location("Research Coordinates: LRR - Frozen Frenzy")
-                locations_lrr_frozenfrenzy.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_frozenfrenzy = world.get_location("Research Coordinates: LRR - Frozen Frenzy")
+            locations_lrr_frozenfrenzy.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_hotstuff:
         locations_lrr_hotstuff = get_location_names_with_ids(["Clear: LRR - Hot Stuff"])
         region_lrr_hotstuff.add_locations(locations_lrr_hotstuff, ManicMinersLocation)
@@ -2141,12 +2131,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_hotstuff_partime.add_event("Par Time Beatable: LRR - Hot Stuff", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_hotstuff_crystaltarget.add_event("Crystal Target Beatable: LRR - Hot Stuff", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_hotstuff = get_location_names_with_ids(["Research Coordinates: LRR - Hot Stuff"])
             region_lrr_hotstuff.add_locations(locations_lrr_hotstuff, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_hotstuff = world.get_location("Research Coordinates: LRR - Hot Stuff")
-                locations_lrr_hotstuff.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_hotstuff = world.get_location("Research Coordinates: LRR - Hot Stuff")
+            locations_lrr_hotstuff.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_icespy:
         locations_lrr_icespy = get_location_names_with_ids(["Clear: LRR - Ice Spy"])
         region_lrr_icespy.add_locations(locations_lrr_icespy, ManicMinersLocation)
@@ -2169,12 +2158,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_icespy_partime.add_event("Par Time Beatable: LRR - Ice Spy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_icespy_crystaltarget.add_event("Crystal Target Beatable: LRR - Ice Spy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_icespy = get_location_names_with_ids(["Research Coordinates: LRR - Ice Spy"])
             region_lrr_icespy.add_locations(locations_lrr_icespy, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_icespy = world.get_location("Research Coordinates: LRR - Ice Spy")
-                locations_lrr_icespy.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_icespy = world.get_location("Research Coordinates: LRR - Ice Spy")
+            locations_lrr_icespy.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_itsaholdup:
         locations_lrr_itsaholdup = get_location_names_with_ids(["Clear: LRR - It's A Hold Up"])
         region_lrr_itsaholdup.add_locations(locations_lrr_itsaholdup, ManicMinersLocation)
@@ -2193,12 +2181,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_itsaholdup_partime.add_event("Par Time Beatable: LRR - It's A Hold Up", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_itsaholdup_crystaltarget.add_event("Crystal Target Beatable: LRR - It's A Hold Up", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_itsaholdup = get_location_names_with_ids(["Research Coordinates: LRR - It's A Hold Up"])
             region_lrr_itsaholdup.add_locations(locations_lrr_itsaholdup, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_itsaholdup = world.get_location("Research Coordinates: LRR - It's A Hold Up")
-                locations_lrr_itsaholdup.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_itsaholdup = world.get_location("Research Coordinates: LRR - It's A Hold Up")
+            locations_lrr_itsaholdup.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_lakeoffire:
         locations_lrr_lakeoffire = get_location_names_with_ids(["Clear: LRR - Lake Of Fire"])
         region_lrr_lakeoffire.add_locations(locations_lrr_lakeoffire, ManicMinersLocation)
@@ -2221,12 +2208,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_lakeoffire_partime.add_event("Par Time Beatable: LRR - Lake Of Fire", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_lakeoffire_crystaltarget.add_event("Crystal Target Beatable: LRR - Lake Of Fire", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_lakeoffire = get_location_names_with_ids(["Research Coordinates: LRR - Lake Of Fire"])
             region_lrr_lakeoffire.add_locations(locations_lrr_lakeoffire, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_lakeoffire = world.get_location("Research Coordinates: LRR - Lake Of Fire")
-                locations_lrr_lakeoffire.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_lakeoffire = world.get_location("Research Coordinates: LRR - Lake Of Fire")
+            locations_lrr_lakeoffire.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_lavalaughter:
         locations_lrr_lavalaughter = get_location_names_with_ids(["Clear: LRR - Lava Laughter"])
         region_lrr_lavalaughter.add_locations(locations_lrr_lavalaughter, ManicMinersLocation)
@@ -2249,12 +2235,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_lavalaughter_partime.add_event("Par Time Beatable: LRR - Lava Laughter", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_lavalaughter_crystaltarget.add_event("Crystal Target Beatable: LRR - Lava Laughter", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_lavalaughter = get_location_names_with_ids(["Research Coordinates: LRR - Lava Laughter"])
             region_lrr_lavalaughter.add_locations(locations_lrr_lavalaughter, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_lavalaughter = world.get_location("Research Coordinates: LRR - Lava Laughter")
-                locations_lrr_lavalaughter.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_lavalaughter = world.get_location("Research Coordinates: LRR - Lava Laughter")
+            locations_lrr_lavalaughter.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_oresome:
         locations_lrr_oresome = get_location_names_with_ids(["Clear: LRR - Oresome"])
         region_lrr_oresome.add_locations(locations_lrr_oresome, ManicMinersLocation)
@@ -2277,12 +2262,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_oresome_partime.add_event("Par Time Beatable: LRR - Oresome", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_oresome_crystaltarget.add_event("Crystal Target Beatable: LRR - Oresome", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_oresome = get_location_names_with_ids(["Research Coordinates: LRR - Oresome"])
             region_lrr_oresome.add_locations(locations_lrr_oresome, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_oresome = world.get_location("Research Coordinates: LRR - Oresome")
-                locations_lrr_oresome.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_oresome = world.get_location("Research Coordinates: LRR - Oresome")
+            locations_lrr_oresome.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_rockhard:
         locations_lrr_rockhard = get_location_names_with_ids(["Clear: LRR - Rock Hard"])
         region_lrr_rockhard.add_locations(locations_lrr_rockhard, ManicMinersLocation)
@@ -2303,12 +2287,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_rockhard_partime.add_event("Par Time Beatable: LRR - Rock Hard", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_rockhard_crystaltarget.add_event("Crystal Target Beatable: LRR - Rock Hard", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_rockhard = get_location_names_with_ids(["Research Coordinates: LRR - Rock Hard"])
             region_lrr_rockhard.add_locations(locations_lrr_rockhard, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_rockhard = world.get_location("Research Coordinates: LRR - Rock Hard")
-                locations_lrr_rockhard.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_rockhard = world.get_location("Research Coordinates: LRR - Rock Hard")
+            locations_lrr_rockhard.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_rockyhorror and world.options.boss_level_lrr_rockyhorror == 0:
         locations_lrr_rockyhorror = get_location_names_with_ids(["Clear: LRR - Rocky Horror"])
         region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror, ManicMinersLocation)
@@ -2333,12 +2316,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_rockyhorror_partime.add_event("Par Time Beatable: LRR - Rocky Horror", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_rockyhorror_crystaltarget.add_event("Crystal Target Beatable: LRR - Rocky Horror", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_rockyhorror = get_location_names_with_ids(["Research Coordinates: LRR - Rocky Horror"])
             region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_rockyhorror = world.get_location("Research Coordinates: LRR - Rocky Horror")
-                locations_lrr_rockyhorror.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_rockyhorror = world.get_location("Research Coordinates: LRR - Rocky Horror")
+            locations_lrr_rockyhorror.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_rubbletrouble:
         locations_lrr_rubbletrouble = get_location_names_with_ids(["Clear: LRR - Rubble Trouble"])
         region_lrr_rubbletrouble.add_locations(locations_lrr_rubbletrouble, ManicMinersLocation)
@@ -2357,12 +2339,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_rubbletrouble_partime.add_event("Par Time Beatable: LRR - Rubble Trouble", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_rubbletrouble_crystaltarget.add_event("Crystal Target Beatable: LRR - Rubble Trouble", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_rubbletrouble = get_location_names_with_ids(["Research Coordinates: LRR - Rubble Trouble"])
             region_lrr_rubbletrouble.add_locations(locations_lrr_rubbletrouble, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_rubbletrouble = world.get_location("Research Coordinates: LRR - Rubble Trouble")
-                locations_lrr_rubbletrouble.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_rubbletrouble = world.get_location("Research Coordinates: LRR - Rubble Trouble")
+            locations_lrr_rubbletrouble.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_runthegauntlet:
         locations_lrr_runthegauntlet = get_location_names_with_ids(["Clear: LRR - Run The Gauntlet"])
         region_lrr_runthegauntlet.add_locations(locations_lrr_runthegauntlet, ManicMinersLocation)
@@ -2381,12 +2362,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_runthegauntlet_partime.add_event("Par Time Beatable: LRR - Run The Gauntlet", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_runthegauntlet_crystaltarget.add_event("Crystal Target Beatable: LRR - Run The Gauntlet", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_runthegauntlet = get_location_names_with_ids(["Research Coordinates: LRR - Run The Gauntlet"])
             region_lrr_runthegauntlet.add_locations(locations_lrr_runthegauntlet, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_runthegauntlet = world.get_location("Research Coordinates: LRR - Run The Gauntlet")
-                locations_lrr_runthegauntlet.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_runthegauntlet = world.get_location("Research Coordinates: LRR - Run The Gauntlet")
+            locations_lrr_runthegauntlet.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_searchandrescue:
         locations_lrr_searchandrescue = get_location_names_with_ids(["Clear: LRR - Search And Rescue"])
         region_lrr_searchandrescue.add_locations(locations_lrr_searchandrescue, ManicMinersLocation)
@@ -2407,12 +2387,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_searchandrescue_partime.add_event("Par Time Beatable: LRR - Search And Rescue", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_searchandrescue_crystaltarget.add_event("Crystal Target Beatable: LRR - Search And Rescue", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_searchandrescue = get_location_names_with_ids(["Research Coordinates: LRR - Search And Rescue"])
             region_lrr_searchandrescue.add_locations(locations_lrr_searchandrescue, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_searchandrescue = world.get_location("Research Coordinates: LRR - Search And Rescue")
-                locations_lrr_searchandrescue.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_searchandrescue = world.get_location("Research Coordinates: LRR - Search And Rescue")
+            locations_lrr_searchandrescue.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_splitdownthemiddle:
         locations_lrr_splitdownthemiddle = get_location_names_with_ids(["Clear: LRR - Split Down The Middle"])
         region_lrr_splitdownthemiddle.add_locations(locations_lrr_splitdownthemiddle, ManicMinersLocation)
@@ -2433,12 +2412,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_splitdownthemiddle_partime.add_event("Par Time Beatable: LRR - Split Down The Middle", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_splitdownthemiddle_crystaltarget.add_event("Crystal Target Beatable: LRR - Split Down The Middle", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_splitdownthemiddle = get_location_names_with_ids(["Research Coordinates: LRR - Split Down The Middle"])
             region_lrr_splitdownthemiddle.add_locations(locations_lrr_splitdownthemiddle, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_splitdownthemiddle = world.get_location("Research Coordinates: LRR - Split Down The Middle")
-                locations_lrr_splitdownthemiddle.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_splitdownthemiddle = world.get_location("Research Coordinates: LRR - Split Down The Middle")
+            locations_lrr_splitdownthemiddle.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_thepathtopower:
         locations_lrr_thepathtopower = get_location_names_with_ids(["Clear: LRR - The Path To Power"])
         region_lrr_thepathtopower.add_locations(locations_lrr_thepathtopower, ManicMinersLocation)
@@ -2457,12 +2435,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_thepathtopower_partime.add_event("Par Time Beatable: LRR - The Path To Power", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_thepathtopower_crystaltarget.add_event("Crystal Target Beatable: LRR - The Path To Power", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_thepathtopower = get_location_names_with_ids(["Research Coordinates: LRR - The Path To Power"])
             region_lrr_thepathtopower.add_locations(locations_lrr_thepathtopower, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_thepathtopower = world.get_location("Research Coordinates: LRR - The Path To Power")
-                locations_lrr_thepathtopower.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_thepathtopower = world.get_location("Research Coordinates: LRR - The Path To Power")
+            locations_lrr_thepathtopower.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_waterlotoffun:
         locations_lrr_waterlotoffun = get_location_names_with_ids(["Clear: LRR - Water Lot Of Fun"])
         region_lrr_waterlotoffun.add_locations(locations_lrr_waterlotoffun, ManicMinersLocation)
@@ -2483,12 +2460,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_waterlotoffun_partime.add_event("Par Time Beatable: LRR - Water Lot Of Fun", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_waterlotoffun_crystaltarget.add_event("Crystal Target Beatable: LRR - Water Lot Of Fun", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_waterlotoffun = get_location_names_with_ids(["Research Coordinates: LRR - Water Lot Of Fun"])
             region_lrr_waterlotoffun.add_locations(locations_lrr_waterlotoffun, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_waterlotoffun = world.get_location("Research Coordinates: LRR - Water Lot Of Fun")
-                locations_lrr_waterlotoffun.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_waterlotoffun = world.get_location("Research Coordinates: LRR - Water Lot Of Fun")
+            locations_lrr_waterlotoffun.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_lrr_waterworks:
         locations_lrr_waterworks = get_location_names_with_ids(["Clear: LRR - Water Works"])
         region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
@@ -2509,12 +2485,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_waterworks_partime.add_event("Par Time Beatable: LRR - Water Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
             region_lrr_waterworks_crystaltarget.add_event("Crystal Target Beatable: LRR - Water Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
-        elif world.options.victory_condition == 3:
+        elif world.options.victory_condition == 3 and world.options.locked_coordinates:
             locations_lrr_waterworks = get_location_names_with_ids(["Research Coordinates: LRR - Water Works"])
             region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
-            if world.options.locked_coordinates:
-                locations_lrr_waterworks = world.get_location("Research Coordinates: LRR - Water Works")
-                locations_lrr_waterworks.place_locked_item(world.create_item("Transporter Coordinates"))
+            locations_lrr_waterworks = world.get_location("Research Coordinates: LRR - Water Works")
+            locations_lrr_waterworks.place_locked_item(world.create_item("Transporter Coordinates"))
 
     if world.options.level_selection_lrrr_abreathoffreshair:
         locations_lrrr_abreathoffreshair = get_location_names_with_ids(["Clear: LRRR - A Breath Of Fresh Air"])
