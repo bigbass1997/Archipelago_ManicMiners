@@ -1,4 +1,5 @@
 from collections.abc import Mapping
+import logging
 from typing import Any
 from Options import OptionError
 
@@ -47,6 +48,8 @@ class ManicMinersWorld(World):
     
     origin_region_name = "Menu"
     
+    logger = logging.getLogger("ManicMiners")
+    
     filler_list = []
     start_sphere1_levels = []
     start_sphere2_levels = []
@@ -66,6 +69,7 @@ class ManicMinersWorld(World):
         # Must have at least one campaign selected, default to LRR if all unticked
         if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 0) & (self.options.campaign_selection_lrrc == 0) & (self.options.campaign_selection_baz == 0)):
             self.options.campaign_selection_lrr.value = 1
+            self.logger.info("Autofixing YAML: No campaigns were selected, defaulting to LRR.")
             
         # Count number of actually available levels based on campaign selection
         number_levels = 0
@@ -84,6 +88,7 @@ class ManicMinersWorld(World):
         
         # Adjust selected level vs available level counts to be equal (taking the minimum)
         if self.options.available_levels > number_levels:
+            self.logger.info("Autofixing YAML: Reducing Available Levels (" + str(self.options.available_levels) + ") to match selected level count (" + str(number_levels) + ").")
             self.options.available_levels.value = number_levels
         else:
             number_levels = self.options.available_levels.value
@@ -134,15 +139,20 @@ class ManicMinersWorld(World):
             # Adjust Coordinate values 
             if self.options.coordinates_in_pool == 0 or self.options.locked_coordinates:
                 self.options.coordinates_in_pool.value = number_levels - 1
-            if self.options.coordinates_required == 0 or self.options.coordinates_required > self.options.coordinates_in_pool:
+            if self.options.coordinates_required == 0:
+                self.options.coordinates_required.value = self.options.coordinates_in_pool.value
+            if self.options.coordinates_required > self.options.coordinates_in_pool:
+                self.logger.info("Autofixing YAML: Reducing Coordinates Required (" + str(self.options.coordinates_required) + ") to total available (" + str(self.options.coordinates_in_pool) + ").")
                 self.options.coordinates_required.value = self.options.coordinates_in_pool.value
             
         # Don't try and achieve more levels than available
         if self.options.target_level_count > self.options.available_levels:
+            self.logger.info("Autofixing YAML: Reducing Target Level Count (" + str(self.options.target_level_count) + ") to total available (" + str(self.options.available_levels) + ").")
             self.options.target_level_count.value = self.options.available_levels.value
         
         # If available levels at start > available levels, reduce it
         if self.options.available_levels_at_start > self.options.available_levels:
+            self.logger.info("Autofixing YAML: Reducing Available Levels At Start (" + str(self.options.available_levels_at_start) + ") to all available levels (" + str(self.options.available_levels) + ").")
             self.options.available_levels_at_start.value = self.options.available_levels
             
         # If No Duplicate Levels, and not using the BAZ unique ones, need to remove the uniques from the pool
