@@ -51,7 +51,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrr_explosiveaction_crystaltarget, Has("Can Build Rapid Rider"))
     if world.options.level_selection_lrr_fireandwater:
         entrance_lrr_fireandwater = world.get_entrance("Start Level - LRR - Fire And Water")
-        world.set_rule(entrance_lrr_fireandwater, (Has("Can Breathe") & Has("Can Build Swimming Vehicle") & Has("Level Access: LRR - Fire And Water") & Has("Can Build 20 Miners")))
+        world.set_rule(entrance_lrr_fireandwater, (Has("Can Breathe") & Has("Can Build Swimming Vehicle") & Has("Level Access: LRR - Fire And Water") & Has("Can Build 20 Miners") & (Has("Can Build Tunnel Transport") | Has("Can Build Tool Store"))))
         entrance_lrr_fireandwater_crystaltarget = world.get_entrance("Get Crystal Target - LRR - Fire And Water")
         world.set_rule(entrance_lrr_fireandwater_crystaltarget, Has("Can Mine Hard Rock"))
     if world.options.level_selection_lrr_frozenfrenzy:
