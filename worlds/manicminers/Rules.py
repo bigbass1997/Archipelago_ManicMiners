@@ -134,7 +134,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrrr_abreathoffreshair_crystaltarget, Has("Can Mine From Swimming Vehicle"))
     if world.options.level_selection_lrrr_airraiders:
         entrance_lrrr_airraiders = world.get_entrance("Start Level - LRRR - Air Raiders")
-        world.set_rule(entrance_lrrr_airraiders, (Has("Can Breathe") & Has("Can Mine Hard Rock") & Has("Level Access: LRRR - Air Raiders") & Has("Can Build 20 Miners")))
+        world.set_rule(entrance_lrrr_airraiders, (Has("Can Breathe") & Has("Can Mine Hard Rock") & Has("Level Access: LRRR - Air Raiders") & Has("Can Build 20 Miners") & Filtered(Has("Can Build Electric Fence"), options = [OptionFilter(ManicMiners_Options.ElectricFencesInLogic, 1)], filtered_resolution = True)))
         entrance_lrrr_airraiders_crystaltarget = world.get_entrance("Get Crystal Target - LRRR - Air Raiders")
         world.set_rule(entrance_lrrr_airraiders_crystaltarget, Has("Can Mine From Swimming Vehicle"))
     if world.options.level_selection_lrrr_backtobasics:
