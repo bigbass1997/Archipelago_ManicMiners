@@ -2,7 +2,6 @@ import asyncio
 import os
 import platform
 import pathlib
-from CommonClient import logger
 from NetUtils import ClientStatus
 
 from . import Items, Locations, ManicMinersWorld
@@ -12,14 +11,6 @@ from typing import TYPE_CHECKING
 from CommonClient import CommonContext, ClientCommandProcessor, logger, get_base_parser, server_loop, gui_enabled
 
 class ManicMinersClientCommandProcessor(ClientCommandProcessor):
-    def _cmd_reset_installation(self):
-        """Wipe and re-initialise Levels and Profile. Needed for first setup.
-        WARNING: Will delete all Archipelago saved data."""
-        # wipe old installs
-        self.output(f"Cleaning any old Archipelago installs...")
-        cleanup_install(self)
-        initialise_install(self)        
-        
     def _cmd_clear_installation(self):
         """Wipe Archipelago data from local Manic Miners installation.
         WARNING: Will delete all Archipelago saved data."""
@@ -585,12 +576,6 @@ def cleanup_levels(self):
         path.rmdir()
     else:
         self.output(f"No Archipelago campaign directory found needing cleanup...")
-
-def initialise_install(self):
-    initialise_levels_dir(self)
-    initialise_ap_save(self)
-    initialise_auxiliary_data(self)
-    self.output(f"Initialisation complete!")
     
 def initialise_levels_dir(self):
     # create level folder (will be populated later based on randomiser)
