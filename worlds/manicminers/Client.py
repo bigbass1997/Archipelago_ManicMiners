@@ -8,9 +8,14 @@ from . import Items, Locations, ManicMinersWorld
 
 from typing import TYPE_CHECKING
 
-from CommonClient import CommonContext, ClientCommandProcessor, logger, get_base_parser, server_loop, gui_enabled
+from CommonClient import logger, get_base_parser, server_loop, gui_enabled
 
-class ManicMinersClientCommandProcessor(ClientCommandProcessor):
+try:
+    from worlds.tracker.TrackerClient import TrackerCommandProcessor as SuperCommandProcessor
+except ModuleNotFoundError:
+    from CommonClient import ClientCommandProcessor as SuperCommandProcessor
+
+class ManicMinersClientCommandProcessor(SuperCommandProcessor):
     def _cmd_clear_installation(self):
         """Wipe Archipelago data from local Manic Miners installation.
         WARNING: Will delete all Archipelago saved data."""
@@ -649,11 +654,19 @@ def validate_seed(self):
         initialise_auxiliary_data(self)
         path.write_text(self.seed_name)
 
-class ManicMinersContext(CommonContext):
+tracker_loaded = False
+try:
+    from worlds.tracker.TrackerClient import TrackerGameContext as SuperContext
+    tracker_loaded = True
+except ModuleNotFoundError:
+    from CommonClient import CommonContext as SuperContext
+
+class ManicMinersContext(SuperContext):
     command_processor = ManicMinersClientCommandProcessor
     game = "Manic Miners"
     items_handling = 0b111
     base_title = "Manic Miners Client"
+    tags = {"AP"}
     
     disable_truck = False
 
@@ -668,6 +681,8 @@ class ManicMinersContext(CommonContext):
         await self.send_connect()
     
     def on_package(self, cmd: str, args: dict):
+        super().on_package(cmd, args)
+        
         if cmd == "RoomInfo":
             self.seed_name = args.get("seed_name")
             validate_seed(self)
@@ -683,19 +698,10 @@ class ManicMinersContext(CommonContext):
     async def disconnect(self, allow_autoreconnect: bool = False):
         await super().disconnect(allow_autoreconnect)
     
-    def run_gui(self):
-        """Import kivy UI system and start running it as self.ui_task."""
-        # Needed to overwrite the base title
-        from kvui import GameManager
-
-        class ManicMinersManager(GameManager):
-            logging_pairs = [
-                ("Client", "Archipelago")
-            ]
-            base_title = "Archipelago Manic Miners Client"
-
-        self.ui = ManicMinersManager(self)
-        self.ui_task = asyncio.create_task(self.ui.async_run(), name="UI")
+    def make_gui(self):
+        ui = super().make_gui()
+        ui.base_title = "Archipelago Manic Miners Client"
+        return ui
 
 async def save_read_loop(self):
     while not self.exit_event.is_set():
@@ -755,6 +761,8 @@ def launch(*launch_args):
         ctx = ManicMinersContext(connect, password)
         ctx.server_task = asyncio.create_task(server_loop(ctx), name="server loop")
         
+        if tracker_loaded:
+            ctx.run_generator()
         if gui_enabled:
             ctx.run_gui()
         ctx.run_cli()
