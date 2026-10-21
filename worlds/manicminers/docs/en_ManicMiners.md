@@ -89,10 +89,6 @@ In-game, selecting the very top-left tile of the map will pop up a message about
 
 The Manic Miners client comes with some extra commands on top of the regular Archipelago Text Client, most of which are to view extra detail about the Archipelago game state:
 
-#### `/reset_installation`
-
-A necessary first step to a fresh Archipelago run, this wipes and refreshes all the Archipelago-specific modifications to the Manic Miners installation. 
-
 #### `/clear_installation`
 
 This command will wipe all Archipelago data from the Manic Miners installation, should you wish for a simple uninstall. 
@@ -134,6 +130,8 @@ The Archipelago integration works in two main ways.
 Firstly, as you unlock levels, it copies the master level files into a dedicated directory to make them available, and then modifies the level data to disable anything you haven't unlocked yet. 
 
 Secondly, it scans the Archipelago-specific save file for level data, to determine which levels you've cleared and what times you've set for them. 
+
+It also maintains a directory of auxiliary files to perform seed validation, as a subfolder of the main MM save location.
 
 ## Problems? 
 
