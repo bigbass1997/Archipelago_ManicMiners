@@ -200,8 +200,6 @@ class ChiefsReportLayout(BoxLayout):
             self.content_text += f"Par times beaten: {count_beaten_par_time_levels_ap()}\n\n"
         elif self.ctx.slot_data["victory_condition"] == 1:
             self.content_text += f"Par times beaten (in local state): {count_beaten_par_time_levels_local()}\n\n"
-        else:
-            self.content_text += f"\n"
 
         if self.ctx.slot_data["victory_condition"] == 2 and self.ctx.slot_data["crystal_targets_are_locations"] == 1:           
             self.content_text += f"Crystal targets met (in Archipelago): {count_beaten_crystal_target_levels_ap()}\n"
@@ -210,8 +208,6 @@ class ChiefsReportLayout(BoxLayout):
             self.content_text += f"Crystal targets met: {count_beaten_crystal_target_levels_ap()}\n\n"
         elif self.ctx.slot_data["victory_condition"] == 2:
             self.content_text += f"Crystal targets met (in local state): {count_beaten_crystal_target_levels_local()}\n\n"
-        else:
-            self.content_text += f"\n"
         
         if self.ctx.slot_data["victory_condition"] == 3:
             self.content_text += f"Transporter Coordinates found: {count_coordinates()}\n\n"
@@ -895,7 +891,7 @@ class AxlesHangarLayout(BoxLayout):
                 if 897 in all_items:
                     self.building_text += f"Docks: [color={color_green}]Available[/color]\n"
                 else:
-                    self.building_text += f"Docks: Unavailable\n"
+                    self.building_text += f"Docks: [color={color_red}]Unavailable[/color]\n"
                 count_canteens = all_items.count(847)
                 if count_canteens == 0:
                     self.building_text += f"Canteens Available: [color={color_red}]0[/color]\n"
@@ -1002,88 +998,88 @@ class AxlesHangarLayout(BoxLayout):
             else:
                 count_hoverscouts = all_items.count(843)
                 if count_hoverscouts == 0:
-                    self.building_text += f"Hover Scouts Available: [color={color_red}]0[/color]\n"
+                    self.vehicle_text += f"Hover Scouts Available: [color={color_red}]0[/color]\n"
                 elif count_hoverscouts > 2:
-                    self.building_text += f"Hover Scouts Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Hover Scouts Available: [color={color_green}]Yes[/color]\n"
                 else:
-                    self.building_text += f"Hover Scouts Available: [color={color_yellow}]{count_hoverscouts}[/color]\n"
+                    self.vehicle_text += f"Hover Scouts Available: [color={color_yellow}]{count_hoverscouts}[/color]\n"
                 count_tunnelscouts = all_items.count(842)
                 if count_tunnelscouts == 0:
-                    self.building_text += f"Tunnel Scouts Available: [color={color_red}]0[/color]\n"
+                    self.vehicle_text += f"Tunnel Scouts Available: [color={color_red}]0[/color]\n"
                 elif count_tunnelscouts > 2:
-                    self.building_text += f"Tunnel Scouts Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Tunnel Scouts Available: [color={color_green}]Yes[/color]\n"
                 else:
-                    self.building_text += f"Tunnel Scouts Available: [color={color_yellow}]{count_tunnelscouts}[/color]\n"
+                    self.vehicle_text += f"Tunnel Scouts Available: [color={color_yellow}]{count_tunnelscouts}[/color]\n"
                 count_smalldiggers = all_items.count(841)
                 if count_smalldiggers == 0:
-                    self.building_text += f"Small Diggers Available: [color={color_red}]0[/color]\n"
+                    self.vehicle_text += f"Small Diggers Available: [color={color_red}]0[/color]\n"
                 elif count_smalldiggers > 2:
-                    self.building_text += f"Small Diggers Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Small Diggers Available: [color={color_green}]Yes[/color]\n"
                 else:
-                    self.building_text += f"Small Diggers Available: [color={color_yellow}]{count_smalldiggers}[/color]\n"
+                    self.vehicle_text += f"Small Diggers Available: [color={color_yellow}]{count_smalldiggers}[/color]\n"
                 count_stts = all_items.count(840)
                 if count_stts == 0:
-                    self.building_text += f"Small Transport Trucks Available: [color={color_red}]0[/color]\n"
-                elif count_stts > 2:
-                    self.building_text += f"Small Transport Trucks Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Small Transport Trucks Available: [color={color_red}]0[/color]\n"
+                elif count_stts > 2 and self.ctx.slot_data["no_infinite_stt"] == 0:
+                    self.vehicle_text += f"Small Transport Trucks Available: [color={color_green}]Yes[/color]\n"
                 else:
-                    self.building_text += f"Small Transport Trucks Available: [color={color_yellow}]{count_stts}[/color]\n"
+                    self.vehicle_text += f"Small Transport Trucks Available: [color={color_yellow}]{count_stts}[/color]\n"
                 count_smlcs = all_items.count(839)
                 if count_smlcs == 0:
-                    self.building_text += f"Small Mobile Laser Cutters Available: [color={color_red}]0[/color]\n"
+                    self.vehicle_text += f"Small Mobile Laser Cutters Available: [color={color_red}]0[/color]\n"
                 elif count_smlcs > 2:
-                    self.building_text += f"Small Mobile Laser Cutters Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Small Mobile Laser Cutters Available: [color={color_green}]Yes[/color]\n"
                 else:
-                    self.building_text += f"Small Mobile Laser Cutters Available: [color={color_yellow}]{count_smlcs}[/color]\n"
+                    self.vehicle_text += f"Small Mobile Laser Cutters Available: [color={color_yellow}]{count_smlcs}[/color]\n"
                 count_rapidriders = all_items.count(838)
                 if count_rapidriders == 0:
-                    self.building_text += f"Rapid Riders Available: [color={color_red}]0[/color]\n"
+                    self.vehicle_text += f"Rapid Riders Available: [color={color_red}]0[/color]\n"
                 elif count_rapidriders > 2:
-                    self.building_text += f"Rapid Riders Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Rapid Riders Available: [color={color_green}]Yes[/color]\n"
                 else:
-                    self.building_text += f"Rapid Riders Available: [color={color_yellow}]{count_rapidriders}[/color]\n"
+                    self.vehicle_text += f"Rapid Riders Available: [color={color_yellow}]{count_rapidriders}[/color]\n"
                 count_cargocarriers = all_items.count(837)
                 if count_cargocarriers == 0:
-                    self.building_text += f"Cargo Carriers Available: [color={color_red}]0[/color]\n"
+                    self.vehicle_text += f"Cargo Carriers Available: [color={color_red}]0[/color]\n"
                 elif count_cargocarriers > 2:
-                    self.building_text += f"Cargo Carriers Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Cargo Carriers Available: [color={color_green}]Yes[/color]\n"
                 else:
-                    self.building_text += f"Cargo Carriers Available: [color={color_yellow}]{count_cargocarriers}[/color]\n"
+                    self.vehicle_text += f"Cargo Carriers Available: [color={color_yellow}]{count_cargocarriers}[/color]\n"
                 count_loaderdozers = all_items.count(836)
                 if count_loaderdozers == 0:
-                    self.building_text += f"Loader Dozers Available: [color={color_red}]0[/color]\n"
+                    self.vehicle_text += f"Loader Dozers Available: [color={color_red}]0[/color]\n"
                 elif count_loaderdozers > 2:
-                    self.building_text += f"Loader Dozers Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Loader Dozers Available: [color={color_green}]Yes[/color]\n"
                 else:
-                    self.building_text += f"Loader Dozers Available: [color={color_yellow}]{count_loaderdozers}[/color]\n"
+                    self.vehicle_text += f"Loader Dozers Available: [color={color_yellow}]{count_loaderdozers}[/color]\n"
                 count_granitegrinders = all_items.count(835)
                 if count_granitegrinders == 0:
-                    self.building_text += f"Granite Grinders Available: [color={color_red}]0[/color]\n"
+                    self.vehicle_text += f"Granite Grinders Available: [color={color_red}]0[/color]\n"
                 elif count_granitegrinders > 2:
-                    self.building_text += f"Granite Grinders Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Granite Grinders Available: [color={color_green}]Yes[/color]\n"
                 else:
-                    self.building_text += f"Granite Grinders Available: [color={color_yellow}]{count_granitegrinders}[/color]\n"
+                    self.vehicle_text += f"Granite Grinders Available: [color={color_yellow}]{count_granitegrinders}[/color]\n"
                 count_lmlcs = all_items.count(834)
                 if count_lmlcs == 0:
-                    self.building_text += f"Large Mobile Laser Cutters Available: [color={color_red}]0[/color]\n"
+                    self.vehicle_text += f"Large Mobile Laser Cutters Available: [color={color_red}]0[/color]\n"
                 elif count_lmlcs > 2:
-                    self.building_text += f"Large Mobile Laser Cutters Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Large Mobile Laser Cutters Available: [color={color_green}]Yes[/color]\n"
                 else:
-                    self.building_text += f"Large Mobile Laser Cutters Available: [color={color_yellow}]{count_lmlcs}[/color]\n"
+                    self.vehicle_text += f"Large Mobile Laser Cutters Available: [color={color_yellow}]{count_lmlcs}[/color]\n"
                 count_chromecrushers = all_items.count(833)
                 if count_chromecrushers == 0:
-                    self.building_text += f"Chrome Crushers Available: [color={color_red}]0[/color]\n"
+                    self.vehicle_text += f"Chrome Crushers Available: [color={color_red}]0[/color]\n"
                 elif count_chromecrushers > 2:
-                    self.building_text += f"Chrome Crushers Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Chrome Crushers Available: [color={color_green}]Yes[/color]\n"
                 else:
-                    self.building_text += f"Chrome Crushers Available: [color={color_yellow}]{count_chromecrushers}[/color]\n"
-                count_tunneltransports = all_items.count(849)
+                    self.vehicle_text += f"Chrome Crushers Available: [color={color_yellow}]{count_chromecrushers}[/color]\n"
+                count_tunneltransports = all_items.count(832)
                 if count_tunneltransports == 0:
-                    self.building_text += f"Tunnel Transports Available: [color={color_red}]0[/color]\n"
+                    self.vehicle_text += f"Tunnel Transports Available: [color={color_red}]0[/color]\n"
                 elif count_tunneltransports > 2:
-                    self.building_text += f"Tunnel Transports Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Tunnel Transports Available: [color={color_green}]Yes[/color]\n"
                 else:
-                    self.building_text += f"Tunnel Transports Available: [color={color_yellow}]{count_tunneltransports}[/color]\n"
+                    self.vehicle_text += f"Tunnel Transports Available: [color={color_yellow}]{count_tunneltransports}[/color]\n"
         if self.ctx.slot_data["miner_cap"]:
             miner_cap = int(self.ctx.slot_data["miner_cap_base_level"])
             miner_1s = all_items.count(948)
