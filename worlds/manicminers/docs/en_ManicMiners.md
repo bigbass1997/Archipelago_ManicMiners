@@ -87,31 +87,11 @@ In-game, selecting the very top-left tile of the map will pop up a message about
 
 ## Additional commands
 
-The Manic Miners client comes with some extra commands on top of the regular Archipelago Text Client, most of which are to view extra detail about the Archipelago game state:
+The Manic Miners client comes with some extra commands on top of the regular Archipelago Text Client, detailed below.
 
 #### `/clear_installation`
 
 This command will wipe all Archipelago data from the Manic Miners installation, should you wish for a simple uninstall. 
-
-#### `/chiefs_report`
-
-Shows overall game information about your current progress, such as how many things you've unlocked or how many levels you've cleared. 
-
-#### `/mining_map`
-
-Shows specific game information about which levels are accessible, but not yet cleared. It _only_ considers the level unlock items, and does not factor if you have all other prerequisites. 
-
-#### `/check_watch`
-
-Shows specific game information about which target times are accessible, but not yet cleared. It _only_ considers the level unlock items, and does not factor if you have all other prerequisites. Par times only become in logic once you wither have a tool store, or can have 20 miners at once.
-
-#### `/power_levels`
-
-Shows specific game information about which crystal targets are accessible, but not yet cleared. It _only_ considers the level unlock items, and does not factor if you have all other prerequisites. Crystal targets may have additional prerequisites beyond those needed to clear a level.
-
-#### `/visit_storage`
-
-Shows specific game information about what non-level unlocks you have or haven't received yet. 
 
 #### `/toggle_truck`
 
