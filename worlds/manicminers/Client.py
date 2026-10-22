@@ -10,9 +10,13 @@ from typing import TYPE_CHECKING
 
 from CommonClient import logger, get_base_parser, server_loop, gui_enabled
 
+tracker_loaded = False
 try:
+    from worlds.tracker.TrackerClient import TrackerGameContext as SuperContext
     from worlds.tracker.TrackerClient import TrackerCommandProcessor as SuperCommandProcessor
+    tracker_loaded = True
 except ModuleNotFoundError:
+    from CommonClient import CommonContext as SuperContext
     from CommonClient import ClientCommandProcessor as SuperCommandProcessor
 
 class ManicMinersClientCommandProcessor(SuperCommandProcessor):
@@ -653,13 +657,6 @@ def validate_seed(self):
         initialise_levels_dir(self)
         initialise_auxiliary_data(self)
         path.write_text(self.seed_name)
-
-tracker_loaded = False
-try:
-    from worlds.tracker.TrackerClient import TrackerGameContext as SuperContext
-    tracker_loaded = True
-except ModuleNotFoundError:
-    from CommonClient import CommonContext as SuperContext
 
 class ManicMinersContext(SuperContext):
     command_processor = ManicMinersClientCommandProcessor
