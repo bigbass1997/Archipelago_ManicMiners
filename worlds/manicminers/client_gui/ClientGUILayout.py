@@ -680,7 +680,7 @@ class CrystalsLayout(BoxLayout):
             if number_levels == 0:
                 self.header_text += f"You have no available crystal targets that you haven't met!"
             else:
-                self.header_text += f"The following {len(intersection)} crystal targets are available, but not cleared.\n(They may not yet be in=logic with your current unlocks.)"
+                self.header_text += f"The following {len(intersection)} crystal targets are available, but not cleared.\n(They may not yet be in-logic with your current unlocks.)"
                 self.content_text = f""
                 for level_name in intersection:
                     full_crystal_target = TARGET_CRYSTAL_COUNT[level_name]
