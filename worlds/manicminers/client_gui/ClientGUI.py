@@ -7,7 +7,7 @@ from kivy.uix.widget import Widget
 
 from ..Client import ManicMinersContext
 
-from .ClientGUILayout import ChiefsReportTabLayout, DocsMapTabLayout, JetsStopwatchTabLayout, SparksReactorsTabLayout, AxlesHangarTabLayout
+from .ClientGUILayout import OverviewTabLayout, LevelsTabLayout, TimesTabLayout, CrystalsTabLayout, InventoryTabLayout
 
 
 def bootstrap_client_gui(gui: Optional[type[GameManager]]) -> type[GameManager]:
@@ -17,49 +17,49 @@ def bootstrap_client_gui(gui: Optional[type[GameManager]]) -> type[GameManager]:
         logging_pairs: List[Tuple[str, str]] = [("Client", "Archipelago")]
         base_title: str = "Archipelago Manic Miners Client"
 
-        chiefsreport_tab_layout: ChiefsReportTabLayout
-        chiefsreport_tab: Widget
+        overview_tab_layout: OverviewTabLayout
+        overview_tab: Widget
         
-        docsmap_tab_layout: DocsMapTabLayout
-        docsmap_tab: Widget
+        levels_tab_layout: LevelsTabLayout
+        levels_tab: Widget
         
-        jetsstopwatch_tab_layout: JetsStopwatchTabLayout
-        jetsstopwatch_tab: Widget
+        times_tab_layout: TimesTabLayout
+        times_tab: Widget
         
-        sparksreactors_tab_layout: SparksReactorsTabLayout
-        sparksreactors_tab: Widget
+        crystals_tab_layout: CrystalsTabLayout
+        crystals_tab: Widget
         
-        axleshangar_tab_layout: AxlesHangarTabLayout
-        axleshangar_tab: Widget
+        inventory_tab_layout: InventoryTabLayout
+        inventory_tab: Widget
 
         def build(self) -> Layout:
             container: Layout = super().build()
 
-            self.chiefsreport_tab_layout = ChiefsReportTabLayout(self.ctx)
-            self.chiefsreport_tab = self.add_client_tab("Chief's Report", self.chiefsreport_tab_layout)
-            self.docsmap_tab_layout = DocsMapTabLayout(self.ctx)
-            self.docsmap_tab = self.add_client_tab("Doc's Map", self.docsmap_tab_layout)
-            self.jetsstopwatch_tab_layout = JetsStopwatchTabLayout(self.ctx)
-            self.jetsstopwatch_tab = self.add_client_tab("Jet's Stopwatch", self.jetsstopwatch_tab_layout)
-            self.sparksreactors_tab_layout = SparksReactorsTabLayout(self.ctx)
-            self.sparksreactors_tab = self.add_client_tab("Sparks' Reactors", self.sparksreactors_tab_layout)
-            self.axleshangar_tab_layout = AxlesHangarTabLayout(self.ctx)
-            self.axleshangar_tab = self.add_client_tab("Axle's Hangar", self.axleshangar_tab_layout)
+            self.overview_tab_layout = OverviewTabLayout(self.ctx)
+            self.overview_tab = self.add_client_tab("Chief: Overview", self.overview_tab_layout)
+            self.levels_tab_layout = LevelsTabLayout(self.ctx)
+            self.levels_tab = self.add_client_tab("Bandit: Levels", self.levels_tab_layout)
+            self.times_tab_layout = TimesTabLayout(self.ctx)
+            self.times_tab = self.add_client_tab("Jet: Times", self.times_tab_layout)
+            self.crystals_tab_layout = CrystalsTabLayout(self.ctx)
+            self.crystals_tab = self.add_client_tab("Sparks: Crystals", self.crystals_tab_layout)
+            self.inventory_tab_layout = InventoryTabLayout(self.ctx)
+            self.inventory_tab = self.add_client_tab("Axle: Inventory", self.inventory_tab_layout)
             
             return container
 
         def update_tabs(self) -> None:
-            self.chiefsreport_tab_layout.update()
-            self.docsmap_tab_layout.update()
-            self.jetsstopwatch_tab_layout.update()
-            self.sparksreactors_tab_layout.update()
-            self.axleshangar_tab_layout.update()
+            self.overview_tab_layout.update()
+            self.levels_tab_layout.update()
+            self.times_tab_layout.update()
+            self.crystals_tab_layout.update()
+            self.inventory_tab_layout.update()
             
         def clear_tabs(self) -> None:
-            self.chiefsreport_tab_layout.clear_widgets()
-            self.docsmap_tab_layout.clear_widgets()
-            self.jetsstopwatch_tab_layout.clear_widgets()
-            self.sparksreactors_tab_layout.clear_widgets()
-            self.axleshangar_tab_layout.clear_widgets()
+            self.overview_tab_layout.clear_widgets()
+            self.levels_tab_layout.clear_widgets()
+            self.times_tab_layout.clear_widgets()
+            self.crystals_tab_layout.clear_widgets()
+            self.inventory_tab_layout.clear_widgets()
 
     return ManicMinersManager

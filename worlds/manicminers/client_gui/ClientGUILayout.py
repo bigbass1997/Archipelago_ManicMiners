@@ -48,15 +48,15 @@ class NotConnectedLayout(BoxLayout):
         self.height = "0dp"
         self.disabled = True
 
-class ChiefsReportLayout(BoxLayout):
+class OverviewLayout(BoxLayout):
     ctx: ManicMinersContext
     
-    header_text = f"[i]Chief keeps a watchful eye on the whole operation from the LMS Explorer.[/i]"
+    header_text = f"[i]Chief keeps a watchful eye on the whole operation from the bridge of the LMS Explorer.[/i]"
     content_text = f""
     header_label: Label
     content_label: Label
 
-    def update_chiefsreport(self):
+    def update_overview(self):
         
         self.content_text = f""
         
@@ -264,20 +264,20 @@ class ChiefsReportLayout(BoxLayout):
 
         self.ctx = ctx
         
-        self.update_chiefsreport()
+        self.update_overview()
         
         self.build_widgets()
 
     def update(self) -> None:
-        self.update_chiefsreport()
+        self.update_overview()
         self.build_widgets()
 
-class ChiefsReportContent(ScrollView):
+class OverviewContent(ScrollView):
     ctx: ManicMinersContext
 
     layout: BoxLayout
 
-    layout_chiefsreport: ChiefsReportLayout
+    layout_overview: OverviewLayout
 
     def __init__(self, ctx: ManicMinersContext) -> None:
         super().__init__()
@@ -287,14 +287,14 @@ class ChiefsReportContent(ScrollView):
         self.layout = BoxLayout(orientation="vertical", size_hint_y=None)
         self.layout.bind(minimum_height=self.layout.setter("height"))
 
-        self.layout_chiefsreport = ChiefsReportLayout(ctx=self.ctx)
-        self.layout.add_widget(self.layout_chiefsreport)
+        self.layout_overview = OverviewLayout(ctx=self.ctx)
+        self.layout.add_widget(self.layout_overview)
 
         self.add_widget(self.layout)
 
     def update(self, *_) -> None:
         try:
-            self.layout_chiefsreport.update()
+            self.layout_overview.update()
         except Exception:
             import traceback
 
@@ -302,11 +302,11 @@ class ChiefsReportContent(ScrollView):
                 f.write(traceback.format_exc() + "\n\n")
 
 
-class ChiefsReportTabLayout(BoxLayout):
+class OverviewTabLayout(BoxLayout):
     ctx: ManicMinersContext
 
     layout_content: BoxLayout
-    layout_content_chiefsreport: ChiefsReportContent
+    layout_content_overview: OverviewContent
 
     layout_not_connected: NotConnectedLayout
 
@@ -336,12 +336,12 @@ class ChiefsReportTabLayout(BoxLayout):
         self.layout_not_connected.hide()
         
         if not len(self.layout_content.children):
-            self.layout_content_chiefsreport = ChiefsReportContent(ctx=self.ctx)
-            self.layout_content.add_widget(self.layout_content_chiefsreport)
+            self.layout_content_overview = OverviewContent(ctx=self.ctx)
+            self.layout_content.add_widget(self.layout_content_overview)
         
-        self.layout_content_chiefsreport.update()
+        self.layout_content_overview.update()
 
-class DocsMapLayout(BoxLayout):
+class LevelsLayout(BoxLayout):
     ctx: ManicMinersContext
     
     header_text = f""
@@ -349,8 +349,8 @@ class DocsMapLayout(BoxLayout):
     header_label: Label
     content_label: Label
 
-    def update_docsmap(self):
-        self.header_text = f"[i]Doc has been busy mapping the nearby caverns.[/i]\n\n"
+    def update_levels(self):
+        self.header_text = f"[i]Bandit has been busy scouting and mapping the nearby caverns. He tries not to get eaten by anything local.[/i]\n\n"
         item_names = []
         location_names = []
         for item in get_ids_from_networkitems(self.ctx.items_received):
@@ -367,7 +367,7 @@ class DocsMapLayout(BoxLayout):
         if number_levels == 0:
             self.header_text += f"You have no available levels that you haven't cleared!"
         else:
-            self.header_text += f"The following {len(intersection)} levels are available, but not cleared.\n(They may not yet be clearable with your current unlocks.)"
+            self.header_text += f"The following {len(intersection)} levels are available, but not cleared.\n(They may not yet be in-logic with your current unlocks.)"
             self.content_text = f""
             for level_name in intersection:
                 self.content_text += f"{level_name}\n"
@@ -412,20 +412,20 @@ class DocsMapLayout(BoxLayout):
 
         self.ctx = ctx
         
-        self.update_docsmap()
+        self.update_levels()
         
         self.build_widgets()
 
     def update(self) -> None:
-        self.update_docsmap()
+        self.update_levels()
         self.build_widgets()
 
-class DocsMapContent(ScrollView):
+class LevelsContent(ScrollView):
     ctx: ManicMinersContext
 
     layout: BoxLayout
 
-    layout_docsmap: DocsMapLayout
+    layout_levels: LevelsLayout
 
     def __init__(self, ctx: ManicMinersContext) -> None:
         super().__init__()
@@ -435,14 +435,14 @@ class DocsMapContent(ScrollView):
         self.layout = BoxLayout(orientation="vertical", size_hint_y=None)
         self.layout.bind(minimum_height=self.layout.setter("height"))
 
-        self.layout_docsmap = DocsMapLayout(ctx=self.ctx)
-        self.layout.add_widget(self.layout_docsmap)
+        self.layout_levels = LevelsLayout(ctx=self.ctx)
+        self.layout.add_widget(self.layout_levels)
 
         self.add_widget(self.layout)
 
     def update(self, *_) -> None:
         try:
-            self.layout_docsmap.update()
+            self.layout_levels.update()
         except Exception:
             import traceback
 
@@ -450,11 +450,11 @@ class DocsMapContent(ScrollView):
                 f.write(traceback.format_exc() + "\n\n")
 
 
-class DocsMapTabLayout(BoxLayout):
+class LevelsTabLayout(BoxLayout):
     ctx: ManicMinersContext
 
     layout_content: BoxLayout
-    layout_content_docsmap: DocsMapContent
+    layout_content_levels: LevelsContent
 
     layout_not_connected: NotConnectedLayout
 
@@ -484,12 +484,12 @@ class DocsMapTabLayout(BoxLayout):
         self.layout_not_connected.hide()
         
         if not len(self.layout_content.children):
-            self.layout_content_docsmap = DocsMapContent(ctx=self.ctx)
-            self.layout_content.add_widget(self.layout_content_docsmap)
+            self.layout_content_levels = LevelsContent(ctx=self.ctx)
+            self.layout_content.add_widget(self.layout_content_levels)
         
-        self.layout_content_docsmap.update()
+        self.layout_content_levels.update()
         
-class JetsStopwatchLayout(BoxLayout):
+class TimesLayout(BoxLayout):
     ctx: ManicMinersContext
     
     header_text = f""
@@ -497,8 +497,8 @@ class JetsStopwatchLayout(BoxLayout):
     header_label: Label
     content_label: Label
 
-    def update_jetsstopwatch(self):
-        self.header_text = f"[i]Jet is timing the crew's performance on the surface.[/i]\n\n"
+    def update_times(self):
+        self.header_text = f"[i]Jet is timing the crew's performance on the surface. You can always fly faster.[/i]\n\n"
         if self.ctx.slot_data["victory_condition"] == 1 or self.ctx.slot_data["target_times_are_locations"] == 1:
             match self.ctx.slot_data["target_time_difficulty"]:
                 case 0:
@@ -527,7 +527,7 @@ class JetsStopwatchLayout(BoxLayout):
             if number_levels == 0:
                 self.header_text += f"You have no available target times that you haven't met!"
             else:
-                self.header_text += f"The following {len(intersection)} target times are available, but not met.\n(They may not yet be meetable with your current unlocks.)"
+                self.header_text += f"The following {len(intersection)} target times are available, but not met.\n(They may not yet be in-logic with your current unlocks.)"
                 self.content_text = f""
                 for level_name in intersection:
                     time_tuple = divmod(time_target_list[level_name], 60)
@@ -576,20 +576,20 @@ class JetsStopwatchLayout(BoxLayout):
 
         self.ctx = ctx
         
-        self.update_jetsstopwatch()
+        self.update_times()
         
         self.build_widgets()
 
     def update(self) -> None:
-        self.update_jetsstopwatch()
+        self.update_times()
         self.build_widgets()
 
-class JetsStopwatchContent(ScrollView):
+class TimesContent(ScrollView):
     ctx: ManicMinersContext
 
     layout: BoxLayout
 
-    layout_jetsstopwatch: JetsStopwatchLayout
+    layout_times: TimesLayout
 
     def __init__(self, ctx: ManicMinersContext) -> None:
         super().__init__()
@@ -599,14 +599,14 @@ class JetsStopwatchContent(ScrollView):
         self.layout = BoxLayout(orientation="vertical", size_hint_y=None)
         self.layout.bind(minimum_height=self.layout.setter("height"))
 
-        self.layout_jetsstopwatch = JetsStopwatchLayout(ctx=self.ctx)
-        self.layout.add_widget(self.layout_jetsstopwatch)
+        self.layout_times = TimesLayout(ctx=self.ctx)
+        self.layout.add_widget(self.layout_times)
 
         self.add_widget(self.layout)
 
     def update(self, *_) -> None:
         try:
-            self.layout_jetsstopwatch.update()
+            self.layout_times.update()
         except Exception:
             import traceback
 
@@ -614,11 +614,11 @@ class JetsStopwatchContent(ScrollView):
                 f.write(traceback.format_exc() + "\n\n")
 
 
-class JetsStopwatchTabLayout(BoxLayout):
+class TimesTabLayout(BoxLayout):
     ctx: ManicMinersContext
 
     layout_content: BoxLayout
-    layout_content_jetsstopwatch: JetsStopwatchContent
+    layout_content_times: TimesContent
 
     layout_not_connected: NotConnectedLayout
 
@@ -648,12 +648,12 @@ class JetsStopwatchTabLayout(BoxLayout):
         self.layout_not_connected.hide()
         
         if not len(self.layout_content.children):
-            self.layout_content_jetsstopwatch = JetsStopwatchContent(ctx=self.ctx)
-            self.layout_content.add_widget(self.layout_content_jetsstopwatch)
+            self.layout_content_times = TimesContent(ctx=self.ctx)
+            self.layout_content.add_widget(self.layout_content_times)
         
-        self.layout_content_jetsstopwatch.update()
+        self.layout_content_times.update()
 
-class SparksReactorsLayout(BoxLayout):
+class CrystalsLayout(BoxLayout):
     ctx: ManicMinersContext
     
     header_text = f""
@@ -661,8 +661,8 @@ class SparksReactorsLayout(BoxLayout):
     header_label: Label
     content_label: Label
 
-    def update_sparksreactors(self):
-        self.header_text = f"[i]Sparks is busy getting the ship's reactors back online.[/i]\n\n"
+    def update_crystals(self):
+        self.header_text = f"[i]Sparks is using the Energy Crystals to get the ship's reactors back online. He always needs more.[/i]\n\n"
         if self.ctx.slot_data["crystal_targets_are_locations"] == 1:
             item_names = []
             location_names = []
@@ -680,7 +680,7 @@ class SparksReactorsLayout(BoxLayout):
             if number_levels == 0:
                 self.header_text += f"You have no available crystal targets that you haven't met!"
             else:
-                self.header_text += f"The following {len(intersection)} crystal targets are available, but not cleared.\n(They may not yet be clearable with your current unlocks.)"
+                self.header_text += f"The following {len(intersection)} crystal targets are available, but not cleared.\n(They may not yet be in=logic with your current unlocks.)"
                 self.content_text = f""
                 for level_name in intersection:
                     full_crystal_target = TARGET_CRYSTAL_COUNT[level_name]
@@ -730,20 +730,20 @@ class SparksReactorsLayout(BoxLayout):
 
         self.ctx = ctx
         
-        self.update_sparksreactors()
+        self.update_crystals()
         
         self.build_widgets()
 
     def update(self) -> None:
-        self.update_sparksreactors()
+        self.update_crystals()
         self.build_widgets()
 
-class SparksReactorsContent(ScrollView):
+class CrystalsContent(ScrollView):
     ctx: ManicMinersContext
 
     layout: BoxLayout
 
-    layout_sparksreactors: SparksReactorsLayout
+    layout_crystals: CrystalsLayout
 
     def __init__(self, ctx: ManicMinersContext) -> None:
         super().__init__()
@@ -753,14 +753,14 @@ class SparksReactorsContent(ScrollView):
         self.layout = BoxLayout(orientation="vertical", size_hint_y=None)
         self.layout.bind(minimum_height=self.layout.setter("height"))
 
-        self.layout_sparksreactors = SparksReactorsLayout(ctx=self.ctx)
-        self.layout.add_widget(self.layout_sparksreactors)
+        self.layout_crystals = CrystalsLayout(ctx=self.ctx)
+        self.layout.add_widget(self.layout_crystals)
 
         self.add_widget(self.layout)
 
     def update(self, *_) -> None:
         try:
-            self.layout_sparksreactors.update()
+            self.layout_crystals.update()
         except Exception:
             import traceback
 
@@ -768,11 +768,11 @@ class SparksReactorsContent(ScrollView):
                 f.write(traceback.format_exc() + "\n\n")
 
 
-class SparksReactorsTabLayout(BoxLayout):
+class CrystalsTabLayout(BoxLayout):
     ctx: ManicMinersContext
 
     layout_content: BoxLayout
-    layout_content_sparksreactors: SparksReactorsContent
+    layout_content_crystals: CrystalsContent
 
     layout_not_connected: NotConnectedLayout
 
@@ -802,12 +802,12 @@ class SparksReactorsTabLayout(BoxLayout):
         self.layout_not_connected.hide()
         
         if not len(self.layout_content.children):
-            self.layout_content_sparksreactors = SparksReactorsContent(ctx=self.ctx)
-            self.layout_content.add_widget(self.layout_content_sparksreactors)
+            self.layout_content_crystals = CrystalsContent(ctx=self.ctx)
+            self.layout_content.add_widget(self.layout_content_crystals)
         
-        self.layout_content_sparksreactors.update()
+        self.layout_content_crystals.update()
 
-class AxlesHangarLayout(BoxLayout):
+class InventoryLayout(BoxLayout):
     ctx: ManicMinersContext
     
     header_text = f""
@@ -821,8 +821,8 @@ class AxlesHangarLayout(BoxLayout):
     vehicle_label: Label
     miner_label: Label
 
-    def update_axleshangar(self):
-        self.header_text = f"[i]Axle is in charge of all buildings, tools, and vehicles.[/i]\n\nAny items not listed below have not been limited by the randomiser."
+    def update_inventory(self):
+        self.header_text = f"[i]Axle is in charge of all buildings, tools, and vehicles. The vehicles are his favourite.[/i]\n\nAny items not listed below have not been limited by the randomiser."
         self.building_text = f""
         self.item_text = f""
         self.vehicle_text = f""
@@ -878,14 +878,14 @@ class AxlesHangarLayout(BoxLayout):
                 if count_toolstores == 0:
                     self.building_text += f"Tool Stores Available: [color={color_red}]0[/color]\n"
                 elif count_toolstores > 2:
-                    self.building_text += f"Tool Stores Available: [color={color_green}]Yes[/color]\n"
+                    self.building_text += f"Tool Stores Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.building_text += f"Tool Stores Available: [color={color_yellow}]{count_toolstores}[/color]\n"
                 count_teleportpads = all_items.count(848)
                 if count_teleportpads == 0:
                     self.building_text += f"Teleport Pads Available: [color={color_red}]0[/color]\n"
                 elif count_teleportpads > 2:
-                    self.building_text += f"Teleport Pads Available: [color={color_green}]Yes[/color]\n"
+                    self.building_text += f"Teleport Pads Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.building_text += f"Teleport Pads Available: [color={color_yellow}]{count_teleportpads}[/color]\n"
                 if 897 in all_items:
@@ -896,21 +896,21 @@ class AxlesHangarLayout(BoxLayout):
                 if count_canteens == 0:
                     self.building_text += f"Canteens Available: [color={color_red}]0[/color]\n"
                 elif count_canteens > 2:
-                    self.building_text += f"Canteens Available: [color={color_green}]Yes[/color]\n"
+                    self.building_text += f"Canteens Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.building_text += f"Canteens Available: [color={color_yellow}]{count_canteens}[/color]\n"
                 count_powerstations = all_items.count(846)
                 if count_powerstations == 0:
                     self.building_text += f"Power Stations Available: [color={color_red}]0[/color]\n"
                 elif count_powerstations > 2:
-                    self.building_text += f"Power Stations Available: [color={color_green}]Yes[/color]\n"
+                    self.building_text += f"Power Stations Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.building_text += f"Power Stations Available: [color={color_yellow}]{count_powerstations}[/color]\n"
                 count_supportstations = all_items.count(845)
                 if count_supportstations == 0:
                     self.building_text += f"Support Stations Available: [color={color_red}]0[/color]\n"
                 elif count_supportstations > 2:
-                    self.building_text += f"Support Stations Available: [color={color_green}]Yes[/color]\n"
+                    self.building_text += f"Support Stations Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.building_text += f"Support Stations Available: [color={color_yellow}]{count_supportstations}[/color]\n"
                 if 893 in all_items:
@@ -929,7 +929,7 @@ class AxlesHangarLayout(BoxLayout):
                 if count_mininglasers == 0:
                     self.building_text += f"Mining Lasers Available: [color={color_red}]0[/color]\n"
                 elif count_mininglasers > 2:
-                    self.building_text += f"Mining Lasers Available: [color={color_green}]Yes[/color]\n"
+                    self.building_text += f"Mining Lasers Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.building_text += f"Mining Lasers Available: [color={color_yellow}]{count_mininglasers}[/color]\n"
                 if 889 in all_items:
@@ -1000,84 +1000,84 @@ class AxlesHangarLayout(BoxLayout):
                 if count_hoverscouts == 0:
                     self.vehicle_text += f"Hover Scouts Available: [color={color_red}]0[/color]\n"
                 elif count_hoverscouts > 2:
-                    self.vehicle_text += f"Hover Scouts Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Hover Scouts Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.vehicle_text += f"Hover Scouts Available: [color={color_yellow}]{count_hoverscouts}[/color]\n"
                 count_tunnelscouts = all_items.count(842)
                 if count_tunnelscouts == 0:
                     self.vehicle_text += f"Tunnel Scouts Available: [color={color_red}]0[/color]\n"
                 elif count_tunnelscouts > 2:
-                    self.vehicle_text += f"Tunnel Scouts Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Tunnel Scouts Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.vehicle_text += f"Tunnel Scouts Available: [color={color_yellow}]{count_tunnelscouts}[/color]\n"
                 count_smalldiggers = all_items.count(841)
                 if count_smalldiggers == 0:
                     self.vehicle_text += f"Small Diggers Available: [color={color_red}]0[/color]\n"
                 elif count_smalldiggers > 2:
-                    self.vehicle_text += f"Small Diggers Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Small Diggers Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.vehicle_text += f"Small Diggers Available: [color={color_yellow}]{count_smalldiggers}[/color]\n"
                 count_stts = all_items.count(840)
                 if count_stts == 0:
                     self.vehicle_text += f"Small Transport Trucks Available: [color={color_red}]0[/color]\n"
                 elif count_stts > 2 and self.ctx.slot_data["no_infinite_stt"] == 0:
-                    self.vehicle_text += f"Small Transport Trucks Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Small Transport Trucks Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.vehicle_text += f"Small Transport Trucks Available: [color={color_yellow}]{count_stts}[/color]\n"
                 count_smlcs = all_items.count(839)
                 if count_smlcs == 0:
                     self.vehicle_text += f"Small Mobile Laser Cutters Available: [color={color_red}]0[/color]\n"
                 elif count_smlcs > 2:
-                    self.vehicle_text += f"Small Mobile Laser Cutters Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Small Mobile Laser Cutters Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.vehicle_text += f"Small Mobile Laser Cutters Available: [color={color_yellow}]{count_smlcs}[/color]\n"
                 count_rapidriders = all_items.count(838)
                 if count_rapidriders == 0:
                     self.vehicle_text += f"Rapid Riders Available: [color={color_red}]0[/color]\n"
                 elif count_rapidriders > 2:
-                    self.vehicle_text += f"Rapid Riders Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Rapid Riders Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.vehicle_text += f"Rapid Riders Available: [color={color_yellow}]{count_rapidriders}[/color]\n"
                 count_cargocarriers = all_items.count(837)
                 if count_cargocarriers == 0:
                     self.vehicle_text += f"Cargo Carriers Available: [color={color_red}]0[/color]\n"
                 elif count_cargocarriers > 2:
-                    self.vehicle_text += f"Cargo Carriers Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Cargo Carriers Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.vehicle_text += f"Cargo Carriers Available: [color={color_yellow}]{count_cargocarriers}[/color]\n"
                 count_loaderdozers = all_items.count(836)
                 if count_loaderdozers == 0:
                     self.vehicle_text += f"Loader Dozers Available: [color={color_red}]0[/color]\n"
                 elif count_loaderdozers > 2:
-                    self.vehicle_text += f"Loader Dozers Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Loader Dozers Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.vehicle_text += f"Loader Dozers Available: [color={color_yellow}]{count_loaderdozers}[/color]\n"
                 count_granitegrinders = all_items.count(835)
                 if count_granitegrinders == 0:
                     self.vehicle_text += f"Granite Grinders Available: [color={color_red}]0[/color]\n"
                 elif count_granitegrinders > 2:
-                    self.vehicle_text += f"Granite Grinders Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Granite Grinders Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.vehicle_text += f"Granite Grinders Available: [color={color_yellow}]{count_granitegrinders}[/color]\n"
                 count_lmlcs = all_items.count(834)
                 if count_lmlcs == 0:
                     self.vehicle_text += f"Large Mobile Laser Cutters Available: [color={color_red}]0[/color]\n"
                 elif count_lmlcs > 2:
-                    self.vehicle_text += f"Large Mobile Laser Cutters Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Large Mobile Laser Cutters Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.vehicle_text += f"Large Mobile Laser Cutters Available: [color={color_yellow}]{count_lmlcs}[/color]\n"
                 count_chromecrushers = all_items.count(833)
                 if count_chromecrushers == 0:
                     self.vehicle_text += f"Chrome Crushers Available: [color={color_red}]0[/color]\n"
                 elif count_chromecrushers > 2:
-                    self.vehicle_text += f"Chrome Crushers Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Chrome Crushers Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.vehicle_text += f"Chrome Crushers Available: [color={color_yellow}]{count_chromecrushers}[/color]\n"
                 count_tunneltransports = all_items.count(832)
                 if count_tunneltransports == 0:
                     self.vehicle_text += f"Tunnel Transports Available: [color={color_red}]0[/color]\n"
                 elif count_tunneltransports > 2:
-                    self.vehicle_text += f"Tunnel Transports Available: [color={color_green}]Yes[/color]\n"
+                    self.vehicle_text += f"Tunnel Transports Available: [color={color_green}]Unlimited[/color]\n"
                 else:
                     self.vehicle_text += f"Tunnel Transports Available: [color={color_yellow}]{count_tunneltransports}[/color]\n"
         if self.ctx.slot_data["miner_cap"]:
@@ -1188,20 +1188,20 @@ class AxlesHangarLayout(BoxLayout):
 
         self.ctx = ctx
         
-        self.update_axleshangar()
+        self.update_inventory()
         
         self.build_widgets()
 
     def update(self) -> None:
-        self.update_axleshangar()
+        self.update_inventory()
         self.build_widgets()
 
-class AxlesHangarContent(ScrollView):
+class InventoryContent(ScrollView):
     ctx: ManicMinersContext
 
     layout: BoxLayout
 
-    layout_axleshangar: AxlesHangarLayout
+    layout_inventory: InventoryLayout
 
     def __init__(self, ctx: ManicMinersContext) -> None:
         super().__init__()
@@ -1211,14 +1211,14 @@ class AxlesHangarContent(ScrollView):
         self.layout = BoxLayout(orientation="vertical", size_hint_y=None)
         self.layout.bind(minimum_height=self.layout.setter("height"))
 
-        self.layout_axleshangar = AxlesHangarLayout(ctx=self.ctx)
-        self.layout.add_widget(self.layout_axleshangar)
+        self.layout_inventory = InventoryLayout(ctx=self.ctx)
+        self.layout.add_widget(self.layout_inventory)
 
         self.add_widget(self.layout)
 
     def update(self, *_) -> None:
         try:
-            self.layout_axleshangar.update()
+            self.layout_inventory.update()
         except Exception:
             import traceback
 
@@ -1226,11 +1226,11 @@ class AxlesHangarContent(ScrollView):
                 f.write(traceback.format_exc() + "\n\n")
 
 
-class AxlesHangarTabLayout(BoxLayout):
+class InventoryTabLayout(BoxLayout):
     ctx: ManicMinersContext
 
     layout_content: BoxLayout
-    layout_content_axleshangar: AxlesHangarContent
+    layout_content_inventory: InventoryContent
 
     layout_not_connected: NotConnectedLayout
 
@@ -1260,7 +1260,7 @@ class AxlesHangarTabLayout(BoxLayout):
         self.layout_not_connected.hide()
         
         if not len(self.layout_content.children):
-            self.layout_content_axleshangar = AxlesHangarContent(ctx=self.ctx)
-            self.layout_content.add_widget(self.layout_content_axleshangar)
+            self.layout_content_inventory = InventoryContent(ctx=self.ctx)
+            self.layout_content.add_widget(self.layout_content_inventory)
         
-        self.layout_content_axleshangar.update()
+        self.layout_content_inventory.update()
