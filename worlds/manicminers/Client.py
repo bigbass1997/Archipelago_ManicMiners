@@ -43,7 +43,35 @@ class ManicMinersClientCommandProcessor(SuperCommandProcessor):
                 break
         if did_something == False:
             self.output(f"Nothing to do - you haven't unlocked Chief's Favourite Truck, or you're not connected to the slot.")
-
+    
+    async def _cmd_spend_crystals(self):
+        """Sell 100 accumulated crystals to boost the server's EnergyLink."""
+        if not hasattr(self.ctx,"slot_data"):
+            self.output(f"Connect to a slot before spending crystals!")
+            return
+        if platform.system() == "Windows":
+            lad = os.getenv('LOCALAPPDATA')
+            save_location = lad + "\\ManicMiners\\Saved\\SaveGames\\Profiles\\Archipelago.sav"
+        else:
+            save_dir = ManicMinersWorld.settings.manic_miners_save_dir
+            save_location = save_dir + "/Archipelago.sav"
+        path = pathlib.Path(save_location)
+        file_bytes = path.read_bytes()
+        currency_crystals_index = file_bytes.find(b"CurrencyCrystal")
+        if currency_crystals_index == -1:
+            self.output(f"No crystals found in save file!")
+            return
+        currency_crystals_bytes = file_bytes[currency_crystals_index+16:currency_crystals_index+19]
+        currency_crystals_int = int.from_bytes(currency_crystals_bytes,"little")
+        if currency_crystals_int < 100:
+            self.output(f"Not enough crystals to charge the EnergyLink!")
+            self.output(f"You have {currency_crystals_int} and can only send 100 at a time.")
+            return
+        currency_crystals_int -= 100
+        await self.ctx.send_msgs([{"cmd": "Set", "key": "EnergyLink0", "default": 0, "operations": [{"operation": "add", "value": 100}]}])
+        new_file_bytes = file_bytes[:currency_crystals_index+16] + currency_crystals_int.to_bytes(4,"little") + file_bytes[currency_crystals_index+20:]
+        path.write_bytes(new_file_bytes)
+        
 def cleanup_install(self):
     cleanup_saves(self)
     cleanup_levels(self)

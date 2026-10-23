@@ -97,6 +97,10 @@ This command will wipe all Archipelago data from the Manic Miners installation, 
 
 If playing with Chief's Favourite Truck enabled, this allows you to disable it temporarily if it's causing more hindrance than help (possible in certain monster- or lava-heavy levels). Run it again to re-enable. Must be run each time the client is restarted, i.e. truck is enabled by default at the start of each session. 
 
+#### `/spend_crystals`
+
+Manic Miners offers EnergyLink support in a one-way direction. By using this command, 100 of your collected crystals are depleted, and a boost of energy is sent to the multiworld. Manic Miners does not have support for receiving energy out of the multiworld. 
+
 ## Other notes and recommendations
 
 An in-game timer can be turned on in the game's Gameplay Settings, to help track Par Times. 
