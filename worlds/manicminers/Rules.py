@@ -33,6 +33,8 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     if world.options.level_selection_lrr_breathless:
         entrance_lrr_breathless = world.get_entrance("Start Level - LRR - Breathless")
         world.set_rule(entrance_lrr_breathless, (Has("Can Use Dynamite") | Has("Can Build Mining Laser") | Has("Can Build Small Mobile Laser Cutter") | Has("Can Build Small Digger") | Has("Can Build Granite Grinder")) & Has("Level Access: LRR - Breathless") & Has("Can Always Breathe"))
+        entrance_lrr_breathless_crystaltarget = world.get_entrance("Get Crystal Target - LRR - Breathless")
+        world.set_rule(entrance_lrr_breathless_crystaltarget, Has("Can Breathe"))
     if world.options.level_selection_lrr_dontpanic:
         entrance_lrr_dontpanic = world.get_entrance("Start Level - LRR - Don't Panic")
         world.set_rule(entrance_lrr_dontpanic, Has("Level Access: LRR - Don't Panic"))
