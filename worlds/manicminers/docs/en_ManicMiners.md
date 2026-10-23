@@ -99,7 +99,7 @@ If playing with Chief's Favourite Truck enabled, this allows you to disable it t
 
 #### `/spend_crystals`
 
-Manic Miners offers EnergyLink support in a one-way direction. By using this command, 100 of your collected crystals are depleted, and a boost of energy is sent to the multiworld. Manic Miners does not have support for receiving energy out of the multiworld. 
+Sparks has figured out how to send surplus power out into the galaxy! Manic Miners offers EnergyLink support in a one-way direction. By using this command, 100 of your 'total collected crystals' are vaporised, and a boost of energy (378MJ) is sent to the multiworld. Manic Miners does not have support for receiving energy out of the multiworld. 
 
 ## Other notes and recommendations
 
