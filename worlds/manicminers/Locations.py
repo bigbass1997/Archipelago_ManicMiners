@@ -707,6 +707,788 @@ LOCATION_NAME_TO_ID = {
 
 }
 
+LOCATION_GROUPS = {
+    "LRR - A Breath Of Fresh Air": {
+        "Clear: LRR - A Breath Of Fresh Air", 
+        "Bonus Clear 1: LRR - A Breath Of Fresh Air",
+        "Beat Par Time: LRR - A Breath Of Fresh Air",
+        "Crystal Target: LRR - A Breath Of Fresh Air"
+    },
+    "LRR - Air Raiders": {
+        "Clear: LRR - Air Raiders", 
+        "Bonus Clear 1: LRR - Air Raiders",
+        "Bonus Clear 2: LRR - Air Raiders",
+        "Bonus Clear 3: LRR - Air Raiders",
+        "Beat Par Time: LRR - Air Raiders",
+        "Crystal Target: LRR - Air Raiders"
+    },
+    "LRR - Back To Basics": {
+        "Clear: LRR - Back To Basics", 
+        "Bonus Clear 1: LRR - Back To Basics",
+        "Bonus Clear 2: LRR - Back To Basics",
+        "Bonus Clear 3: LRR - Back To Basics",
+        "Bonus Clear 4: LRR - Back To Basics",
+        "Beat Par Time: LRR - Back To Basics",
+        "Crystal Target: LRR - Back To Basics"
+    },
+    "LRR - Breathless": {
+        "Clear: LRR - Breathless", 
+        "Bonus Clear 1: LRR - Breathless",
+        "Bonus Clear 2: LRR - Breathless",
+        "Beat Par Time: LRR - Breathless",
+        "Crystal Target: LRR - Breathless"
+    },
+    "LRR - Don't Panic": {
+        "Clear: LRR - Don't Panic", 
+        "Bonus Clear 1: LRR - Don't Panic",
+        "Bonus Clear 2: LRR - Don't Panic",
+        "Bonus Clear 3: LRR - Don't Panic",
+        "Beat Par Time: LRR - Don't Panic",
+        "Crystal Target: LRR - Don't Panic"
+    },
+    "LRR - Driller Night": {
+        "Clear: LRR - Driller Night", 
+        "Bonus Clear 1: LRR - Driller Night",
+        "Beat Par Time: LRR - Driller Night",
+        "Crystal Target: LRR - Driller Night"
+    },
+    "LRR - Erode Works": {
+        "Clear: LRR - Erode Works", 
+        "Bonus Clear 1: LRR - Erode Works",
+        "Bonus Clear 2: LRR - Erode Works",
+        "Beat Par Time: LRR - Erode Works",
+        "Crystal Target: LRR - Erode Works"
+    },
+    "LRR - Explosive Action": {
+        "Clear: LRR - Explosive Action", 
+        "Bonus Clear 1: LRR - Explosive Action",
+        "Beat Par Time: LRR - Explosive Action",
+        "Crystal Target: LRR - Explosive Action"
+    },
+    "LRR - Fire And Water": {
+        "Clear: LRR - Fire And Water", 
+        "Bonus Clear 1: LRR - Fire And Water",
+        "Bonus Clear 2: LRR - Fire And Water",
+        "Bonus Clear 3: LRR - Fire And Water",
+        "Beat Par Time: LRR - Fire And Water",
+        "Crystal Target: LRR - Fire And Water"
+    },
+    "LRR - Frozen Frenzy": {
+        "Clear: LRR - Frozen Frenzy", 
+        "Bonus Clear 1: LRR - Frozen Frenzy",
+        "Bonus Clear 2: LRR - Frozen Frenzy",
+        "Beat Par Time: LRR - Frozen Frenzy",
+        "Crystal Target: LRR - Frozen Frenzy"
+    },
+    "LRR - Hot Stuff": {
+        "Clear: LRR - Hot Stuff", 
+        "Bonus Clear 1: LRR - Hot Stuff",
+        "Bonus Clear 2: LRR - Hot Stuff",
+        "Bonus Clear 3: LRR - Hot Stuff",
+        "Bonus Clear 4: LRR - Hot Stuff",
+        "Beat Par Time: LRR - Hot Stuff",
+        "Crystal Target: LRR - Hot Stuff"
+    },
+    "LRR - Ice Spy": {
+        "Clear: LRR - Ice Spy", 
+        "Bonus Clear 1: LRR - Ice Spy",
+        "Bonus Clear 2: LRR - Ice Spy",
+        "Bonus Clear 3: LRR - Ice Spy",
+        "Beat Par Time: LRR - Ice Spy",
+        "Crystal Target: LRR - Ice Spy"
+    },
+    "LRR - It's A Hold Up": {
+        "Clear: LRR - It's A Hold Up", 
+        "Bonus Clear 1: LRR - It's A Hold Up",
+        "Beat Par Time: LRR - It's A Hold Up",
+        "Crystal Target: LRR - It's A Hold Up"
+    },
+    "LRR - Lake Of Fire": {
+        "Clear: LRR - Lake Of Fire", 
+        "Bonus Clear 1: LRR - Lake Of Fire",
+        "Bonus Clear 2: LRR - Lake Of Fire",
+        "Bonus Clear 3: LRR - Lake Of Fire",
+        "Beat Par Time: LRR - Lake Of Fire",
+        "Crystal Target: LRR - Lake Of Fire"
+    },
+    "LRR - Lava Laughter": {
+        "Clear: LRR - Lava Laughter", 
+        "Bonus Clear 1: LRR - Lava Laughter",
+        "Bonus Clear 2: LRR - Lava Laughter",
+        "Bonus Clear 3: LRR - Lava Laughter",
+        "Beat Par Time: LRR - Lava Laughter",
+        "Crystal Target: LRR - Lava Laughter"
+    },
+    "LRR - Oresome": {
+        "Clear: LRR - Oresome", 
+        "Bonus Clear 1: LRR - Oresome",
+        "Bonus Clear 2: LRR - Oresome",
+        "Bonus Clear 3: LRR - Oresome",
+        "Beat Par Time: LRR - Oresome",
+        "Crystal Target: LRR - Oresome"
+    },
+    "LRR - Rock Hard": {
+        "Clear: LRR - Rock Hard", 
+        "Bonus Clear 1: LRR - Rock Hard",
+        "Bonus Clear 2: LRR - Rock Hard",
+        "Beat Par Time: LRR - Rock Hard",
+        "Crystal Target: LRR - Rock Hard"
+    },
+    "LRR - Rocky Horror": {
+        "Clear: LRR - Rocky Horror", 
+        "Bonus Clear 1: LRR - Rocky Horror",
+        "Bonus Clear 2: LRR - Rocky Horror",
+        "Bonus Clear 3: LRR - Rocky Horror",
+        "Bonus Clear 4: LRR - Rocky Horror",
+        "Beat Par Time: LRR - Rocky Horror",
+        "Crystal Target: LRR - Rocky Horror"
+    },
+    "LRR - Rubble Trouble": {
+        "Clear: LRR - Rubble Trouble", 
+        "Bonus Clear 1: LRR - Rubble Trouble",
+        "Beat Par Time: LRR - Rubble Trouble",
+        "Crystal Target: LRR - Rubble Trouble"
+    },
+    "LRR - Run The Gauntlet": {
+        "Clear: LRR - Run The Gauntlet", 
+        "Bonus Clear 1: LRR - Run The Gauntlet",
+        "Beat Par Time: LRR - Run The Gauntlet",
+        "Crystal Target: LRR - Run The Gauntlet"
+    },
+    "LRR - Search And Rescue": {
+        "Clear: LRR - Search And Rescue", 
+        "Bonus Clear 1: LRR - Search And Rescue",
+        "Bonus Clear 2: LRR - Search And Rescue",
+        "Beat Par Time: LRR - Search And Rescue",
+        "Crystal Target: LRR - Search And Rescue"
+    },
+    "LRR - Split Down The Middle": {
+        "Clear: LRR - Split Down The Middle", 
+        "Bonus Clear 1: LRR - Split Down The Middle",
+        "Bonus Clear 2: LRR - Split Down The Middle",
+        "Beat Par Time: LRR - Split Down The Middle",
+        "Crystal Target: LRR - Split Down The Middle"
+    },
+    "LRR - The Path To Power": {
+        "Clear: LRR - The Path To Power", 
+        "Bonus Clear 1: LRR - The Path To Power",
+        "Beat Par Time: LRR - The Path To Power",
+        "Crystal Target: LRR - The Path To Power"
+    },
+    "LRR - Water Lot Of Fun": {
+        "Clear: LRR - Water Lot Of Fun", 
+        "Bonus Clear 1: LRR - Water Lot Of Fun",
+        "Bonus Clear 2: LRR - Water Lot Of Fun",
+        "Beat Par Time: LRR - Water Lot Of Fun",
+        "Crystal Target: LRR - Water Lot Of Fun"
+    },
+    "LRR - Water Works": {
+        "Clear: LRR - Water Works", 
+        "Bonus Clear 1: LRR - Water Works",
+        "Bonus Clear 2: LRR - Water Works",
+        "Beat Par Time: LRR - Water Works",
+        "Crystal Target: LRR - Water Works"
+    },
+
+    "LRRR - A Breath Of Fresh Air": {
+        "Clear: LRRR - A Breath Of Fresh Air", 
+        "Bonus Clear 1: LRRR - A Breath Of Fresh Air",
+        "Beat Par Time: LRRR - A Breath Of Fresh Air",
+        "Crystal Target: LRRR - A Breath Of Fresh Air"
+    },
+    "LRRR - Air Raiders": {
+        "Clear: LRRR - Air Raiders", 
+        "Bonus Clear 1: LRRR - Air Raiders",
+        "Bonus Clear 2: LRRR - Air Raiders",
+        "Bonus Clear 3: LRRR - Air Raiders",
+        "Beat Par Time: LRRR - Air Raiders",
+        "Crystal Target: LRRR - Air Raiders"
+    },
+    "LRRR - Back To Basics": {
+        "Clear: LRRR - Back To Basics", 
+        "Bonus Clear 1: LRRR - Back To Basics",
+        "Bonus Clear 2: LRRR - Back To Basics",
+        "Bonus Clear 3: LRRR - Back To Basics",
+        "Bonus Clear 4: LRRR - Back To Basics",
+        "Beat Par Time: LRRR - Back To Basics",
+        "Crystal Target: LRRR - Back To Basics"
+    },
+    "LRRR - Breathless": {
+        "Clear: LRRR - Breathless", 
+        "Bonus Clear 1: LRRR - Breathless",
+        "Bonus Clear 2: LRRR - Breathless",
+        "Beat Par Time: LRRR - Breathless",
+        "Crystal Target: LRRR - Breathless"
+    },
+    "LRRR - Don't Panic": {
+        "Clear: LRRR - Don't Panic", 
+        "Bonus Clear 1: LRRR - Don't Panic",
+        "Bonus Clear 2: LRRR - Don't Panic",
+        "Bonus Clear 3: LRRR - Don't Panic",
+        "Beat Par Time: LRRR - Don't Panic",
+        "Crystal Target: LRRR - Don't Panic"
+    },
+    "LRRR - Driller Night": {
+        "Clear: LRRR - Driller Night", 
+        "Bonus Clear 1: LRRR - Driller Night",
+        "Beat Par Time: LRRR - Driller Night",
+        "Crystal Target: LRRR - Driller Night"
+    },
+    "LRRR - Erode Works": {
+        "Clear: LRRR - Erode Works", 
+        "Bonus Clear 1: LRRR - Erode Works",
+        "Bonus Clear 2: LRRR - Erode Works",
+        "Beat Par Time: LRRR - Erode Works",
+        "Crystal Target: LRRR - Erode Works"
+    },
+    "LRRR - Explosive Action": {
+        "Clear: LRRR - Explosive Action", 
+        "Bonus Clear 1: LRRR - Explosive Action",
+        "Beat Par Time: LRRR - Explosive Action",
+        "Crystal Target: LRRR - Explosive Action"
+    },
+    "LRRR - Fire And Water": {
+        "Clear: LRRR - Fire And Water", 
+        "Bonus Clear 1: LRRR - Fire And Water",
+        "Bonus Clear 2: LRRR - Fire And Water",
+        "Bonus Clear 3: LRRR - Fire And Water",
+        "Beat Par Time: LRRR - Fire And Water",
+        "Crystal Target: LRRR - Fire And Water"
+    },
+    "LRRR - Frozen Frenzy": {
+        "Clear: LRRR - Frozen Frenzy", 
+        "Bonus Clear 1: LRRR - Frozen Frenzy",
+        "Bonus Clear 2: LRRR - Frozen Frenzy",
+        "Beat Par Time: LRRR - Frozen Frenzy",
+        "Crystal Target: LRRR - Frozen Frenzy"
+    },
+    "LRRR - Hot Stuff": {
+        "Clear: LRRR - Hot Stuff", 
+        "Bonus Clear 1: LRRR - Hot Stuff",
+        "Bonus Clear 2: LRRR - Hot Stuff",
+        "Bonus Clear 3: LRRR - Hot Stuff",
+        "Bonus Clear 4: LRRR - Hot Stuff",
+        "Beat Par Time: LRRR - Hot Stuff",
+        "Crystal Target: LRRR - Hot Stuff"
+    },
+    "LRRR - Ice Spy": {
+        "Clear: LRRR - Ice Spy", 
+        "Bonus Clear 1: LRRR - Ice Spy",
+        "Bonus Clear 2: LRRR - Ice Spy",
+        "Bonus Clear 3: LRRR - Ice Spy",
+        "Beat Par Time: LRRR - Ice Spy",
+        "Crystal Target: LRRR - Ice Spy"
+    },
+    "LRRR - It's A Hold Up": {
+        "Clear: LRRR - It's A Hold Up", 
+        "Bonus Clear 1: LRRR - It's A Hold Up",
+        "Beat Par Time: LRRR - It's A Hold Up",
+        "Crystal Target: LRRR - It's A Hold Up"
+    },
+    "LRRR - Lake Of Fire": {
+        "Clear: LRRR - Lake Of Fire", 
+        "Bonus Clear 1: LRRR - Lake Of Fire",
+        "Bonus Clear 2: LRRR - Lake Of Fire",
+        "Bonus Clear 3: LRRR - Lake Of Fire",
+        "Beat Par Time: LRRR - Lake Of Fire",
+        "Crystal Target: LRRR - Lake Of Fire"
+    },
+    "LRRR - Lava Laughter": {
+        "Clear: LRRR - Lava Laughter", 
+        "Bonus Clear 1: LRRR - Lava Laughter",
+        "Bonus Clear 2: LRRR - Lava Laughter",
+        "Bonus Clear 3: LRRR - Lava Laughter",
+        "Beat Par Time: LRRR - Lava Laughter",
+        "Crystal Target: LRRR - Lava Laughter"
+    },
+    "LRRR - Oresome": {
+        "Clear: LRRR - Oresome", 
+        "Bonus Clear 1: LRRR - Oresome",
+        "Bonus Clear 2: LRRR - Oresome",
+        "Bonus Clear 3: LRRR - Oresome",
+        "Beat Par Time: LRRR - Oresome",
+        "Crystal Target: LRRR - Oresome"
+    },
+    "LRRR - Rock Hard": {
+        "Clear: LRRR - Rock Hard", 
+        "Bonus Clear 1: LRRR - Rock Hard",
+        "Bonus Clear 2: LRRR - Rock Hard",
+        "Beat Par Time: LRRR - Rock Hard",
+        "Crystal Target: LRRR - Rock Hard"
+    },
+    "LRRR - Rocky Horror": {
+        "Clear: LRRR - Rocky Horror", 
+        "Bonus Clear 1: LRRR - Rocky Horror",
+        "Bonus Clear 2: LRRR - Rocky Horror",
+        "Bonus Clear 3: LRRR - Rocky Horror",
+        "Bonus Clear 4: LRRR - Rocky Horror",
+        "Beat Par Time: LRRR - Rocky Horror",
+        "Crystal Target: LRRR - Rocky Horror"
+    },
+    "LRRR - Rubble Trouble": {
+        "Clear: LRRR - Rubble Trouble", 
+        "Bonus Clear 1: LRRR - Rubble Trouble",
+        "Beat Par Time: LRRR - Rubble Trouble",
+        "Crystal Target: LRRR - Rubble Trouble"
+    },
+    "LRRR - Run The Gauntlet": {
+        "Clear: LRRR - Run The Gauntlet", 
+        "Bonus Clear 1: LRRR - Run The Gauntlet",
+        "Beat Par Time: LRRR - Run The Gauntlet",
+        "Crystal Target: LRRR - Run The Gauntlet"
+    },
+    "LRRR - Search And Rescue": {
+        "Clear: LRRR - Search And Rescue", 
+        "Bonus Clear 1: LRRR - Search And Rescue",
+        "Bonus Clear 2: LRRR - Search And Rescue",
+        "Beat Par Time: LRRR - Search And Rescue",
+        "Crystal Target: LRRR - Search And Rescue"
+    },
+    "LRRR - Split Down The Middle": {
+        "Clear: LRRR - Split Down The Middle", 
+        "Bonus Clear 1: LRRR - Split Down The Middle",
+        "Bonus Clear 2: LRRR - Split Down The Middle",
+        "Beat Par Time: LRRR - Split Down The Middle",
+        "Crystal Target: LRRR - Split Down The Middle"
+    },
+    "LRRR - The Path To Power": {
+        "Clear: LRRR - The Path To Power", 
+        "Bonus Clear 1: LRRR - The Path To Power",
+        "Beat Par Time: LRRR - The Path To Power",
+        "Crystal Target: LRRR - The Path To Power"
+    },
+    "LRRR - Water Lot Of Fun": {
+        "Clear: LRRR - Water Lot Of Fun", 
+        "Bonus Clear 1: LRRR - Water Lot Of Fun",
+        "Bonus Clear 2: LRRR - Water Lot Of Fun",
+        "Beat Par Time: LRRR - Water Lot Of Fun",
+        "Crystal Target: LRRR - Water Lot Of Fun"
+    },
+    "LRRR - Water Works": {
+        "Clear: LRRR - Water Works", 
+        "Bonus Clear 1: LRRR - Water Works",
+        "Bonus Clear 2: LRRR - Water Works",
+        "Beat Par Time: LRRR - Water Works",
+        "Crystal Target: LRRR - Water Works"
+    },
+
+    "LRRC - A Breath Of Fresh Air": {
+        "Clear: LRRC - A Breath Of Fresh Air", 
+        "Bonus Clear 1: LRRC - A Breath Of Fresh Air",
+        "Beat Par Time: LRRC - A Breath Of Fresh Air",
+        "Crystal Target: LRRC - A Breath Of Fresh Air"
+    },
+    "LRRC - Air Raiders": {
+        "Clear: LRRC - Air Raiders", 
+        "Bonus Clear 1: LRRC - Air Raiders",
+        "Bonus Clear 2: LRRC - Air Raiders",
+        "Bonus Clear 3: LRRC - Air Raiders",
+        "Beat Par Time: LRRC - Air Raiders",
+        "Crystal Target: LRRC - Air Raiders"
+    },
+    "LRRC - Back To Basics": {
+        "Clear: LRRC - Back To Basics", 
+        "Bonus Clear 1: LRRC - Back To Basics",
+        "Bonus Clear 2: LRRC - Back To Basics",
+        "Bonus Clear 3: LRRC - Back To Basics",
+        "Bonus Clear 4: LRRC - Back To Basics",
+        "Beat Par Time: LRRC - Back To Basics",
+        "Crystal Target: LRRC - Back To Basics"
+    },
+    "LRRC - Breathless": {
+        "Clear: LRRC - Breathless", 
+        "Bonus Clear 1: LRRC - Breathless",
+        "Bonus Clear 2: LRRC - Breathless",
+        "Beat Par Time: LRRC - Breathless",
+        "Crystal Target: LRRC - Breathless"
+    },
+    "LRRC - Don't Panic": {
+        "Clear: LRRC - Don't Panic", 
+        "Bonus Clear 1: LRRC - Don't Panic",
+        "Bonus Clear 2: LRRC - Don't Panic",
+        "Bonus Clear 3: LRRC - Don't Panic",
+        "Beat Par Time: LRRC - Don't Panic",
+        "Crystal Target: LRRC - Don't Panic"
+    },
+    "LRRC - Driller Night": {
+        "Clear: LRRC - Driller Night", 
+        "Bonus Clear 1: LRRC - Driller Night",
+        "Beat Par Time: LRRC - Driller Night",
+        "Crystal Target: LRRC - Driller Night"
+    },
+    "LRRC - Erode Works": {
+        "Clear: LRRC - Erode Works", 
+        "Bonus Clear 1: LRRC - Erode Works",
+        "Bonus Clear 2: LRRC - Erode Works",
+        "Beat Par Time: LRRC - Erode Works",
+        "Crystal Target: LRRC - Erode Works"
+    },
+    "LRRC - Explosive Action": {
+        "Clear: LRRC - Explosive Action", 
+        "Bonus Clear 1: LRRC - Explosive Action",
+        "Beat Par Time: LRRC - Explosive Action",
+        "Crystal Target: LRRC - Explosive Action"
+    },
+    "LRRC - Fire And Water": {
+        "Clear: LRRC - Fire And Water", 
+        "Bonus Clear 1: LRRC - Fire And Water",
+        "Bonus Clear 2: LRRC - Fire And Water",
+        "Bonus Clear 3: LRRC - Fire And Water",
+        "Beat Par Time: LRRC - Fire And Water",
+        "Crystal Target: LRRC - Fire And Water"
+    },
+    "LRRC - Frozen Frenzy": {
+        "Clear: LRRC - Frozen Frenzy", 
+        "Bonus Clear 1: LRRC - Frozen Frenzy",
+        "Bonus Clear 2: LRRC - Frozen Frenzy",
+        "Beat Par Time: LRRC - Frozen Frenzy",
+        "Crystal Target: LRRC - Frozen Frenzy"
+    },
+    "LRRC - Hot Stuff": {
+        "Clear: LRRC - Hot Stuff", 
+        "Bonus Clear 1: LRRC - Hot Stuff",
+        "Bonus Clear 2: LRRC - Hot Stuff",
+        "Bonus Clear 3: LRRC - Hot Stuff",
+        "Bonus Clear 4: LRRC - Hot Stuff",
+        "Beat Par Time: LRRC - Hot Stuff",
+        "Crystal Target: LRRC - Hot Stuff"
+    },
+    "LRRC - Ice Spy": {
+        "Clear: LRRC - Ice Spy", 
+        "Bonus Clear 1: LRRC - Ice Spy",
+        "Bonus Clear 2: LRRC - Ice Spy",
+        "Bonus Clear 3: LRRC - Ice Spy",
+        "Beat Par Time: LRRC - Ice Spy",
+        "Crystal Target: LRRC - Ice Spy"
+    },
+    "LRRC - It's A Hold Up": {
+        "Clear: LRRC - It's A Hold Up", 
+        "Bonus Clear 1: LRRC - It's A Hold Up",
+        "Beat Par Time: LRRC - It's A Hold Up",
+        "Crystal Target: LRRC - It's A Hold Up"
+    },
+    "LRRC - Lake Of Fire": {
+        "Clear: LRRC - Lake Of Fire", 
+        "Bonus Clear 1: LRRC - Lake Of Fire",
+        "Bonus Clear 2: LRRC - Lake Of Fire",
+        "Bonus Clear 3: LRRC - Lake Of Fire",
+        "Beat Par Time: LRRC - Lake Of Fire",
+        "Crystal Target: LRRC - Lake Of Fire"
+    },
+    "LRRC - Lava Laughter": {
+        "Clear: LRRC - Lava Laughter", 
+        "Bonus Clear 1: LRRC - Lava Laughter",
+        "Bonus Clear 2: LRRC - Lava Laughter",
+        "Bonus Clear 3: LRRC - Lava Laughter",
+        "Beat Par Time: LRRC - Lava Laughter",
+        "Crystal Target: LRRC - Lava Laughter"
+    },
+    "LRRC - Oresome": {
+        "Clear: LRRC - Oresome", 
+        "Bonus Clear 1: LRRC - Oresome",
+        "Bonus Clear 2: LRRC - Oresome",
+        "Bonus Clear 3: LRRC - Oresome",
+        "Beat Par Time: LRRC - Oresome",
+        "Crystal Target: LRRC - Oresome"
+    },
+    "LRRC - Rock Hard": {
+        "Clear: LRRC - Rock Hard", 
+        "Bonus Clear 1: LRRC - Rock Hard",
+        "Bonus Clear 2: LRRC - Rock Hard",
+        "Beat Par Time: LRRC - Rock Hard",
+        "Crystal Target: LRRC - Rock Hard"
+    },
+    "LRRC - Rocky Horror": {
+        "Clear: LRRC - Rocky Horror", 
+        "Bonus Clear 1: LRRC - Rocky Horror",
+        "Bonus Clear 2: LRRC - Rocky Horror",
+        "Bonus Clear 3: LRRC - Rocky Horror",
+        "Bonus Clear 4: LRRC - Rocky Horror",
+        "Beat Par Time: LRRC - Rocky Horror",
+        "Crystal Target: LRRC - Rocky Horror"
+    },
+    "LRRC - Rubble Trouble": {
+        "Clear: LRRC - Rubble Trouble", 
+        "Bonus Clear 1: LRRC - Rubble Trouble",
+        "Beat Par Time: LRRC - Rubble Trouble",
+        "Crystal Target: LRRC - Rubble Trouble"
+    },
+    "LRRC - Run The Gauntlet": {
+        "Clear: LRRC - Run The Gauntlet", 
+        "Bonus Clear 1: LRRC - Run The Gauntlet",
+        "Beat Par Time: LRRC - Run The Gauntlet",
+        "Crystal Target: LRRC - Run The Gauntlet"
+    },
+    "LRRC - Search And Rescue": {
+        "Clear: LRRC - Search And Rescue", 
+        "Bonus Clear 1: LRRC - Search And Rescue",
+        "Bonus Clear 2: LRRC - Search And Rescue",
+        "Beat Par Time: LRRC - Search And Rescue",
+        "Crystal Target: LRRC - Search And Rescue"
+    },
+    "LRRC - Split Down The Middle": {
+        "Clear: LRRC - Split Down The Middle", 
+        "Bonus Clear 1: LRRC - Split Down The Middle",
+        "Bonus Clear 2: LRRC - Split Down The Middle",
+        "Beat Par Time: LRRC - Split Down The Middle",
+        "Crystal Target: LRRC - Split Down The Middle"
+    },
+    "LRRC - The Path To Power": {
+        "Clear: LRRC - The Path To Power", 
+        "Bonus Clear 1: LRRC - The Path To Power",
+        "Beat Par Time: LRRC - The Path To Power",
+        "Crystal Target: LRRC - The Path To Power"
+    },
+    "LRRC - Water Lot Of Fun": {
+        "Clear: LRRC - Water Lot Of Fun", 
+        "Bonus Clear 1: LRRC - Water Lot Of Fun",
+        "Bonus Clear 2: LRRC - Water Lot Of Fun",
+        "Beat Par Time: LRRC - Water Lot Of Fun",
+        "Crystal Target: LRRC - Water Lot Of Fun"
+    },
+    "LRRC - Water Works": {
+        "Clear: LRRC - Water Works", 
+        "Bonus Clear 1: LRRC - Water Works",
+        "Bonus Clear 2: LRRC - Water Works",
+        "Beat Par Time: LRRC - Water Works",
+        "Crystal Target: LRRC - Water Works"
+    },
+
+    "BAZ - A Breath Of Fresh Air": {
+        "Clear: BAZ - A Breath Of Fresh Air", 
+        "Bonus Clear 1: BAZ - A Breath Of Fresh Air",
+        "Beat Par Time: BAZ - A Breath Of Fresh Air",
+        "Crystal Target: BAZ - A Breath Of Fresh Air"
+    },
+    "BAZ - Air Raiders": {
+        "Clear: BAZ - Air Raiders", 
+        "Bonus Clear 1: BAZ - Air Raiders",
+        "Bonus Clear 2: BAZ - Air Raiders",
+        "Bonus Clear 3: BAZ - Air Raiders",
+        "Beat Par Time: BAZ - Air Raiders",
+        "Crystal Target: BAZ - Air Raiders"
+    },
+    "BAZ - Back To Basics": {
+        "Clear: BAZ - Back To Basics", 
+        "Bonus Clear 1: BAZ - Back To Basics",
+        "Bonus Clear 2: BAZ - Back To Basics",
+        "Bonus Clear 3: BAZ - Back To Basics",
+        "Bonus Clear 4: BAZ - Back To Basics",
+        "Beat Par Time: BAZ - Back To Basics",
+        "Crystal Target: BAZ - Back To Basics"
+    },
+    "BAZ - Breathless": {
+        "Clear: BAZ - Breathless", 
+        "Bonus Clear 1: BAZ - Breathless",
+        "Bonus Clear 2: BAZ - Breathless",
+        "Beat Par Time: BAZ - Breathless",
+        "Crystal Target: BAZ - Breathless"
+    },
+    "BAZ - Cold Comfort": {
+        "Clear: BAZ - Cold Comfort", 
+        "Bonus Clear 1: BAZ - Cold Comfort",
+        "Bonus Clear 2: BAZ - Cold Comfort",
+        "Beat Par Time: BAZ - Cold Comfort",
+        "Crystal Target: BAZ - Cold Comfort"
+    },
+    "BAZ - Don't Panic": {
+        "Clear: BAZ - Don't Panic", 
+        "Bonus Clear 1: BAZ - Don't Panic",
+        "Bonus Clear 2: BAZ - Don't Panic",
+        "Bonus Clear 3: BAZ - Don't Panic",
+        "Beat Par Time: BAZ - Don't Panic",
+        "Crystal Target: BAZ - Don't Panic"
+    },
+    "BAZ - Down In The Dirt": {
+        "Clear: BAZ - Down In The Dirt", 
+        "Bonus Clear 1: BAZ - Down In The Dirt",
+        "Bonus Clear 2: BAZ - Down In The Dirt",
+        "Beat Par Time: BAZ - Down In The Dirt",
+        "Crystal Target: BAZ - Down In The Dirt"
+    },
+    "BAZ - Driller Night": {
+        "Clear: BAZ - Driller Night", 
+        "Bonus Clear 1: BAZ - Driller Night",
+        "Beat Par Time: BAZ - Driller Night",
+        "Crystal Target: BAZ - Driller Night"
+    },
+    "BAZ - Erode Works": {
+        "Clear: BAZ - Erode Works", 
+        "Bonus Clear 1: BAZ - Erode Works",
+        "Bonus Clear 2: BAZ - Erode Works",
+        "Beat Par Time: BAZ - Erode Works",
+        "Crystal Target: BAZ - Erode Works"
+    },
+    "BAZ - Explosive Action": {
+        "Clear: BAZ - Explosive Action", 
+        "Bonus Clear 1: BAZ - Explosive Action",
+        "Beat Par Time: BAZ - Explosive Action",
+        "Crystal Target: BAZ - Explosive Action"
+    },
+    "BAZ - Fire And Water": {
+        "Clear: BAZ - Fire And Water", 
+        "Bonus Clear 1: BAZ - Fire And Water",
+        "Bonus Clear 2: BAZ - Fire And Water",
+        "Bonus Clear 3: BAZ - Fire And Water",
+        "Beat Par Time: BAZ - Fire And Water",
+        "Crystal Target: BAZ - Fire And Water"
+    },
+    "BAZ - Frozen Frenzy": {
+        "Clear: BAZ - Frozen Frenzy", 
+        "Bonus Clear 1: BAZ - Frozen Frenzy",
+        "Bonus Clear 2: BAZ - Frozen Frenzy",
+        "Beat Par Time: BAZ - Frozen Frenzy",
+        "Crystal Target: BAZ - Frozen Frenzy"
+    },
+    "BAZ - Hot Stuff": {
+        "Clear: BAZ - Hot Stuff", 
+        "Bonus Clear 1: BAZ - Hot Stuff",
+        "Bonus Clear 2: BAZ - Hot Stuff",
+        "Bonus Clear 3: BAZ - Hot Stuff",
+        "Bonus Clear 4: BAZ - Hot Stuff",
+        "Beat Par Time: BAZ - Hot Stuff",
+        "Crystal Target: BAZ - Hot Stuff"
+    },
+    "BAZ - Ice Spy": {
+        "Clear: BAZ - Ice Spy", 
+        "Bonus Clear 1: BAZ - Ice Spy",
+        "Bonus Clear 2: BAZ - Ice Spy",
+        "Bonus Clear 3: BAZ - Ice Spy",
+        "Beat Par Time: BAZ - Ice Spy",
+        "Crystal Target: BAZ - Ice Spy"
+    },
+    "BAZ - It's A Hold Up": {
+        "Clear: BAZ - It's A Hold Up", 
+        "Bonus Clear 1: BAZ - It's A Hold Up",
+        "Beat Par Time: BAZ - It's A Hold Up",
+        "Crystal Target: BAZ - It's A Hold Up"
+    },
+    "BAZ - Lake Of Fire": {
+        "Clear: BAZ - Lake Of Fire", 
+        "Bonus Clear 1: BAZ - Lake Of Fire",
+        "Bonus Clear 2: BAZ - Lake Of Fire",
+        "Bonus Clear 3: BAZ - Lake Of Fire",
+        "Beat Par Time: BAZ - Lake Of Fire",
+        "Crystal Target: BAZ - Lake Of Fire"
+    },
+    "BAZ - Lava Laughter": {
+        "Clear: BAZ - Lava Laughter", 
+        "Bonus Clear 1: BAZ - Lava Laughter",
+        "Bonus Clear 2: BAZ - Lava Laughter",
+        "Bonus Clear 3: BAZ - Lava Laughter",
+        "Beat Par Time: BAZ - Lava Laughter",
+        "Crystal Target: BAZ - Lava Laughter"
+    },
+    "BAZ - Mine Over Manner": {
+        "Clear: BAZ - Mine Over Manner", 
+        "Bonus Clear 1: BAZ - Mine Over Manner",
+        "Beat Par Time: BAZ - Mine Over Manner",
+        "Crystal Target: BAZ - Mine Over Manner"
+    },
+    "BAZ - Molten Meltdown": {
+        "Clear: BAZ - Molten Meltdown", 
+        "Bonus Clear 1: BAZ - Molten Meltdown",
+        "Beat Par Time: BAZ - Molten Meltdown",
+        "Crystal Target: BAZ - Molten Meltdown"
+    },
+    "BAZ - Oresome": {
+        "Clear: BAZ - Oresome", 
+        "Bonus Clear 1: BAZ - Oresome",
+        "Bonus Clear 2: BAZ - Oresome",
+        "Bonus Clear 3: BAZ - Oresome",
+        "Beat Par Time: BAZ - Oresome",
+        "Crystal Target: BAZ - Oresome"
+    },
+    "BAZ - Recruitment": {
+        "Clear: BAZ - Recruitment", 
+        "Bonus Clear 1: BAZ - Recruitment",
+        "Beat Par Time: BAZ - Recruitment",
+        "Crystal Target: BAZ - Recruitment"
+    },
+    "BAZ - Rock Hard": {
+        "Clear: BAZ - Rock Hard", 
+        "Bonus Clear 1: BAZ - Rock Hard",
+        "Bonus Clear 2: BAZ - Rock Hard",
+        "Beat Par Time: BAZ - Rock Hard",
+        "Crystal Target: BAZ - Rock Hard"
+    },
+    "BAZ - Rocky Horror": {
+        "Clear: BAZ - Rocky Horror", 
+        "Bonus Clear 1: BAZ - Rocky Horror",
+        "Bonus Clear 2: BAZ - Rocky Horror",
+        "Bonus Clear 3: BAZ - Rocky Horror",
+        "Bonus Clear 4: BAZ - Rocky Horror",
+        "Beat Par Time: BAZ - Rocky Horror",
+        "Crystal Target: BAZ - Rocky Horror"
+    },
+    "BAZ - Rubble Trouble": {
+        "Clear: BAZ - Rubble Trouble", 
+        "Bonus Clear 1: BAZ - Rubble Trouble",
+        "Beat Par Time: BAZ - Rubble Trouble",
+        "Crystal Target: BAZ - Rubble Trouble"
+    },
+    "BAZ - Run The Gauntlet": {
+        "Clear: BAZ - Run The Gauntlet", 
+        "Bonus Clear 1: BAZ - Run The Gauntlet",
+        "Beat Par Time: BAZ - Run The Gauntlet",
+        "Crystal Target: BAZ - Run The Gauntlet"
+    },
+    "BAZ - Seamless": {
+        "Clear: BAZ - Seamless", 
+        "Bonus Clear 1: BAZ - Seamless",
+        "Bonus Clear 2: BAZ - Seamless",
+        "Beat Par Time: BAZ - Seamless",
+        "Crystal Target: BAZ - Seamless"
+    },
+    "BAZ - Search And Rescue": {
+        "Clear: BAZ - Search And Rescue", 
+        "Bonus Clear 1: BAZ - Search And Rescue",
+        "Bonus Clear 2: BAZ - Search And Rescue",
+        "Beat Par Time: BAZ - Search And Rescue",
+        "Crystal Target: BAZ - Search And Rescue"
+    },
+    "BAZ - Slimey Simple": {
+        "Clear: BAZ - Slimey Simple", 
+        "Bonus Clear 1: BAZ - Slimey Simple",
+        "Bonus Clear 2: BAZ - Slimey Simple",
+        "Beat Par Time: BAZ - Slimey Simple",
+        "Crystal Target: BAZ - Slimey Simple"
+    },
+    "BAZ - Split Down The Middle": {
+        "Clear: BAZ - Split Down The Middle", 
+        "Bonus Clear 1: BAZ - Split Down The Middle",
+        "Bonus Clear 2: BAZ - Split Down The Middle",
+        "Beat Par Time: BAZ - Split Down The Middle",
+        "Crystal Target: BAZ - Split Down The Middle"
+    },
+    "BAZ - The Hard Rock Life": {
+        "Clear: BAZ - The Hard Rock Life", 
+        "Bonus Clear 1: BAZ - The Hard Rock Life",
+        "Beat Par Time: BAZ - The Hard Rock Life",
+        "Crystal Target: BAZ - The Hard Rock Life"
+    },
+    "BAZ - The Path To Power": {
+        "Clear: BAZ - The Path To Power", 
+        "Bonus Clear 1: BAZ - The Path To Power",
+        "Beat Par Time: BAZ - The Path To Power",
+        "Crystal Target: BAZ - The Path To Power"
+    },
+    "BAZ - Water Lot Of Fun": {
+        "Clear: BAZ - Water Lot Of Fun", 
+        "Bonus Clear 1: BAZ - Water Lot Of Fun",
+        "Bonus Clear 2: BAZ - Water Lot Of Fun",
+        "Beat Par Time: BAZ - Water Lot Of Fun",
+        "Crystal Target: BAZ - Water Lot Of Fun"
+    },
+    "BAZ - Water Works": {
+        "Clear: BAZ - Water Works", 
+        "Bonus Clear 1: BAZ - Water Works",
+        "Bonus Clear 2: BAZ - Water Works",
+        "Beat Par Time: BAZ - Water Works",
+        "Crystal Target: BAZ - Water Works"
+    }
+}
+
 TARGET_CLEAR_TIME_EASY = {
     "LRR - A Breath Of Fresh Air": 900, # 15:00
     "LRR - Air Raiders": 2400, # 40:00
