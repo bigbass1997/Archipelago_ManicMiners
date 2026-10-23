@@ -68,7 +68,7 @@ class ManicMinersClientCommandProcessor(SuperCommandProcessor):
             self.output(f"You have {currency_crystals_int} and can only send 100 at a time.")
             return
         currency_crystals_int -= 100
-        await self.ctx.send_msgs([{"cmd": "Set", "key": "EnergyLink0", "default": 0, "operations": [{"operation": "add", "value": 100}]}])
+        await self.ctx.send_msgs([{"cmd": "Set", "key": "EnergyLink0", "default": 0, "operations": [{"operation": "add", "value": 378000000}]}])
         new_file_bytes = file_bytes[:currency_crystals_index+16] + currency_crystals_int.to_bytes(4,"little") + file_bytes[currency_crystals_index+20:]
         path.write_bytes(new_file_bytes)
         
