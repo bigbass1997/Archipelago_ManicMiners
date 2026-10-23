@@ -380,7 +380,7 @@ class DocsMapLayout(BoxLayout):
             markup=True,
             font_size="20dp",
             size_hint_y=None,
-            height="76dp",
+            height="96dp",
             halign="left",
             valign="top",
         )
@@ -544,7 +544,7 @@ class JetsStopwatchLayout(BoxLayout):
             markup=True,
             font_size="20dp",
             size_hint_y=None,
-            height="76dp",
+            height="96dp",
             halign="left",
             valign="top",
         )
@@ -698,7 +698,7 @@ class SparksReactorsLayout(BoxLayout):
             markup=True,
             font_size="20dp",
             size_hint_y=None,
-            height="76dp",
+            height="96dp",
             halign="left",
             valign="top",
         )
