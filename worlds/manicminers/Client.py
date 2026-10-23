@@ -149,7 +149,6 @@ def initialise_auxiliary_data(self):
         path.mkdir()
 
 def validate_seed(self):
-    # grab current seed_name
     if platform.system() == "Windows":
         lad = os.getenv('LOCALAPPDATA')
         ap_data_dir = lad + "\\ManicMiners\\Saved\\SaveGames\\Profiles\\ArchipelagoData\\"
@@ -159,9 +158,10 @@ def validate_seed(self):
         ap_data_dir = save_dir + "/ArchipelagoData/"
         save_location = save_dir + "/Archipelago.sav"
     path = pathlib.Path(ap_data_dir + "current_seed.txt")
+    remote_seed = self.seed_name + "_" + str(self.slot)
     if path.exists():
         current_seed = path.read_text()
-        if current_seed != self.seed_name:
+        if current_seed != remote_seed:
             self.output(f"Seed mismatch detected! Auto-cycling save files...")
             cleanup_levels(self)
             initialise_levels_dir(self)
@@ -169,13 +169,13 @@ def validate_seed(self):
             backuppath = pathlib.Path(ap_data_dir + current_seed + ".sav")
             self.output(f"Backing up current save file...")
             backuppath.write_bytes(savepath.read_bytes())
-            oldsavepath = pathlib.Path(ap_data_dir + self.seed_name + ".sav")
+            oldsavepath = pathlib.Path(ap_data_dir + remote_seed + ".sav")
             if oldsavepath.exists():
                 self.output(f"Restoring previous save file...")
                 savepath.write_bytes(oldsavepath.read_bytes())
             else:
                 initialise_ap_save(self)
-            path.write_text(self.seed_name)
+            path.write_text(remote_seed)
         else:
             self.output(f"Connecting to existing seed: validated!")
     else:
@@ -183,7 +183,7 @@ def validate_seed(self):
         cleanup_levels(self)
         initialise_levels_dir(self)
         initialise_auxiliary_data(self)
-        path.write_text(self.seed_name)
+        path.write_text(remote_seed)
 
 class ManicMinersContext(SuperContext):
     command_processor = ManicMinersClientCommandProcessor
@@ -209,10 +209,10 @@ class ManicMinersContext(SuperContext):
         
         if cmd == "RoomInfo":
             self.seed_name = args.get("seed_name")
-            validate_seed(self)
         
         elif cmd == "Connected":
             self.game = self.slot_info[self.slot].game
+            validate_seed(self)
             self.slot_data = args.get("slot_data", {})
             self.save_watcher = asyncio.create_task(save_read_loop(self), name="save watcher")
             self.ui.update_tabs()
