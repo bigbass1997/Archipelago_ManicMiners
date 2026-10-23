@@ -220,6 +220,9 @@ class ManicMinersContext(SuperContext):
         elif cmd == "ReceivedItems":
             sync_levels(self)
             self.ui.update_tabs()
+        
+        elif cmd == "RoomUpdate":
+            self.ui.update_tabs()
 
     async def disconnect(self, allow_autoreconnect: bool = False):
         await super().disconnect(allow_autoreconnect)
