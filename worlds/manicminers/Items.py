@@ -1041,7 +1041,7 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
             target = "\\LRR - Rock Hard.dat"
         case 18:
             if options["boss_level"] == "LRR - Rocky Horror":
-                if all_items.count(874) < options["target_level_count"]:
+                if all_items.count(874) < options["coordinates_required"]:
                     return False
             source = "\\LRR\\rockyhorror.dat"
             target = "\\LRR - Rocky Horror.dat"
@@ -1119,7 +1119,7 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
             target = "\\LRRR - Rock Hard.dat"
         case 1018:
             if options["boss_level"] == "LRRR - Rocky Horror":
-                if all_items.count(874) < options["target_level_count"]:
+                if all_items.count(874) < options["coordinates_required"]:
                     return False
             source = "\\LRRR\\rockyhorror.dat"
             target = "\\LRRR - Rocky Horror.dat"
@@ -1197,7 +1197,7 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
             target = "\\LRRC - Rock Hard.dat"
         case 2018:
             if options["boss_level"] == "LRRC - Rocky Horror":
-                if all_items.count(874) < options["target_level_count"]:
+                if all_items.count(874) < options["coordinates_required"]:
                     return False
             source = "\\LRRC\\rockyhorror.dat"
             target = "\\LRRC - Rocky Horror.dat"
@@ -1290,7 +1290,7 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
             target = "\\BAZ - Rock Hard.dat"
         case 3023:
             if options["boss_level"] == "BAZ - Rocky Horror":
-                if all_items.count(874) < options["target_level_count"]:
+                if all_items.count(874) < options["coordinates_required"]:
                     return False
             source = "\\BAZ\\rockyhorror.dat"
             target = "\\BAZ - Rocky Horror.dat"
