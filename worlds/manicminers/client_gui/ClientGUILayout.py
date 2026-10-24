@@ -159,14 +159,7 @@ class OverviewLayout(BoxLayout):
         elif self.ctx.slot_data["victory_condition"] == 2:
             self.content_text += f"Goal: Beat crystal targets on {self.ctx.slot_data["target_level_count"]} levels\n\n"
         elif self.ctx.slot_data["victory_condition"] == 3:
-            if self.ctx.slot_data["boss_level_lrr_rockyhorror"] == 1:
-                boss_level = "LRR - Rocky Horror"
-            if self.ctx.slot_data["boss_level_lrrr_rockyhorror"] == 1:
-                boss_level = "LRRR - Rocky Horror"
-            if self.ctx.slot_data["boss_level_lrrc_rockyhorror"] == 1:
-                boss_level = "LRRC - Rocky Horror"
-            if self.ctx.slot_data["boss_level_baz_rockyhorror"] == 1:
-                boss_level = "BAZ - Rocky Horror"
+            boss_level = self.ctx.slot_data["boss_level"]
             self.content_text += f"Goal: Get {self.ctx.slot_data["coordinates_required"]} Transporter Coordinates items to unlock {boss_level} then clear it.\n"
             if self.ctx.slot_data["locked_coordinates"] == 1:
                 self.content_text += f"Transporter Coordinates are found for beating levels.\n\n"

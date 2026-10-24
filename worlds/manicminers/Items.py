@@ -973,13 +973,13 @@ def create_all_items(world: ManicMinersWorld) -> None:
     needed_number_of_filler_items = number_of_unfilled_locations - number_of_items
     itempool += [world.create_filler() for _ in range(needed_number_of_filler_items)]
     
-    if world.options.boss_level_lrr_rockyhorror:
+    if world.boss_level == "LRR - Rocky Horror":
         world.push_precollected(world.create_item("Level Access: LRR - Rocky Horror"))
-    if world.options.boss_level_lrrr_rockyhorror:
+    if world.boss_level == "LRRR - Rocky Horror":
         world.push_precollected(world.create_item("Level Access: LRRR - Rocky Horror"))
-    if world.options.boss_level_lrrc_rockyhorror:
+    if world.boss_level == "LRRC - Rocky Horror":
         world.push_precollected(world.create_item("Level Access: LRRC - Rocky Horror"))
-    if world.options.boss_level_baz_rockyhorror:
+    if world.boss_level == "BAZ - Rocky Horror":
         world.push_precollected(world.create_item("Level Access: BAZ - Rocky Horror"))
     
     world.multiworld.itempool += itempool
@@ -1040,7 +1040,7 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
             source = "\\LRR\\rockhard.dat"
             target = "\\LRR - Rock Hard.dat"
         case 18:
-            if options["boss_level_lrr_rockyhorror"] == 1:
+            if options["boss_level"] == "LRR - Rocky Horror":
                 if all_items.count(874) < options["target_level_count"]:
                     return False
             source = "\\LRR\\rockyhorror.dat"
@@ -1118,7 +1118,7 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
             source = "\\LRRR\\rockhard.dat"
             target = "\\LRRR - Rock Hard.dat"
         case 1018:
-            if options["boss_level_lrrr_rockyhorror"] == 1:
+            if options["boss_level"] == "LRRR - Rocky Horror":
                 if all_items.count(874) < options["target_level_count"]:
                     return False
             source = "\\LRRR\\rockyhorror.dat"
@@ -1196,7 +1196,7 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
             source = "\\LRRC\\rockhard.dat"
             target = "\\LRRC - Rock Hard.dat"
         case 2018:
-            if options["boss_level_lrrc_rockyhorror"] == 1:
+            if options["boss_level"] == "LRRC - Rocky Horror":
                 if all_items.count(874) < options["target_level_count"]:
                     return False
             source = "\\LRRC\\rockyhorror.dat"
@@ -1289,7 +1289,7 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
             source = "\\BAZ\\rockhard.dat"
             target = "\\BAZ - Rock Hard.dat"
         case 3023:
-            if options["boss_level_baz_rockyhorror"] == 1:
+            if options["boss_level"] == "BAZ - Rocky Horror":
                 if all_items.count(874) < options["target_level_count"]:
                     return False
             source = "\\BAZ\\rockyhorror.dat"

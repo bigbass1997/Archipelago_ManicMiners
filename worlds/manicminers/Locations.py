@@ -2640,7 +2640,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
     region_baz_waterlotoffun_crystaltarget = world.get_region("Crystal Target: BAZ - Water Lot Of Fun")
     region_baz_waterworks_crystaltarget = world.get_region("Crystal Target: BAZ - Water Works")
     
-    if world.options.level_selection_lrr_abreathoffreshair:
+    if "LRR - A Breath Of Fresh Air" in world.selected_levels:
         locations_lrr_abreathoffreshair = get_location_names_with_ids(["Clear: LRR - A Breath Of Fresh Air"])
         region_lrr_abreathoffreshair.add_locations(locations_lrr_abreathoffreshair, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2663,7 +2663,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_abreathoffreshair.add_locations(locations_lrr_abreathoffreshair, ManicMinersLocation)
             locations_lrr_abreathoffreshair = world.get_location("Research Coordinates: LRR - A Breath Of Fresh Air")
             locations_lrr_abreathoffreshair.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_airraiders:
+    if "LRR - Air Raiders" in world.selected_levels:
         locations_lrr_airraiders = get_location_names_with_ids(["Clear: LRR - Air Raiders"])
         region_lrr_airraiders.add_locations(locations_lrr_airraiders, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2690,7 +2690,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_airraiders.add_locations(locations_lrr_airraiders, ManicMinersLocation)
             locations_lrr_airraiders = world.get_location("Research Coordinates: LRR - Air Raiders")
             locations_lrr_airraiders.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_backtobasics:
+    if "LRR - Back To Basics" in world.selected_levels:
         slug_level = True
         locations_lrr_backtobasics = get_location_names_with_ids(["Clear: LRR - Back To Basics"])
         region_lrr_backtobasics.add_locations(locations_lrr_backtobasics, ManicMinersLocation)
@@ -2720,7 +2720,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_backtobasics.add_locations(locations_lrr_backtobasics, ManicMinersLocation)
             locations_lrr_backtobasics = world.get_location("Research Coordinates: LRR - Back To Basics")
             locations_lrr_backtobasics.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_breathless:
+    if "LRR - Breathless" in world.selected_levels:
         locations_lrr_breathless = get_location_names_with_ids(["Clear: LRR - Breathless"])
         region_lrr_breathless.add_locations(locations_lrr_breathless, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2745,7 +2745,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_breathless.add_locations(locations_lrr_breathless, ManicMinersLocation)
             locations_lrr_breathless = world.get_location("Research Coordinates: LRR - Breathless")
             locations_lrr_breathless.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_dontpanic:
+    if "LRR - Don't Panic" in world.selected_levels:
         locations_lrr_dontpanic = get_location_names_with_ids(["Clear: LRR - Don't Panic"])
         region_lrr_dontpanic.add_locations(locations_lrr_dontpanic, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2772,7 +2772,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_dontpanic.add_locations(locations_lrr_dontpanic, ManicMinersLocation)
             locations_lrr_dontpanic = world.get_location("Research Coordinates: LRR - Don't Panic")
             locations_lrr_dontpanic.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_drillernight:
+    if "LRR - Driller Night" in world.selected_levels:
         locations_lrr_drillernight = get_location_names_with_ids(["Clear: LRR - Driller Night"])
         region_lrr_drillernight.add_locations(locations_lrr_drillernight, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2795,7 +2795,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_drillernight.add_locations(locations_lrr_drillernight, ManicMinersLocation)
             locations_lrr_drillernight = world.get_location("Research Coordinates: LRR - Driller Night")
             locations_lrr_drillernight.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_erodeworks:
+    if "LRR - Erode Works" in world.selected_levels:
         locations_lrr_erodeworks = get_location_names_with_ids(["Clear: LRR - Erode Works"])
         region_lrr_erodeworks.add_locations(locations_lrr_erodeworks, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2820,7 +2820,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_erodeworks.add_locations(locations_lrr_erodeworks, ManicMinersLocation)
             locations_lrr_erodeworks = world.get_location("Research Coordinates: LRR - Erode Works")
             locations_lrr_erodeworks.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_explosiveaction:
+    if "LRR - Explosive Action" in world.selected_levels:
         locations_lrr_explosiveaction = get_location_names_with_ids(["Clear: LRR - Explosive Action"])
         region_lrr_explosiveaction.add_locations(locations_lrr_explosiveaction, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2843,7 +2843,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_explosiveaction.add_locations(locations_lrr_explosiveaction, ManicMinersLocation)
             locations_lrr_explosiveaction = world.get_location("Research Coordinates: LRR - Explosive Action")
             locations_lrr_explosiveaction.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_fireandwater:
+    if "LRR - Fire And Water" in world.selected_levels:
         locations_lrr_fireandwater = get_location_names_with_ids(["Clear: LRR - Fire And Water"])
         region_lrr_fireandwater.add_locations(locations_lrr_fireandwater, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2870,7 +2870,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_fireandwater.add_locations(locations_lrr_fireandwater, ManicMinersLocation)
             locations_lrr_fireandwater = world.get_location("Research Coordinates: LRR - Fire And Water")
             locations_lrr_fireandwater.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_frozenfrenzy:
+    if "LRR - Frozen Frenzy" in world.selected_levels:
         locations_lrr_frozenfrenzy = get_location_names_with_ids(["Clear: LRR - Frozen Frenzy"])
         region_lrr_frozenfrenzy.add_locations(locations_lrr_frozenfrenzy, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2895,7 +2895,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_frozenfrenzy.add_locations(locations_lrr_frozenfrenzy, ManicMinersLocation)
             locations_lrr_frozenfrenzy = world.get_location("Research Coordinates: LRR - Frozen Frenzy")
             locations_lrr_frozenfrenzy.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_hotstuff:
+    if "LRR - Hot Stuff" in world.selected_levels:
         locations_lrr_hotstuff = get_location_names_with_ids(["Clear: LRR - Hot Stuff"])
         region_lrr_hotstuff.add_locations(locations_lrr_hotstuff, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2924,7 +2924,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_hotstuff.add_locations(locations_lrr_hotstuff, ManicMinersLocation)
             locations_lrr_hotstuff = world.get_location("Research Coordinates: LRR - Hot Stuff")
             locations_lrr_hotstuff.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_icespy:
+    if "LRR - Ice Spy" in world.selected_levels:
         locations_lrr_icespy = get_location_names_with_ids(["Clear: LRR - Ice Spy"])
         region_lrr_icespy.add_locations(locations_lrr_icespy, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2951,7 +2951,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_icespy.add_locations(locations_lrr_icespy, ManicMinersLocation)
             locations_lrr_icespy = world.get_location("Research Coordinates: LRR - Ice Spy")
             locations_lrr_icespy.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_itsaholdup:
+    if "LRR - It's A Hold Up" in world.selected_levels:
         locations_lrr_itsaholdup = get_location_names_with_ids(["Clear: LRR - It's A Hold Up"])
         region_lrr_itsaholdup.add_locations(locations_lrr_itsaholdup, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2974,7 +2974,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_itsaholdup.add_locations(locations_lrr_itsaholdup, ManicMinersLocation)
             locations_lrr_itsaholdup = world.get_location("Research Coordinates: LRR - It's A Hold Up")
             locations_lrr_itsaholdup.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_lakeoffire:
+    if "LRR - Lake Of Fire" in world.selected_levels:
         locations_lrr_lakeoffire = get_location_names_with_ids(["Clear: LRR - Lake Of Fire"])
         region_lrr_lakeoffire.add_locations(locations_lrr_lakeoffire, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3001,7 +3001,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_lakeoffire.add_locations(locations_lrr_lakeoffire, ManicMinersLocation)
             locations_lrr_lakeoffire = world.get_location("Research Coordinates: LRR - Lake Of Fire")
             locations_lrr_lakeoffire.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_lavalaughter:
+    if "LRR - Lava Laughter" in world.selected_levels:
         locations_lrr_lavalaughter = get_location_names_with_ids(["Clear: LRR - Lava Laughter"])
         region_lrr_lavalaughter.add_locations(locations_lrr_lavalaughter, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3028,7 +3028,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_lavalaughter.add_locations(locations_lrr_lavalaughter, ManicMinersLocation)
             locations_lrr_lavalaughter = world.get_location("Research Coordinates: LRR - Lava Laughter")
             locations_lrr_lavalaughter.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_oresome:
+    if "LRR - Oresome" in world.selected_levels:
         locations_lrr_oresome = get_location_names_with_ids(["Clear: LRR - Oresome"])
         region_lrr_oresome.add_locations(locations_lrr_oresome, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3055,7 +3055,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_oresome.add_locations(locations_lrr_oresome, ManicMinersLocation)
             locations_lrr_oresome = world.get_location("Research Coordinates: LRR - Oresome")
             locations_lrr_oresome.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_rockhard:
+    if "LRR - Rock Hard" in world.selected_levels:
         slug_level = True
         locations_lrr_rockhard = get_location_names_with_ids(["Clear: LRR - Rock Hard"])
         region_lrr_rockhard.add_locations(locations_lrr_rockhard, ManicMinersLocation)
@@ -3081,7 +3081,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_rockhard.add_locations(locations_lrr_rockhard, ManicMinersLocation)
             locations_lrr_rockhard = world.get_location("Research Coordinates: LRR - Rock Hard")
             locations_lrr_rockhard.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_rockyhorror and world.options.boss_level_lrr_rockyhorror == 0:
+    if "LRR - Rocky Horror" in world.selected_levels and world.boss_level != "LRR - Rocky Horror":
         slug_level = True
         locations_lrr_rockyhorror = get_location_names_with_ids(["Clear: LRR - Rocky Horror"])
         region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror, ManicMinersLocation)
@@ -3111,7 +3111,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror, ManicMinersLocation)
             locations_lrr_rockyhorror = world.get_location("Research Coordinates: LRR - Rocky Horror")
             locations_lrr_rockyhorror.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_rubbletrouble:
+    if "LRR - Rubble Trouble" in world.selected_levels:
         locations_lrr_rubbletrouble = get_location_names_with_ids(["Clear: LRR - Rubble Trouble"])
         region_lrr_rubbletrouble.add_locations(locations_lrr_rubbletrouble, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3134,7 +3134,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_rubbletrouble.add_locations(locations_lrr_rubbletrouble, ManicMinersLocation)
             locations_lrr_rubbletrouble = world.get_location("Research Coordinates: LRR - Rubble Trouble")
             locations_lrr_rubbletrouble.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_runthegauntlet:
+    if "LRR - Run The Gauntlet" in world.selected_levels:
         locations_lrr_runthegauntlet = get_location_names_with_ids(["Clear: LRR - Run The Gauntlet"])
         region_lrr_runthegauntlet.add_locations(locations_lrr_runthegauntlet, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3157,7 +3157,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_runthegauntlet.add_locations(locations_lrr_runthegauntlet, ManicMinersLocation)
             locations_lrr_runthegauntlet = world.get_location("Research Coordinates: LRR - Run The Gauntlet")
             locations_lrr_runthegauntlet.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_searchandrescue:
+    if "LRR - Search And Rescue" in world.selected_levels:
         locations_lrr_searchandrescue = get_location_names_with_ids(["Clear: LRR - Search And Rescue"])
         region_lrr_searchandrescue.add_locations(locations_lrr_searchandrescue, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3182,7 +3182,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_searchandrescue.add_locations(locations_lrr_searchandrescue, ManicMinersLocation)
             locations_lrr_searchandrescue = world.get_location("Research Coordinates: LRR - Search And Rescue")
             locations_lrr_searchandrescue.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_splitdownthemiddle:
+    if "LRR - Split Down The Middle" in world.selected_levels:
         locations_lrr_splitdownthemiddle = get_location_names_with_ids(["Clear: LRR - Split Down The Middle"])
         region_lrr_splitdownthemiddle.add_locations(locations_lrr_splitdownthemiddle, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3207,7 +3207,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_splitdownthemiddle.add_locations(locations_lrr_splitdownthemiddle, ManicMinersLocation)
             locations_lrr_splitdownthemiddle = world.get_location("Research Coordinates: LRR - Split Down The Middle")
             locations_lrr_splitdownthemiddle.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_thepathtopower:
+    if "LRR - The Path To Power" in world.selected_levels:
         locations_lrr_thepathtopower = get_location_names_with_ids(["Clear: LRR - The Path To Power"])
         region_lrr_thepathtopower.add_locations(locations_lrr_thepathtopower, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3230,7 +3230,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_thepathtopower.add_locations(locations_lrr_thepathtopower, ManicMinersLocation)
             locations_lrr_thepathtopower = world.get_location("Research Coordinates: LRR - The Path To Power")
             locations_lrr_thepathtopower.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_waterlotoffun:
+    if "LRR - Water Lot Of Fun" in world.selected_levels:
         locations_lrr_waterlotoffun = get_location_names_with_ids(["Clear: LRR - Water Lot Of Fun"])
         region_lrr_waterlotoffun.add_locations(locations_lrr_waterlotoffun, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3255,7 +3255,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             region_lrr_waterlotoffun.add_locations(locations_lrr_waterlotoffun, ManicMinersLocation)
             locations_lrr_waterlotoffun = world.get_location("Research Coordinates: LRR - Water Lot Of Fun")
             locations_lrr_waterlotoffun.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_waterworks:
+    if "LRR - Water Works" in world.selected_levels:
         locations_lrr_waterworks = get_location_names_with_ids(["Clear: LRR - Water Works"])
         region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3281,7 +3281,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_waterworks = world.get_location("Research Coordinates: LRR - Water Works")
             locations_lrr_waterworks.place_locked_item(world.create_item("Transporter Coordinates"))
 
-    if world.options.level_selection_lrrr_abreathoffreshair:
+    if "LRRR - A Breath Of Fresh Air" in world.selected_levels:
         locations_lrrr_abreathoffreshair = get_location_names_with_ids(["Clear: LRRR - A Breath Of Fresh Air"])
         region_lrrr_abreathoffreshair.add_locations(locations_lrrr_abreathoffreshair, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3305,7 +3305,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_abreathoffreshair = world.get_location("Research Coordinates: LRRR - A Breath Of Fresh Air")
                 locations_lrrr_abreathoffreshair.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_airraiders:
+    if "LRRR - Air Raiders" in world.selected_levels:
         locations_lrrr_airraiders = get_location_names_with_ids(["Clear: LRRR - Air Raiders"])
         region_lrrr_airraiders.add_locations(locations_lrrr_airraiders, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3333,7 +3333,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_airraiders = world.get_location("Research Coordinates: LRRR - Air Raiders")
                 locations_lrrr_airraiders.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_backtobasics:
+    if "LRRR - Back To Basics" in world.selected_levels:
         slug_level = True
         locations_lrrr_backtobasics = get_location_names_with_ids(["Clear: LRRR - Back To Basics"])
         region_lrrr_backtobasics.add_locations(locations_lrrr_backtobasics, ManicMinersLocation)
@@ -3364,7 +3364,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_backtobasics = world.get_location("Research Coordinates: LRRR - Back To Basics")
                 locations_lrrr_backtobasics.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_breathless:
+    if "LRRR - Breathless" in world.selected_levels:
         locations_lrrr_breathless = get_location_names_with_ids(["Clear: LRRR - Breathless"])
         region_lrrr_breathless.add_locations(locations_lrrr_breathless, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3390,7 +3390,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_breathless = world.get_location("Research Coordinates: LRRR - Breathless")
                 locations_lrrr_breathless.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_dontpanic:
+    if "LRRR - Don't Panic" in world.selected_levels:
         locations_lrrr_dontpanic = get_location_names_with_ids(["Clear: LRRR - Don't Panic"])
         region_lrrr_dontpanic.add_locations(locations_lrrr_dontpanic, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3418,7 +3418,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_dontpanic = world.get_location("Research Coordinates: LRRR - Don't Panic")
                 locations_lrrr_dontpanic.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_drillernight:
+    if "LRRR - Driller Night" in world.selected_levels:
         locations_lrrr_drillernight = get_location_names_with_ids(["Clear: LRRR - Driller Night"])
         region_lrrr_drillernight.add_locations(locations_lrrr_drillernight, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3442,7 +3442,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_drillernight = world.get_location("Research Coordinates: LRRR - Driller Night")
                 locations_lrrr_drillernight.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_erodeworks:
+    if "LRRR - Erode Works" in world.selected_levels:
         locations_lrrr_erodeworks = get_location_names_with_ids(["Clear: LRRR - Erode Works"])
         region_lrrr_erodeworks.add_locations(locations_lrrr_erodeworks, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3468,7 +3468,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_erodeworks = world.get_location("Research Coordinates: LRRR - Erode Works")
                 locations_lrrr_erodeworks.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_explosiveaction:
+    if "LRRR - Explosive Action" in world.selected_levels:
         slug_level = True
         locations_lrrr_explosiveaction = get_location_names_with_ids(["Clear: LRRR - Explosive Action"])
         region_lrrr_explosiveaction.add_locations(locations_lrrr_explosiveaction, ManicMinersLocation)
@@ -3493,7 +3493,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_explosiveaction = world.get_location("Research Coordinates: LRRR - Explosive Action")
                 locations_lrrr_explosiveaction.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_fireandwater:
+    if "LRRR - Fire And Water" in world.selected_levels:
         locations_lrrr_fireandwater = get_location_names_with_ids(["Clear: LRRR - Fire And Water"])
         region_lrrr_fireandwater.add_locations(locations_lrrr_fireandwater, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3521,7 +3521,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_fireandwater = world.get_location("Research Coordinates: LRRR - Fire And Water")
                 locations_lrrr_fireandwater.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_frozenfrenzy:
+    if "LRRR - Frozen Frenzy" in world.selected_levels:
         locations_lrrr_frozenfrenzy = get_location_names_with_ids(["Clear: LRRR - Frozen Frenzy"])
         region_lrrr_frozenfrenzy.add_locations(locations_lrrr_frozenfrenzy, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3547,7 +3547,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_frozenfrenzy = world.get_location("Research Coordinates: LRRR - Frozen Frenzy")
                 locations_lrrr_frozenfrenzy.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_hotstuff:
+    if "LRRR - Hot Stuff" in world.selected_levels:
         locations_lrrr_hotstuff = get_location_names_with_ids(["Clear: LRRR - Hot Stuff"])
         region_lrrr_hotstuff.add_locations(locations_lrrr_hotstuff, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3577,7 +3577,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_hotstuff = world.get_location("Research Coordinates: LRRR - Hot Stuff")
                 locations_lrrr_hotstuff.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_icespy:
+    if "LRRR - Ice Spy" in world.selected_levels:
         locations_lrrr_icespy = get_location_names_with_ids(["Clear: LRRR - Ice Spy"])
         region_lrrr_icespy.add_locations(locations_lrrr_icespy, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3605,7 +3605,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_icespy = world.get_location("Research Coordinates: LRRR - Ice Spy")
                 locations_lrrr_icespy.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_itsaholdup:
+    if "LRRR - It's A Hold Up" in world.selected_levels:
         locations_lrrr_itsaholdup = get_location_names_with_ids(["Clear: LRRR - It's A Hold Up"])
         region_lrrr_itsaholdup.add_locations(locations_lrrr_itsaholdup, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3629,7 +3629,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_itsaholdup = world.get_location("Research Coordinates: LRRR - It's A Hold Up")
                 locations_lrrr_itsaholdup.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_lakeoffire:
+    if "LRRR - Lake Of Fire" in world.selected_levels:
         locations_lrrr_lakeoffire = get_location_names_with_ids(["Clear: LRRR - Lake Of Fire"])
         region_lrrr_lakeoffire.add_locations(locations_lrrr_lakeoffire, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3657,7 +3657,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_lakeoffire = world.get_location("Research Coordinates: LRRR - Lake Of Fire")
                 locations_lrrr_lakeoffire.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_lavalaughter:
+    if "LRRR - Lava Laughter" in world.selected_levels:
         locations_lrrr_lavalaughter = get_location_names_with_ids(["Clear: LRRR - Lava Laughter"])
         region_lrrr_lavalaughter.add_locations(locations_lrrr_lavalaughter, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3685,7 +3685,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_lavalaughter = world.get_location("Research Coordinates: LRRR - Lava Laughter")
                 locations_lrrr_lavalaughter.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_oresome:
+    if "LRRR - Oresome" in world.selected_levels:
         locations_lrrr_oresome = get_location_names_with_ids(["Clear: LRRR - Oresome"])
         region_lrrr_oresome.add_locations(locations_lrrr_oresome, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3713,7 +3713,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_oresome = world.get_location("Research Coordinates: LRRR - Oresome")
                 locations_lrrr_oresome.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_rockhard:
+    if "LRRR - Rock Hard" in world.selected_levels:
         slug_level = True
         locations_lrrr_rockhard = get_location_names_with_ids(["Clear: LRRR - Rock Hard"])
         region_lrrr_rockhard.add_locations(locations_lrrr_rockhard, ManicMinersLocation)
@@ -3740,7 +3740,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_rockhard = world.get_location("Research Coordinates: LRRR - Rock Hard")
                 locations_lrrr_rockhard.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_rockyhorror and world.options.boss_level_lrrr_rockyhorror == 0:
+    if "LRRR - Rocky Horror" in world.selected_levels and world.boss_level != "LRRR - Rocky Horror":
         slug_level = True
         locations_lrrr_rockyhorror = get_location_names_with_ids(["Clear: LRRR - Rocky Horror"])
         region_lrrr_rockyhorror.add_locations(locations_lrrr_rockyhorror, ManicMinersLocation)
@@ -3771,7 +3771,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_rockyhorror = world.get_location("Research Coordinates: LRRR - Rocky Horror")
                 locations_lrrr_rockyhorror.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_rubbletrouble:
+    if "LRRR - Rubble Trouble" in world.selected_levels:
         locations_lrrr_rubbletrouble = get_location_names_with_ids(["Clear: LRRR - Rubble Trouble"])
         region_lrrr_rubbletrouble.add_locations(locations_lrrr_rubbletrouble, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3795,7 +3795,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_rubbletrouble = world.get_location("Research Coordinates: LRRR - Rubble Trouble")
                 locations_lrrr_rubbletrouble.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_runthegauntlet:
+    if "LRRR - Run The Gauntlet" in world.selected_levels:
         locations_lrrr_runthegauntlet = get_location_names_with_ids(["Clear: LRRR - Run The Gauntlet"])
         region_lrrr_runthegauntlet.add_locations(locations_lrrr_runthegauntlet, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3819,7 +3819,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_runthegauntlet = world.get_location("Research Coordinates: LRRR - Run The Gauntlet")
                 locations_lrrr_runthegauntlet.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_searchandrescue:
+    if "LRRR - Search And Rescue" in world.selected_levels:
         locations_lrrr_searchandrescue = get_location_names_with_ids(["Clear: LRRR - Search And Rescue"])
         region_lrrr_searchandrescue.add_locations(locations_lrrr_searchandrescue, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3845,7 +3845,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_searchandrescue = world.get_location("Research Coordinates: LRRR - Search And Rescue")
                 locations_lrrr_searchandrescue.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_splitdownthemiddle:
+    if "LRRR - Split Down The Middle" in world.selected_levels:
         locations_lrrr_splitdownthemiddle = get_location_names_with_ids(["Clear: LRRR - Split Down The Middle"])
         region_lrrr_splitdownthemiddle.add_locations(locations_lrrr_splitdownthemiddle, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3871,7 +3871,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_splitdownthemiddle = world.get_location("Research Coordinates: LRRR - Split Down The Middle")
                 locations_lrrr_splitdownthemiddle.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_thepathtopower:
+    if "LRRR - The Path To Power" in world.selected_levels:
         locations_lrrr_thepathtopower = get_location_names_with_ids(["Clear: LRRR - The Path To Power"])
         region_lrrr_thepathtopower.add_locations(locations_lrrr_thepathtopower, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3895,7 +3895,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_thepathtopower = world.get_location("Research Coordinates: LRRR - The Path To Power")
                 locations_lrrr_thepathtopower.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_waterlotoffun:
+    if "LRRR - Water Lot Of Fun" in world.selected_levels:
         locations_lrrr_waterlotoffun = get_location_names_with_ids(["Clear: LRRR - Water Lot Of Fun"])
         region_lrrr_waterlotoffun.add_locations(locations_lrrr_waterlotoffun, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3921,7 +3921,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_waterlotoffun = world.get_location("Research Coordinates: LRRR - Water Lot Of Fun")
                 locations_lrrr_waterlotoffun.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_waterworks:
+    if "LRRR - Water Works" in world.selected_levels:
         locations_lrrr_waterworks = get_location_names_with_ids(["Clear: LRRR - Water Works"])
         region_lrrr_waterworks.add_locations(locations_lrrr_waterworks, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3948,7 +3948,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
                 locations_lrrr_waterworks = world.get_location("Research Coordinates: LRRR - Water Works")
                 locations_lrrr_waterworks.place_locked_item(world.create_item("Transporter Coordinates"))
 
-    if world.options.level_selection_lrrc_abreathoffreshair:
+    if "LRRC - A Breath Of Fresh Air" in world.selected_levels:
         locations_lrrc_abreathoffreshair = get_location_names_with_ids(["Clear: LRRC - A Breath Of Fresh Air"])
         region_lrrc_abreathoffreshair.add_locations(locations_lrrc_abreathoffreshair, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3972,7 +3972,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_abreathoffreshair = world.get_location("Research Coordinates: LRRC - A Breath Of Fresh Air")
                 locations_lrrc_abreathoffreshair.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_airraiders:
+    if "LRRC - Air Raiders" in world.selected_levels:
         locations_lrrc_airraiders = get_location_names_with_ids(["Clear: LRRC - Air Raiders"])
         region_lrrc_airraiders.add_locations(locations_lrrc_airraiders, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4000,7 +4000,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_airraiders = world.get_location("Research Coordinates: LRRC - Air Raiders")
                 locations_lrrc_airraiders.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_backtobasics:
+    if "LRRC - Back To Basics" in world.selected_levels:
         slug_level = True
         locations_lrrc_backtobasics = get_location_names_with_ids(["Clear: LRRC - Back To Basics"])
         region_lrrc_backtobasics.add_locations(locations_lrrc_backtobasics, ManicMinersLocation)
@@ -4031,7 +4031,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_backtobasics = world.get_location("Research Coordinates: LRRC - Back To Basics")
                 locations_lrrc_backtobasics.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_breathless:
+    if "LRRC - Breathless" in world.selected_levels:
         locations_lrrc_breathless = get_location_names_with_ids(["Clear: LRRC - Breathless"])
         region_lrrc_breathless.add_locations(locations_lrrc_breathless, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4057,7 +4057,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_breathless = world.get_location("Research Coordinates: LRRC - Breathless")
                 locations_lrrc_breathless.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_dontpanic:
+    if "LRRC - Don't Panic" in world.selected_levels:
         locations_lrrc_dontpanic = get_location_names_with_ids(["Clear: LRRC - Don't Panic"])
         region_lrrc_dontpanic.add_locations(locations_lrrc_dontpanic, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4085,7 +4085,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_dontpanic = world.get_location("Research Coordinates: LRRC - Don't Panic")
                 locations_lrrc_dontpanic.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_drillernight:
+    if "LRRC - Driller Night" in world.selected_levels:
         locations_lrrc_drillernight = get_location_names_with_ids(["Clear: LRRC - Driller Night"])
         region_lrrc_drillernight.add_locations(locations_lrrc_drillernight, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4109,7 +4109,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_drillernight = world.get_location("Research Coordinates: LRRC - Driller Night")
                 locations_lrrc_drillernight.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_erodeworks:
+    if "LRRC - Erode Works" in world.selected_levels:
         locations_lrrc_erodeworks = get_location_names_with_ids(["Clear: LRRC - Erode Works"])
         region_lrrc_erodeworks.add_locations(locations_lrrc_erodeworks, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4135,7 +4135,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_erodeworks = world.get_location("Research Coordinates: LRRC - Erode Works")
                 locations_lrrc_erodeworks.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_explosiveaction:
+    if "LRRC - Explosive Action" in world.selected_levels:
         locations_lrrc_explosiveaction = get_location_names_with_ids(["Clear: LRRC - Explosive Action"])
         region_lrrc_explosiveaction.add_locations(locations_lrrc_explosiveaction, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4159,7 +4159,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_explosiveaction = world.get_location("Research Coordinates: LRRC - Explosive Action")
                 locations_lrrc_explosiveaction.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_fireandwater:
+    if "LRRC - Fire And Water" in world.selected_levels:
         locations_lrrc_fireandwater = get_location_names_with_ids(["Clear: LRRC - Fire And Water"])
         region_lrrc_fireandwater.add_locations(locations_lrrc_fireandwater, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4187,7 +4187,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_fireandwater = world.get_location("Research Coordinates: LRRC - Fire And Water")
                 locations_lrrc_fireandwater.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_frozenfrenzy:
+    if "LRRC - Frozen Frenzy" in world.selected_levels:
         locations_lrrc_frozenfrenzy = get_location_names_with_ids(["Clear: LRRC - Frozen Frenzy"])
         region_lrrc_frozenfrenzy.add_locations(locations_lrrc_frozenfrenzy, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4213,7 +4213,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_frozenfrenzy = world.get_location("Research Coordinates: LRRC - Frozen Frenzy")
                 locations_lrrc_frozenfrenzy.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_hotstuff:
+    if "LRRC - Hot Stuff" in world.selected_levels:
         locations_lrrc_hotstuff = get_location_names_with_ids(["Clear: LRRC - Hot Stuff"])
         region_lrrc_hotstuff.add_locations(locations_lrrc_hotstuff, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4243,7 +4243,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_hotstuff = world.get_location("Research Coordinates: LRRC - Hot Stuff")
                 locations_lrrc_hotstuff.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_icespy:
+    if "LRRC - Ice Spy" in world.selected_levels:
         locations_lrrc_icespy = get_location_names_with_ids(["Clear: LRRC - Ice Spy"])
         region_lrrc_icespy.add_locations(locations_lrrc_icespy, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4271,7 +4271,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_icespy = world.get_location("Research Coordinates: LRRC - Ice Spy")
                 locations_lrrc_icespy.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_itsaholdup:
+    if "LRRC - It's A Hold Up" in world.selected_levels:
         locations_lrrc_itsaholdup = get_location_names_with_ids(["Clear: LRRC - It's A Hold Up"])
         region_lrrc_itsaholdup.add_locations(locations_lrrc_itsaholdup, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4295,7 +4295,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_itsaholdup = world.get_location("Research Coordinates: LRRC - It's A Hold Up")
                 locations_lrrc_itsaholdup.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_lakeoffire:
+    if "LRRC - Lake Of Fire" in world.selected_levels:
         locations_lrrc_lakeoffire = get_location_names_with_ids(["Clear: LRRC - Lake Of Fire"])
         region_lrrc_lakeoffire.add_locations(locations_lrrc_lakeoffire, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4323,7 +4323,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_lakeoffire = world.get_location("Research Coordinates: LRRC - Lake Of Fire")
                 locations_lrrc_lakeoffire.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_lavalaughter:
+    if "LRRC - Lava Laughter" in world.selected_levels:
         locations_lrrc_lavalaughter = get_location_names_with_ids(["Clear: LRRC - Lava Laughter"])
         region_lrrc_lavalaughter.add_locations(locations_lrrc_lavalaughter, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4351,7 +4351,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_lavalaughter = world.get_location("Research Coordinates: LRRC - Lava Laughter")
                 locations_lrrc_lavalaughter.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_oresome:
+    if "LRRC - Oresome" in world.selected_levels:
         locations_lrrc_oresome = get_location_names_with_ids(["Clear: LRRC - Oresome"])
         region_lrrc_oresome.add_locations(locations_lrrc_oresome, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4379,7 +4379,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_oresome = world.get_location("Research Coordinates: LRRC - Oresome")
                 locations_lrrc_oresome.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_rockhard:
+    if "LRRC - Rock Hard" in world.selected_levels:
         slug_level = True
         locations_lrrc_rockhard = get_location_names_with_ids(["Clear: LRRC - Rock Hard"])
         region_lrrc_rockhard.add_locations(locations_lrrc_rockhard, ManicMinersLocation)
@@ -4406,7 +4406,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_rockhard = world.get_location("Research Coordinates: LRRC - Rock Hard")
                 locations_lrrc_rockhard.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_rockyhorror and world.options.boss_level_lrrc_rockyhorror == 0:
+    if "LRRC - Rocky Horror" in world.selected_levels and world.boss_level != "LRRC - Rocky Horror":
         slug_level = True
         locations_lrrc_rockyhorror = get_location_names_with_ids(["Clear: LRRC - Rocky Horror"])
         region_lrrc_rockyhorror.add_locations(locations_lrrc_rockyhorror, ManicMinersLocation)
@@ -4437,7 +4437,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_rockyhorror = world.get_location("Research Coordinates: LRRC - Rocky Horror")
                 locations_lrrc_rockyhorror.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_rubbletrouble:
+    if "LRRC - Rubble Trouble" in world.selected_levels:
         locations_lrrc_rubbletrouble = get_location_names_with_ids(["Clear: LRRC - Rubble Trouble"])
         region_lrrc_rubbletrouble.add_locations(locations_lrrc_rubbletrouble, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4461,7 +4461,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_rubbletrouble = world.get_location("Research Coordinates: LRRC - Rubble Trouble")
                 locations_lrrc_rubbletrouble.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_runthegauntlet:
+    if "LRRC - Run The Gauntlet" in world.selected_levels:
         locations_lrrc_runthegauntlet = get_location_names_with_ids(["Clear: LRRC - Run The Gauntlet"])
         region_lrrc_runthegauntlet.add_locations(locations_lrrc_runthegauntlet, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4485,7 +4485,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_runthegauntlet = world.get_location("Research Coordinates: LRRC - Run The Gauntlet")
                 locations_lrrc_runthegauntlet.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_searchandrescue:
+    if "LRRC - Search And Rescue" in world.selected_levels:
         locations_lrrc_searchandrescue = get_location_names_with_ids(["Clear: LRRC - Search And Rescue"])
         region_lrrc_searchandrescue.add_locations(locations_lrrc_searchandrescue, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4511,7 +4511,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_searchandrescue = world.get_location("Research Coordinates: LRRC - Search And Rescue")
                 locations_lrrc_searchandrescue.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_splitdownthemiddle:
+    if "LRRC - Split Down The Middle" in world.selected_levels:
         locations_lrrc_splitdownthemiddle = get_location_names_with_ids(["Clear: LRRC - Split Down The Middle"])
         region_lrrc_splitdownthemiddle.add_locations(locations_lrrc_splitdownthemiddle, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4537,7 +4537,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_splitdownthemiddle = world.get_location("Research Coordinates: LRRC - Split Down The Middle")
                 locations_lrrc_splitdownthemiddle.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_thepathtopower:
+    if "LRRC - The Path To Power" in world.selected_levels:
         locations_lrrc_thepathtopower = get_location_names_with_ids(["Clear: LRRC - The Path To Power"])
         region_lrrc_thepathtopower.add_locations(locations_lrrc_thepathtopower, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4561,7 +4561,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_thepathtopower = world.get_location("Research Coordinates: LRRC - The Path To Power")
                 locations_lrrc_thepathtopower.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_waterlotoffun:
+    if "LRRC - Water Lot Of Fun" in world.selected_levels:
         locations_lrrc_waterlotoffun = get_location_names_with_ids(["Clear: LRRC - Water Lot Of Fun"])
         region_lrrc_waterlotoffun.add_locations(locations_lrrc_waterlotoffun, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4587,7 +4587,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_waterlotoffun = world.get_location("Research Coordinates: LRRC - Water Lot Of Fun")
                 locations_lrrc_waterlotoffun.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_waterworks:
+    if "LRRC - Water Works" in world.selected_levels:
         locations_lrrc_waterworks = get_location_names_with_ids(["Clear: LRRC - Water Works"])
         region_lrrc_waterworks.add_locations(locations_lrrc_waterworks, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4614,7 +4614,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
                 locations_lrrc_waterworks = world.get_location("Research Coordinates: LRRC - Water Works")
                 locations_lrrc_waterworks.place_locked_item(world.create_item("Transporter Coordinates"))
 
-    if world.options.level_selection_baz_abreathoffreshair:
+    if "BAZ - A Breath Of Fresh Air" in world.selected_levels:
         locations_baz_abreathoffreshair = get_location_names_with_ids(["Clear: BAZ - A Breath Of Fresh Air"])
         region_baz_abreathoffreshair.add_locations(locations_baz_abreathoffreshair, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4638,7 +4638,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_abreathoffreshair = world.get_location("Research Coordinates: BAZ - A Breath Of Fresh Air")
                 locations_baz_abreathoffreshair.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_airraiders:
+    if "BAZ - Air Raiders" in world.selected_levels:
         locations_baz_airraiders = get_location_names_with_ids(["Clear: BAZ - Air Raiders"])
         region_baz_airraiders.add_locations(locations_baz_airraiders, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4666,7 +4666,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_airraiders = world.get_location("Research Coordinates: BAZ - Air Raiders")
                 locations_baz_airraiders.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_backtobasics:
+    if "BAZ - Back To Basics" in world.selected_levels:
         slug_level = True
         locations_baz_backtobasics = get_location_names_with_ids(["Clear: BAZ - Back To Basics"])
         region_baz_backtobasics.add_locations(locations_baz_backtobasics, ManicMinersLocation)
@@ -4697,7 +4697,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_backtobasics = world.get_location("Research Coordinates: BAZ - Back To Basics")
                 locations_baz_backtobasics.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_breathless:
+    if "BAZ - Breathless" in world.selected_levels:
         locations_baz_breathless = get_location_names_with_ids(["Clear: BAZ - Breathless"])
         region_baz_breathless.add_locations(locations_baz_breathless, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4723,7 +4723,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_breathless = world.get_location("Research Coordinates: BAZ - Breathless")
                 locations_baz_breathless.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_coldcomfort:
+    if "BAZ - Cold Comfort" in world.selected_levels:
         locations_baz_coldcomfort = get_location_names_with_ids(["Clear: BAZ - Cold Comfort"])
         region_baz_coldcomfort.add_locations(locations_baz_coldcomfort, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4749,7 +4749,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_coldcomfort = world.get_location("Research Coordinates: BAZ - Cold Comfort")
                 locations_baz_coldcomfort.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_dontpanic:
+    if "BAZ - Don't Panic" in world.selected_levels:
         locations_baz_dontpanic = get_location_names_with_ids(["Clear: BAZ - Don't Panic"])
         region_baz_dontpanic.add_locations(locations_baz_dontpanic, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4777,7 +4777,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_dontpanic = world.get_location("Research Coordinates: BAZ - Don't Panic")
                 locations_baz_dontpanic.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_downinthedirt:
+    if "BAZ - Down In The Dirt" in world.selected_levels:
         locations_baz_downinthedirt = get_location_names_with_ids(["Clear: BAZ - Down In The Dirt"])
         region_baz_downinthedirt.add_locations(locations_baz_downinthedirt, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4803,7 +4803,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_downinthedirt = world.get_location("Research Coordinates: BAZ - Down In The Dirt")
                 locations_baz_downinthedirt.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_drillernight:
+    if "BAZ - Driller Night" in world.selected_levels:
         locations_baz_drillernight = get_location_names_with_ids(["Clear: BAZ - Driller Night"])
         region_baz_drillernight.add_locations(locations_baz_drillernight, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4827,7 +4827,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_drillernight = world.get_location("Research Coordinates: BAZ - Driller Night")
                 locations_baz_drillernight.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_erodeworks:
+    if "BAZ - Erode Works" in world.selected_levels:
         locations_baz_erodeworks = get_location_names_with_ids(["Clear: BAZ - Erode Works"])
         region_baz_erodeworks.add_locations(locations_baz_erodeworks, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4853,7 +4853,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_erodeworks = world.get_location("Research Coordinates: BAZ - Erode Works")
                 locations_baz_erodeworks.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_explosiveaction:
+    if "BAZ - Explosive Action" in world.selected_levels:
         locations_baz_explosiveaction = get_location_names_with_ids(["Clear: BAZ - Explosive Action"])
         region_baz_explosiveaction.add_locations(locations_baz_explosiveaction, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4877,7 +4877,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_explosiveaction = world.get_location("Research Coordinates: BAZ - Explosive Action")
                 locations_baz_explosiveaction.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_fireandwater:
+    if "BAZ - Fire And Water" in world.selected_levels:
         locations_baz_fireandwater = get_location_names_with_ids(["Clear: BAZ - Fire And Water"])
         region_baz_fireandwater.add_locations(locations_baz_fireandwater, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4905,7 +4905,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_fireandwater = world.get_location("Research Coordinates: BAZ - Fire And Water")
                 locations_baz_fireandwater.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_frozenfrenzy:
+    if "BAZ - Frozen Frenzy" in world.selected_levels:
         locations_baz_frozenfrenzy = get_location_names_with_ids(["Clear: BAZ - Frozen Frenzy"])
         region_baz_frozenfrenzy.add_locations(locations_baz_frozenfrenzy, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4931,7 +4931,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_frozenfrenzy = world.get_location("Research Coordinates: BAZ - Frozen Frenzy")
                 locations_baz_frozenfrenzy.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_hotstuff:
+    if "BAZ - Hot Stuff" in world.selected_levels:
         locations_baz_hotstuff = get_location_names_with_ids(["Clear: BAZ - Hot Stuff"])
         region_baz_hotstuff.add_locations(locations_baz_hotstuff, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4961,7 +4961,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_hotstuff = world.get_location("Research Coordinates: BAZ - Hot Stuff")
                 locations_baz_hotstuff.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_icespy:
+    if "BAZ - Ice Spy" in world.selected_levels:
         locations_baz_icespy = get_location_names_with_ids(["Clear: BAZ - Ice Spy"])
         region_baz_icespy.add_locations(locations_baz_icespy, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -4989,7 +4989,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_icespy = world.get_location("Research Coordinates: BAZ - Ice Spy")
                 locations_baz_icespy.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_itsaholdup:
+    if "BAZ - It's A Hold Up" in world.selected_levels:
         locations_baz_itsaholdup = get_location_names_with_ids(["Clear: BAZ - It's A Hold Up"])
         region_baz_itsaholdup.add_locations(locations_baz_itsaholdup, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5013,7 +5013,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_itsaholdup = world.get_location("Research Coordinates: BAZ - It's A Hold Up")
                 locations_baz_itsaholdup.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_lakeoffire:
+    if "BAZ - Lake Of Fire" in world.selected_levels:
         locations_baz_lakeoffire = get_location_names_with_ids(["Clear: BAZ - Lake Of Fire"])
         region_baz_lakeoffire.add_locations(locations_baz_lakeoffire, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5041,7 +5041,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_lakeoffire = world.get_location("Research Coordinates: BAZ - Lake Of Fire")
                 locations_baz_lakeoffire.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_lavalaughter:
+    if "BAZ - Lava Laughter" in world.selected_levels:
         locations_baz_lavalaughter = get_location_names_with_ids(["Clear: BAZ - Lava Laughter"])
         region_baz_lavalaughter.add_locations(locations_baz_lavalaughter, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5069,7 +5069,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_lavalaughter = world.get_location("Research Coordinates: BAZ - Lava Laughter")
                 locations_baz_lavalaughter.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_mineovermanner:
+    if "BAZ - Mine Over Manner" in world.selected_levels:
         locations_baz_mineovermanner = get_location_names_with_ids(["Clear: BAZ - Mine Over Manner"])
         region_baz_mineovermanner.add_locations(locations_baz_mineovermanner, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5093,7 +5093,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_mineovermanner = world.get_location("Research Coordinates: BAZ - Mine Over Manner")
                 locations_baz_mineovermanner.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_moltenmeltdown:
+    if "BAZ - Molten Meltdown" in world.selected_levels:
         locations_baz_moltenmeltdown = get_location_names_with_ids(["Clear: BAZ - Molten Meltdown"])
         region_baz_moltenmeltdown.add_locations(locations_baz_moltenmeltdown, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5117,7 +5117,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_moltenmeltdown = world.get_location("Research Coordinates: BAZ - Molten Meltdown")
                 locations_baz_moltenmeltdown.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_oresome:
+    if "BAZ - Oresome" in world.selected_levels:
         locations_baz_oresome = get_location_names_with_ids(["Clear: BAZ - Oresome"])
         region_baz_oresome.add_locations(locations_baz_oresome, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5145,7 +5145,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_oresome = world.get_location("Research Coordinates: BAZ - Oresome")
                 locations_baz_oresome.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_recruitment:
+    if "BAZ - Recruitment" in world.selected_levels:
         locations_baz_recruitment = get_location_names_with_ids(["Clear: BAZ - Recruitment"])
         region_baz_recruitment.add_locations(locations_baz_recruitment, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5169,7 +5169,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_recruitment = world.get_location("Research Coordinates: BAZ - Recruitment")
                 locations_baz_recruitment.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_rockhard:
+    if "BAZ - Rock Hard" in world.selected_levels:
         slug_level = True
         locations_baz_rockhard = get_location_names_with_ids(["Clear: BAZ - Rock Hard"])
         region_baz_rockhard.add_locations(locations_baz_rockhard, ManicMinersLocation)
@@ -5196,7 +5196,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_rockhard = world.get_location("Research Coordinates: BAZ - Rock Hard")
                 locations_baz_rockhard.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_rockyhorror and world.options.boss_level_baz_rockyhorror == 0:
+    if "BAZ - Rocky Horror" in world.selected_levels and world.boss_level != "BAZ - Rocky Horror":
         slug_level = True
         locations_baz_rockyhorror = get_location_names_with_ids(["Clear: BAZ - Rocky Horror"])
         region_baz_rockyhorror.add_locations(locations_baz_rockyhorror, ManicMinersLocation)
@@ -5227,7 +5227,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_rockyhorror = world.get_location("Research Coordinates: BAZ - Rocky Horror")
                 locations_baz_rockyhorror.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_rubbletrouble:
+    if "BAZ - Rubble Trouble" in world.selected_levels:
         locations_baz_rubbletrouble = get_location_names_with_ids(["Clear: BAZ - Rubble Trouble"])
         region_baz_rubbletrouble.add_locations(locations_baz_rubbletrouble, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5251,7 +5251,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_rubbletrouble = world.get_location("Research Coordinates: BAZ - Rubble Trouble")
                 locations_baz_rubbletrouble.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_runthegauntlet:
+    if "BAZ - Run The Gauntlet" in world.selected_levels:
         locations_baz_runthegauntlet = get_location_names_with_ids(["Clear: BAZ - Run The Gauntlet"])
         region_baz_runthegauntlet.add_locations(locations_baz_runthegauntlet, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5275,7 +5275,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_runthegauntlet = world.get_location("Research Coordinates: BAZ - Run The Gauntlet")
                 locations_baz_runthegauntlet.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_seamless:
+    if "BAZ - Seamless" in world.selected_levels:
         locations_baz_seamless = get_location_names_with_ids(["Clear: BAZ - Seamless"])
         region_baz_seamless.add_locations(locations_baz_seamless, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5301,7 +5301,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_seamless = world.get_location("Research Coordinates: BAZ - Seamless")
                 locations_baz_seamless.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_searchandrescue:
+    if "BAZ - Search And Rescue" in world.selected_levels:
         locations_baz_searchandrescue = get_location_names_with_ids(["Clear: BAZ - Search And Rescue"])
         region_baz_searchandrescue.add_locations(locations_baz_searchandrescue, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5327,7 +5327,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_searchandrescue = world.get_location("Research Coordinates: BAZ - Search And Rescue")
                 locations_baz_searchandrescue.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_slimeysimple:
+    if "BAZ - Slimey Simple" in world.selected_levels:
         slug_level = True
         locations_baz_slimeysimple = get_location_names_with_ids(["Clear: BAZ - Slimey Simple"])
         region_baz_slimeysimple.add_locations(locations_baz_slimeysimple, ManicMinersLocation)
@@ -5354,7 +5354,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_slimeysimple = world.get_location("Research Coordinates: BAZ - Slimey Simple")
                 locations_baz_slimeysimple.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_splitdownthemiddle:
+    if "BAZ - Split Down The Middle" in world.selected_levels:
         locations_baz_splitdownthemiddle = get_location_names_with_ids(["Clear: BAZ - Split Down The Middle"])
         region_baz_splitdownthemiddle.add_locations(locations_baz_splitdownthemiddle, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5380,7 +5380,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_splitdownthemiddle = world.get_location("Research Coordinates: BAZ - Split Down The Middle")
                 locations_baz_splitdownthemiddle.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_thehardrocklife:
+    if "BAZ - The Hard Rock Life" in world.selected_levels:
         locations_baz_thehardrocklife = get_location_names_with_ids(["Clear: BAZ - The Hard Rock Life"])
         region_baz_thehardrocklife.add_locations(locations_baz_thehardrocklife, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5404,7 +5404,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_thehardrocklife = world.get_location("Research Coordinates: BAZ - The Hard Rock Life")
                 locations_baz_thehardrocklife.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_thepathtopower:
+    if "BAZ - The Path To Power" in world.selected_levels:
         locations_baz_thepathtopower = get_location_names_with_ids(["Clear: BAZ - The Path To Power"])
         region_baz_thepathtopower.add_locations(locations_baz_thepathtopower, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5428,7 +5428,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_thepathtopower = world.get_location("Research Coordinates: BAZ - The Path To Power")
                 locations_baz_thepathtopower.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_waterlotoffun:
+    if "BAZ - Water Lot Of Fun" in world.selected_levels:
         locations_baz_waterlotoffun = get_location_names_with_ids(["Clear: BAZ - Water Lot Of Fun"])
         region_baz_waterlotoffun.add_locations(locations_baz_waterlotoffun, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5454,7 +5454,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_waterlotoffun = world.get_location("Research Coordinates: BAZ - Water Lot Of Fun")
                 locations_baz_waterlotoffun.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_waterworks:
+    if "BAZ - Water Works" in world.selected_levels:
         locations_baz_waterworks = get_location_names_with_ids(["Clear: BAZ - Water Works"])
         region_baz_waterworks.add_locations(locations_baz_waterworks, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -5530,13 +5530,13 @@ def check_for_victory(options,save_path):
     
     elif options["victory_condition"] == 3: # coordinate_hunt
         for level in levelDataList:
-            if options["boss_level_lrr_rockyhorror"] == 1 and level[0] == "Archipelago/LRR - Rocky Horror":
+            if options["boss_level"] == "LRR - Rocky Horror" and level[0] == "Archipelago/LRR - Rocky Horror":
                 return True
-            if options["boss_level_lrrr_rockyhorror"] == 1 and level[0] == "Archipelago/LRRR - Rocky Horror":
+            if options["boss_level"] == "LRRR - Rocky Horror" and level[0] == "Archipelago/LRRR - Rocky Horror":
                 return True
-            if options["boss_level_lrrc_rockyhorror"] == 1 and level[0] == "Archipelago/LRRC - Rocky Horror":
+            if options["boss_level"] == "LRRC - Rocky Horror" and level[0] == "Archipelago/LRRC - Rocky Horror":
                 return True
-            if options["boss_level_baz_rockyhorror"] == 1 and level[0] == "Archipelago/BAZ - Rocky Horror":
+            if options["boss_level"] == "BAZ - Rocky Horror" and level[0] == "Archipelago/BAZ - Rocky Horror":
                 return True
         return False
     
