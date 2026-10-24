@@ -52,11 +52,6 @@ class ManicMinersWorld(World):
     
     item_name_groups = Items.ITEM_GROUPS
     location_name_groups = Locations.LOCATION_GROUPS
-    
-    # Tell Universal Tracker we want to use re_gen_passthrough
-    @staticmethod
-    def interpret_slot_data(slot_data: dict[str, Any]) -> dict[str, Any]:
-        return slot_data
 
     # Tell Universal Tracker we don't need the yaml
     ut_can_gen_without_yaml = True
