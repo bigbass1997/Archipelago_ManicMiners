@@ -308,6 +308,25 @@ class IncludeBazUniqueLevels(DefaultOnToggle):
     """
 
     display_name = "Include Baz-unique Levels"
+    
+class CollectBehaviour(Choice):
+    """
+    How should the client behave when locations are completed on the server but not locally? This usually occurs when the server has !collect enabled, but could also be due to playing the same slot from multiple devices.
+    Local Only: The client ignores server state all times. E.g. if your goal is to clear 25 levels then your local save must have cleared 25 levels to win, regardless of locations remaining. 
+    Sync Goal: The client will prefer the server state to local state when calculating goal. E.g. if your goal is to clear 25 levels, then your client will declare you victorious once 25 "Clear: X" locations are completed. 
+    WARNING - This means that it is possible for your game to be completed by other people !collecting your locations! Except for Coordinate Hunt, where you will still need to beat the final level.
+    Sync With Parent: As well as syncing goal, if "Clear: X" is sent, then all "Bonus Clear" locations for the same level will be automatically sent. This prevents you from having to clear a level that someone else has collected. Only relevant if Bonus Locations are enabled. 
+    Sync All: Like Sync With Parent, but if any of the "Bonus Clear" locations are sent, then all locations (both master and bonus) are sent, instead of only keying off the master "Clear" location. 
+    """
+    
+    display_name = "Collect Behaviour"
+    
+    option_local_only = 0
+    option_sync_goal = 1
+    option_sync_with_parent = 2
+    option_sync_all = 3
+    
+    default = option_local_only
 
 @dataclass
 class ManicMinersOptions(PerGameCommonOptions):
@@ -342,6 +361,7 @@ class ManicMinersOptions(PerGameCommonOptions):
     campaign_selection_baz: CampaignSelectionBAZ
     no_duplicate_levels: NoDuplicateLevels
     include_baz_unique_levels: IncludeBazUniqueLevels
+    collect_behaviour: CollectBehaviour
 
 option_groups = [
     OptionGroup(
@@ -350,7 +370,7 @@ option_groups = [
     ),
     OptionGroup(
         "Goal",
-        [VictoryCondition,TargetLevelCount,LockedCoordinates,CoordinatesRequired,CoordinatesInPool]
+        [VictoryCondition,TargetLevelCount,LockedCoordinates,CoordinatesRequired,CoordinatesInPool,CollectBehaviour]
     ),
     OptionGroup(
         "Locations",

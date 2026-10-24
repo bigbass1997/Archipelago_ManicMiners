@@ -358,7 +358,7 @@ class ManicMinersWorld(World):
     
     def fill_slot_data(self) -> Mapping[str, Any]:
         output = self.options.as_dict(
-        "victory_condition", "locked_coordinates", "target_level_count", "coordinates_required", "available_levels", "available_levels_at_start", "sphere1_levels_at_start", "target_times_are_locations", "target_time_difficulty", "crystal_targets_are_locations", "crystal_target_percentage", "buildings_are_items", "items_are_items", "vehicles_are_items", "progressive_items", "no_infinite_stt", "miner_cap", "miner_cap_base_level", "breathing_always_in_logic", "faster_blasting_always_in_logic", "electric_fences_in_logic", "bonus_clear_locations", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz", "no_duplicate_levels", "include_baz_unique_levels"
+        "victory_condition", "locked_coordinates", "target_level_count", "coordinates_required", "available_levels", "available_levels_at_start", "sphere1_levels_at_start", "target_times_are_locations", "target_time_difficulty", "crystal_targets_are_locations", "crystal_target_percentage", "buildings_are_items", "items_are_items", "vehicles_are_items", "progressive_items", "no_infinite_stt", "miner_cap", "miner_cap_base_level", "breathing_always_in_logic", "faster_blasting_always_in_logic", "electric_fences_in_logic", "bonus_clear_locations", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz", "no_duplicate_levels", "include_baz_unique_levels", "collect_behaviour"
         )
         output["boss_level"] = self.boss_level
         output["selected_levels"] = self.selected_levels

@@ -239,10 +239,10 @@ async def save_read_loop(self):
         else:
             save_dir = ManicMinersWorld.settings.manic_miners_save_dir
             save_path = save_dir + "/Archipelago.sav"
-        checked_location_ids = Locations.get_locations_from_save_data(self.slot_data,save_path)
+        checked_location_ids = Locations.get_locations_from_save_data(self.slot_data,save_path,self.checked_locations)
         locations = await self.check_locations(checked_location_ids)
         if not self.finished_game:
-            victory = Locations.check_for_victory(self.slot_data,save_path)
+            victory = Locations.check_for_victory(self.slot_data,save_path,self.checked_locations)
             if victory:
                 await self.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
                 self.finished_game = True

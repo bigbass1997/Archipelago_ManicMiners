@@ -168,8 +168,10 @@ class OverviewLayout(BoxLayout):
 
         self.content_text += f"Levels available: {count_available_levels()}/{count_total_levels()}\n"
         if self.ctx.slot_data["victory_condition"] == 0:
-            self.content_text += f"Levels cleared (in Archipelago): {count_cleared_levels_ap()}\n"
-            self.content_text += f"Levels cleared (in local state): {count_cleared_levels_local()}\n\n"
+            if self.ctx.slot_data["collect_behaviour"] == 0:
+                self.content_text += f"Levels cleared (in local state): {count_cleared_levels_local()}\n\n"
+            else:
+                self.content_text += f"Levels cleared (in Archipelago): {count_cleared_levels_ap()}\n\n"
         else:
             self.content_text += f"Levels cleared: {count_cleared_levels_ap()}\n\n"
         
@@ -187,20 +189,27 @@ class OverviewLayout(BoxLayout):
                     time_difficulty = ""
             self.content_text += f"Time difficulty: {time_difficulty}\n"
         if self.ctx.slot_data["victory_condition"] == 1 and self.ctx.slot_data["target_times_are_locations"] == 1:
-            self.content_text += f"Par times beaten (in Archipelago): {count_beaten_par_time_levels_ap()}\n"
-            self.content_text += f"Par times beaten (in local state): {count_beaten_par_time_levels_local()}\n\n"
+            if self.ctx.slot_data["collect_behaviour"] == 0:    
+                self.content_text += f"Par times beaten (in Archipelago as locations): {count_beaten_par_time_levels_ap()}\n"
+                self.content_text += f"Par times beaten (in local state for goal): {count_beaten_par_time_levels_local()}\n\n"
         elif self.ctx.slot_data["target_times_are_locations"] == 1:
             self.content_text += f"Par times beaten: {count_beaten_par_time_levels_ap()}\n\n"
         elif self.ctx.slot_data["victory_condition"] == 1:
-            self.content_text += f"Par times beaten (in local state): {count_beaten_par_time_levels_local()}\n\n"
+            if self.ctx.slot_data["collect_behaviour"] == 0:
+                self.content_text += f"Par times beaten (in local state): {count_beaten_par_time_levels_local()}\n\n"
+            else:
+                self.content_text += f"Par times beaten (in Archipelago): {count_beaten_par_time_levels_ap()}\n\n"
 
         if self.ctx.slot_data["victory_condition"] == 2 and self.ctx.slot_data["crystal_targets_are_locations"] == 1:           
-            self.content_text += f"Crystal targets met (in Archipelago): {count_beaten_crystal_target_levels_ap()}\n"
-            self.content_text += f"Crystal targets met (in local state): {count_beaten_crystal_target_levels_local()}\n\n"
+            self.content_text += f"Crystal targets met (in Archipelago as locations): {count_beaten_crystal_target_levels_ap()}\n"
+            self.content_text += f"Crystal targets met (in local state for goal): {count_beaten_crystal_target_levels_local()}\n\n"
         elif self.ctx.slot_data["crystal_targets_are_locations"] == 1:
             self.content_text += f"Crystal targets met: {count_beaten_crystal_target_levels_ap()}\n\n"
         elif self.ctx.slot_data["victory_condition"] == 2:
-            self.content_text += f"Crystal targets met (in local state): {count_beaten_crystal_target_levels_local()}\n\n"
+            if self.ctx.slot_data["collect_behaviour"] == 0:
+                self.content_text += f"Crystal targets met (in local state): {count_beaten_crystal_target_levels_local()}\n\n"
+            else:
+                self.content_text += f"Crystal targets met (in Archipelago): {count_beaten_crystal_target_levels_ap()}\n\n"
         
         if self.ctx.slot_data["victory_condition"] == 3:
             self.content_text += f"Transporter Coordinates found: {count_coordinates()}\n\n"

@@ -5485,16 +5485,21 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         locations_slug = get_location_names_with_ids(["Pet A Slug!"])
         region_menu.add_locations(locations_slug, ManicMinersLocation)
         
-def check_for_victory(options,save_path):
+def check_for_victory(options,save_path,checked_locations):
     levelDataList = ParseSaveFile.parseAllLevelsFromFilepath(save_path)
     
     if options["victory_condition"] == 0: # beat_x_levels
         level_count = 0
         target_count = options["target_level_count"]
-        for level in levelDataList:
-            location_id = location_id_from_level_name(level[0])
-            if (location_id != -1):
-                level_count += 1
+        if options["collect_behaviour"] == 0:
+            for level in levelDataList:
+                location_id = location_id_from_level_name(level[0])
+                if (location_id != -1):
+                    level_count += 1
+        else:
+            for location in checked_locations:
+                if (location % 10 == 0) and location in (set(range(1,259)) | set(range(10001,10259)) | set(range(20001,20259)) | set(range(30001,30339))):
+                    level_count += 1
         if level_count >= target_count:
             return True
         else:
@@ -5503,11 +5508,16 @@ def check_for_victory(options,save_path):
     elif options["victory_condition"] == 1: # beat_x_par_times
         beaten_time_count = 0
         target_count = options["target_level_count"]
-        for level in levelDataList:
-            location_id = location_id_from_level_name(level[0])
-            if (location_id != -1):
-                target_time = get_target_time(level[0], options["target_time_difficulty"])
-                if level[1] < target_time:
+        if options["collect_behaviour"] == 0:
+            for level in levelDataList:
+                location_id = location_id_from_level_name(level[0])
+                if (location_id != -1):
+                    target_time = get_target_time(level[0], options["target_time_difficulty"])
+                    if level[1] < target_time:
+                        beaten_time_count += 1
+        else:
+            for location in checked_locations:
+                if (location % 10 == 0) and location in (set(range(1001,1259)) | set(range(11001,11259)) | set(range(21001,21259)) | set(range(31001,31339))):
                     beaten_time_count += 1
         if beaten_time_count >= target_count:
             return True
@@ -5517,11 +5527,16 @@ def check_for_victory(options,save_path):
     elif options["victory_condition"] == 2: # beat_x_crystal_targets
         beaten_crystal_target_count = 0
         target_count = options["target_level_count"]
-        for level in levelDataList:
-            location_id = location_id_from_level_name(level[0])
-            if (location_id != -1):
-                target_crystal_count = get_target_crystal_count(level[0], options["crystal_target_percentage"])
-                if level[2] >= target_crystal_count:
+        if options["collect_behaviour"] == 0:
+            for level in levelDataList:
+                location_id = location_id_from_level_name(level[0])
+                if (location_id != -1):
+                    target_crystal_count = get_target_crystal_count(level[0], options["crystal_target_percentage"])
+                    if level[2] >= target_crystal_count:
+                        beaten_crystal_target_count += 1
+        else:
+            for location in checked_locations:
+                if (location % 10 == 0) and location in (set(range(2001,2259)) | set(range(12001,12259)) | set(range(22001,22259)) | set(range(32001,32339))):
                     beaten_crystal_target_count += 1
         if beaten_crystal_target_count >= target_count:
             return True
@@ -5543,7 +5558,7 @@ def check_for_victory(options,save_path):
     #shouldn't hit this, but to make sure we return something
     return False
   
-def get_locations_from_save_data(options,save_path):
+def get_locations_from_save_data(options,save_path,checked_locations):
     levelDataList = ParseSaveFile.parseAllLevelsFromFilepath(save_path)
     
     location_ids = []
@@ -5586,6 +5601,39 @@ def get_locations_from_save_data(options,save_path):
     if save_data.find(b"StatsTimesPetSlugs") != -1:
         # print(save_data.find(b"StatsTimesPetSlugs"))
         location_ids.append(40001)
+    
+    # Sync extra based on Collect Behaviour option
+    if options["collect_behaviour"] == 2:
+        for location in checked_locations:
+            # Main Clear Locations only
+            if (location % 10 == 0) and location in (set(range(1,259)) | set(range(10001,10259)) | set(range(20001,20259)) | set(range(30001,30339))):
+                location_ids.append(location)
+                location_ids.append(location + 1)
+                location_ids.append(location + 2)
+                location_ids.append(location + 3)
+                location_ids.append(location + 4)
+                location_ids.append(location + 5)
+                location_ids.append(location + 6)
+                location_ids.append(location + 7)
+                location_ids.append(location + 8)
+                location_ids.append(location + 9)
+        location_ids = set(location_ids)
+    elif options["collect_behaviour"] == 3:
+        for location in checked_locations:
+            # All Clear Locations apply (but round down to multiple of 10 for ease)
+            location = (location // 10) * 10
+            if location in (set(range(1,259)) | set(range(10001,10259)) | set(range(20001,20259)) | set(range(30001,30339))):
+                location_ids.append(location)
+                location_ids.append(location + 1)
+                location_ids.append(location + 2)
+                location_ids.append(location + 3)
+                location_ids.append(location + 4)
+                location_ids.append(location + 5)
+                location_ids.append(location + 6)
+                location_ids.append(location + 7)
+                location_ids.append(location + 8)
+                location_ids.append(location + 9)
+        location_ids = set(location_ids)
     
     return location_ids
 
