@@ -142,14 +142,15 @@ class ManicMinersWorld(World):
             if self.options.campaign_selection_baz:
                 boss_level_list.append("Level Access: BAZ - Rocky Horror")
             random_index = self.random.randint(0,len(boss_level_list)-1)
-            self.boss_level = boss_level_list[random_index]
+            boss_level = boss_level_list[random_index]
             if self.options.no_duplicate_levels:
                 duplicates = Items.get_duplicate_levels(boss_level)
                 for level in duplicates:
                     if level in available_sphere2_levels:
                         available_sphere2_levels.remove(level)
             else:
-                available_sphere2_levels.remove(self.boss_level)
+                available_sphere2_levels.remove(boss_level)
+            self.boss_level = boss_level[14:]
             
             # Adjust Coordinate values 
             if self.options.coordinates_in_pool == 0 or self.options.locked_coordinates:
