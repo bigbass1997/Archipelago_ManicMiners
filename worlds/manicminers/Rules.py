@@ -485,7 +485,12 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     for entrance in world.get_entrances():
         if entrance.name[:15] == "Reach Par Time ":
             world.set_rule(entrance, (Has("Can Build Tool Store") | Has("Can Build 20 Miners")))
-        
+     
+    # Add an access rule for the slug location (if it exists):
+    slug_location = world.get_location("Pet A Slug!")
+    if slug_location != None:
+        world.set_rule(slug_location, HasAny("Level Access: LRR - Back To Basics","Level Access: LRR - Rock Hard","Level Access: LRR - Rocky Horror","Level Access: LRRR - Back To Basics","Level Access: LRRR - Explosive Action","Level Access: LRRR - Rock Hard","Level Access: LRRR - Rocky Horror","Level Access: LRRC - Back To Basics","Level Access: LRRC - Rock Hard","Level Access: LRRC - Rocky Horror","Level Access: BAZ - Back To Basics","Level Access: BAZ - Rock Hard","Level Access: BAZ - Rocky Horror","Level Access: BAZ - Slimey Simple"))
+     
     goal_achievable = world.get_location("Goal Conditions Achievable")
     if world.options.victory_condition == 0:
         world.set_rule(goal_achievable, Has("Level Completed", world.options.target_level_count.value))
