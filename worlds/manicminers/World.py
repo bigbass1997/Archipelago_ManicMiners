@@ -53,6 +53,14 @@ class ManicMinersWorld(World):
     item_name_groups = Items.ITEM_GROUPS
     location_name_groups = Locations.LOCATION_GROUPS
     
+    # Tell Universal Tracker we want to use re_gen_passthrough
+    @staticmethod
+    def interpret_slot_data(slot_data: dict[str, Any]) -> dict[str, Any]:
+        return slot_data
+
+    # Tell Universal Tracker we don't need the yaml
+    ut_can_gen_without_yaml = True
+    
     filler_list = []
     start_sphere1_levels = []
     start_sphere2_levels = []
@@ -60,7 +68,11 @@ class ManicMinersWorld(World):
     extra_items = 0
     
     def generate_early(self) -> None:
-        # Fix some potentially fatal option combinations
+        
+        # UT integrations
+        passthrough = getattr(self.multiworld, "re_gen_passthrough", {})
+        if isinstance(passthrough, dict) and self.game in passthrough:
+            self._apply_slot_data(passthrough[self.game])
         
         # Re-initialise to avoid re-using old values (e.g. when fuzzing)
         self.filler_list = []
@@ -156,7 +168,7 @@ class ManicMinersWorld(World):
         # If available levels at start > available levels, reduce it
         if self.options.available_levels_at_start > self.options.available_levels:
             self.logger.info("Autofixing YAML: Reducing Available Levels At Start (" + str(self.options.available_levels_at_start) + ") to all available levels (" + str(self.options.available_levels) + ").")
-            self.options.available_levels_at_start.value = self.options.available_levels
+            self.options.available_levels_at_start.value = self.options.available_levels.value
             
         # If No Duplicate Levels, and not using the BAZ unique ones, need to remove the uniques from the pool
         if self.options.no_duplicate_levels and self.options.include_baz_unique_levels == 0:
@@ -514,7 +526,40 @@ class ManicMinersWorld(World):
                 self.multiworld.itempool.append(self.create_item("Miner Cap +5"))
                 number_items += 1
                 self.extra_items += 1
+    
+    def _apply_slot_data(self, slot_data: dict[str, Any]) -> None:
+        # Read slot_data to support UT's yaml-less generation
         
+        self.options.victory_condition.value = slot_data["victory_condition"]
+        self.options.locked_coordinates.value = slot_data["locked_coordinates"]
+        self.options.target_level_count.value = slot_data["target_level_count"]
+        self.options.coordinates_required.value = slot_data["coordinates_required"]
+        self.options.available_levels.value = slot_data["available_levels"]
+        self.options.available_levels_at_start.value = slot_data["available_levels_at_start"]
+        self.options.sphere1_levels_at_start.value = slot_data["sphere1_levels_at_start"]
+        self.options.target_times_are_locations.value = slot_data["target_times_are_locations"]
+        self.options.target_time_difficulty.value = slot_data["target_time_difficulty"]
+        self.options.crystal_targets_are_locations.value = slot_data["crystal_targets_are_locations"]
+        self.options.crystal_target_percentage.value = slot_data["crystal_target_percentage"]
+        self.options.buildings_are_items.value = slot_data["buildings_are_items"]
+        self.options.items_are_items.value = slot_data["items_are_items"]
+        self.options.vehicles_are_items.value = slot_data["vehicles_are_items"]
+        self.options.progressive_items.value = slot_data["progressive_items"]
+        self.options.no_infinite_stt.value = slot_data["no_infinite_stt"]
+        self.options.miner_cap.value = slot_data["miner_cap"]
+        self.options.miner_cap_base_level.value = slot_data["miner_cap_base_level"]
+        self.options.breathing_always_in_logic.value = slot_data["breathing_always_in_logic"]
+        self.options.faster_blasting_always_in_logic.value = slot_data["faster_blasting_always_in_logic"]
+        self.options.electric_fences_in_logic.value = slot_data["electric_fences_in_logic"]
+        self.options.bonus_clear_locations.value = slot_data["bonus_clear_locations"]
+        self.options.campaign_selection_lrr.value = slot_data["campaign_selection_lrr"]
+        self.options.campaign_selection_lrrr.value = slot_data["campaign_selection_lrrr"]
+        self.options.campaign_selection_lrrc.value = slot_data["campaign_selection_lrrc"]
+        self.options.campaign_selection_baz.value = slot_data["campaign_selection_baz"]
+        self.options.no_duplicate_levels.value = slot_data["no_duplicate_levels"]
+        self.options.include_baz_unique_levels.value = slot_data["include_baz_unique_levels"]
+      
+    
     def create_regions(self) -> None:
         Regions.create_and_connect_regions(self)
         Locations.create_all_locations(self)
@@ -533,7 +578,7 @@ class ManicMinersWorld(World):
     
     def fill_slot_data(self) -> Mapping[str, Any]:
         return self.options.as_dict(
-        "victory_condition", "locked_coordinates", "target_level_count", "coordinates_required", "target_times_are_locations", "target_time_difficulty", "crystal_targets_are_locations", "crystal_target_percentage", "buildings_are_items", "items_are_items", "vehicles_are_items", "progressive_items", "no_infinite_stt", "miner_cap", "miner_cap_base_level", "bonus_clear_locations", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz", "no_duplicate_levels", "include_baz_unique_levels", "boss_level_lrr_rockyhorror", "boss_level_lrrr_rockyhorror", "boss_level_lrrc_rockyhorror", "boss_level_baz_rockyhorror"
+        "victory_condition", "locked_coordinates", "target_level_count", "coordinates_required", "available_levels", "available_levels_at_start", "sphere1_levels_at_start", "target_times_are_locations", "target_time_difficulty", "crystal_targets_are_locations", "crystal_target_percentage", "buildings_are_items", "items_are_items", "vehicles_are_items", "progressive_items", "no_infinite_stt", "miner_cap", "miner_cap_base_level", "breathing_always_in_logic", "faster_blasting_always_in_logic", "electric_fences_in_logic", "bonus_clear_locations", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz", "no_duplicate_levels", "include_baz_unique_levels", "boss_level_lrr_rockyhorror", "boss_level_lrrr_rockyhorror", "boss_level_lrrc_rockyhorror", "boss_level_baz_rockyhorror"
         )
 
 def launch_client(*args):
