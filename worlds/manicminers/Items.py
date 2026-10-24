@@ -1348,7 +1348,7 @@ def update_disabled_unlocks(filepath, level_name, all_items, options, disable_tr
     init_section = ";\n"
     tick_section = ";\n"
     
-    if (options["target_times_are_locations"] or options["victory_condition"] == 1):
+    if (options["target_times_are_locations"] or options["victory_condition"] == 1) and level_name != options["boss_level"]:
         target_time = 0
         if options["target_time_difficulty"] == 0:
             target_time = TARGET_CLEAR_TIME_EASY[level_name]
@@ -1374,7 +1374,7 @@ def update_disabled_unlocks(filepath, level_name, all_items, options, disable_tr
         script_section = script_section + "ArchGoAndMakeTheMonsterMessage::;\n" + "ArchTimeMessage=ArchTimeMessage+NiceMinutesElapsed;\n" + "ArchTimeMessage=ArchTimeMessage+\":\";\n" + "((NiceSecondsElapsed<10))ArchTimeMessage=ArchTimeMessage+\"0\";\n" + "ArchTimeMessage=ArchTimeMessage+NiceSecondsElapsed;\n" + "ArchTimeMessage=ArchTimeMessage+\" game-time used out of the \";\n" + "ArchTimeMessage=ArchTimeMessage+NiceMinutesPar;\n" + "ArchTimeMessage=ArchTimeMessage+\":\";\n" + "((NiceSecondsPar<10))ArchTimeMessage=ArchTimeMessage+\"0\";\n" + "ArchTimeMessage=ArchTimeMessage+NiceSecondsPar;\n" + "ArchTimeMessage=ArchTimeMessage+\" target. \";\n" + "ArchTimeMessage=ArchTimeMessage+NiceRealTimeMinutesRemaining;\n" + "ArchTimeMessage=ArchTimeMessage+\":\";\n" + "((NiceRealTimeSecondsRemaining<10))ArchTimeMessage=ArchTimeMessage+\"0\";\n" + "ArchTimeMessage=ArchTimeMessage+NiceRealTimeSecondsRemaining;\n" + "ArchTimeMessage=ArchTimeMessage+\" real-time remaining (at 300% speed)\";\n" + "msg:ArchTimeMessage;\n\n"
         script_section = script_section + "ArchParTimeHasRunOut::;\n" + "ArchTimeMessage=\"Par time of \";\n" + "ArchTimeMessage=ArchTimeMessage+NiceMinutesPar;\n" + "ArchTimeMessage=ArchTimeMessage+\":\";\n" + "ArchTimeMessage=ArchTimeMessage+NiceSecondsPar;\n" + "((NiceSecondsPar<10))ArchTimeMessage=ArchTimeMessage+\"0\";\n" + "ArchTimeMessage=ArchTimeMessage+\" has elapsed. If you haven't won the level by  now, you will not clear the Par Time location.\";\n" + "msg:ArchTimeMessage;\n" + "stoptimer:ArchParTimer;\n\n"
 
-    if (options["crystal_targets_are_locations"] or options["victory_condition"] == 2):
+    if (options["crystal_targets_are_locations"] or options["victory_condition"] == 2) and level_name != options["boss_level"]:
         full_crystal_count = TARGET_CRYSTAL_COUNT[level_name]
         target_crystal_count = (full_crystal_count * options["crystal_target_percentage"]) // 100
         briefing_section = briefing_section + "AP Target Crystal Count: " + str(target_crystal_count) + ".\n" + "Remember: The total crystal count shown in-game includes any starting buildings/vehicles, but the final score does not!\n"
