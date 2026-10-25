@@ -279,6 +279,11 @@ class ManicMinersWorld(World):
         if self.options.miner_cap:
             number_items += 5 # "Miner Cap +5"s but not the filler +1s
         number_items -= self.options.available_levels_at_start.value
+        if self.options.victory_condition == 3 and self.options.locked_coordinates == 0: # Transporter Coordinates (if not locked to their own locations)
+            if self.options.coordinates_in_pool == 0:
+                number_items += number_levels # 1 Coordinate per level
+            else:
+                number_items += self.options.coordinates_in_pool.value
         
         # Check we haven't got more Items than Locations, handle if so
         item_location_diffcount = number_items - number_locations
