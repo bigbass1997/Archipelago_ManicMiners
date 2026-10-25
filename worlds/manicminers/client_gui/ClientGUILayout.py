@@ -119,18 +119,18 @@ class OverviewLayout(BoxLayout):
         
         def count_available_buildings():
             all_items = set(get_ids_from_networkitems(self.ctx.items_received))
-            level_items = set(range(889,900))
-            return len(all_items & level_items)
+            building_items = set(range(889,900)) | set(range(844,850))
+            return len(all_items & building_items)
             
         def count_available_items():
             all_items = set(get_ids_from_networkitems(self.ctx.items_received))
-            level_items = set(range(887,889))
-            return len(all_items & level_items)
+            item_items = set(range(887,889))
+            return len(all_items & item_items)
             
         def count_available_vehicles():
             all_items = set(get_ids_from_networkitems(self.ctx.items_received))
-            level_items = set(range(875,887))
-            return len(all_items & level_items)
+            vehicle_items = set(range(875,887)) | set(range(832,844))    
+            return len(all_items & vehicle_items)
         
         def count_coordinates():
             return get_ids_from_networkitems(self.ctx.items_received).count(874)
