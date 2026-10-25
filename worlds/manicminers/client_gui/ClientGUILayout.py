@@ -666,7 +666,7 @@ class CrystalsLayout(BoxLayout):
 
     def update_crystals(self):
         self.header_text = f"[i]Sparks is using the Energy Crystals to get the ship's reactors back online. He always needs more.[/i]\n\n"
-        if self.ctx.slot_data["crystal_targets_are_locations"] == 1:
+        if self.ctx.slot_data["victory_condition"] == 2 or self.ctx.slot_data["crystal_targets_are_locations"] == 1:
             item_names = []
             location_names = []
             for item in get_ids_from_networkitems(self.ctx.items_received):
