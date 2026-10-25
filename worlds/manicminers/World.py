@@ -283,7 +283,7 @@ class ManicMinersWorld(World):
         # Check we haven't got more Items than Locations, handle if so
         item_location_diffcount = number_items - number_locations
         if item_location_diffcount > 0:
-            raise OptionError(f"You've got more Items than Locations, please change your yaml! Have you considered enabling Bonus Locations?")
+            raise OptionError(f"You've got more Items ({number_items}) than Locations ({number_locations}), please change your yaml! Have you considered enabling Bonus Locations?")
         
         # Add bonus duplicates if there's space
         if self.options.progressive_items == 3:
