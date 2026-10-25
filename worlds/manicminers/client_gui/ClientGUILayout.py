@@ -369,7 +369,7 @@ class LevelsLayout(BoxLayout):
         if number_levels == 0:
             self.header_text += f"You have no available levels that you haven't cleared!"
         else:
-            self.header_text += f"The following {len(intersection)} levels are available, but not cleared.\n(They may not yet be in-logic with your current unlocks.)"
+            self.header_text += f"The following {len(intersection)} levels are available, but not cleared in Archipelago.\n(They may not yet be in-logic with your current unlocks.)"
             self.content_text = f""
             for level_name in intersection:
                 self.content_text += f"{level_name}\n"
@@ -529,13 +529,14 @@ class TimesLayout(BoxLayout):
             if number_levels == 0:
                 self.header_text += f"You have no available target times that you haven't met!"
             else:
-                self.header_text += f"The following {len(intersection)} target times are available, but not met.\n(They may not yet be in-logic with your current unlocks.)"
+                self.header_text += f"The following {len(intersection)} target times are available, but not met in Archipelago.\n(They may not yet be in-logic with your current unlocks.)"
                 self.content_text = f""
                 for level_name in intersection:
                     time_tuple = divmod(time_target_list[level_name], 60)
                     self.content_text += f"{level_name}: {time_tuple[0]:02d}:{time_tuple[1]:02d}\n"
         else:
             self.header_text += f"Jet doesn't need to time you for anything. Explore Planet U at your own leisure!"
+            self.content_text = f""
 
 
     def build_widgets(self):
@@ -682,7 +683,7 @@ class CrystalsLayout(BoxLayout):
             if number_levels == 0:
                 self.header_text += f"You have no available crystal targets that you haven't met!"
             else:
-                self.header_text += f"The following {len(intersection)} crystal targets are available, but not cleared.\n(They may not yet be in-logic with your current unlocks.)"
+                self.header_text += f"The following {len(intersection)} crystal targets are available, but not cleared in Archipelago.\n(They may not yet be in-logic with your current unlocks.)"
                 self.content_text = f""
                 for level_name in intersection:
                     full_crystal_target = TARGET_CRYSTAL_COUNT[level_name]
@@ -690,6 +691,7 @@ class CrystalsLayout(BoxLayout):
                     self.content_text += f"{level_name}: {crystal_target}\n"
         else:
             self.header_text += f"Power levels are stable, you don't need to go beyond the regular level targets!"
+            self.content_text = f""
 
 
     def build_widgets(self):
