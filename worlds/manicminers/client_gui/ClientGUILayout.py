@@ -72,7 +72,7 @@ class OverviewLayout(BoxLayout):
             else:
                 save_dir = ManicMinersWorld.settings.manic_miners_save_dir
                 save_path = save_dir + "/Archipelago.sav"
-            all_locations = set(get_locations_from_save_data(self.ctx.slot_data,save_path))
+            all_locations = set(get_locations_from_save_data(self.ctx.slot_data,save_path,self.ctx.checked_locations))
             clear_locations = set(range(0,1000,10)) | set(range(10000,11000,10)) | set(range(20000,21000,10)) | set(range(30000,31000,10))
             return len(all_locations & clear_locations)
             
@@ -88,7 +88,7 @@ class OverviewLayout(BoxLayout):
             else:
                 save_dir = ManicMinersWorld.settings.manic_miners_save_dir
                 save_path = save_dir + "/Archipelago.sav"
-            all_locations = set(get_locations_from_save_data(self.ctx.slot_data,save_path))
+            all_locations = set(get_locations_from_save_data(self.ctx.slot_data,save_path,self.ctx.checked_locations))
             par_time_locations = set(range(1000,2000)) | set(range(11000,12000)) | set(range(21000,22000)) | set(range(31000,32000))
             return len(all_locations & par_time_locations)
             
@@ -104,7 +104,7 @@ class OverviewLayout(BoxLayout):
             else:
                 save_dir = ManicMinersWorld.settings.manic_miners_save_dir
                 save_path = save_dir + "/Archipelago.sav"
-            all_locations = set(get_locations_from_save_data(self.ctx.slot_data,save_path))
+            all_locations = set(get_locations_from_save_data(self.ctx.slot_data,save_path,self.ctx.checked_locations))
             crystal_target_locations = set(range(2000,3000)) | set(range(12000,13000)) | set(range(22000,23000)) | set(range(32000,33000))
             return len(all_locations & crystal_target_locations)
         
