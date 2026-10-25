@@ -501,7 +501,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     # Add an access rule for the slug location (if it exists):
     try:
         slug_location = world.get_location("Pet A Slug!")
-        world.set_rule(slug_location, HasAny("Level Access: LRR - Back To Basics","Level Access: LRR - Rock Hard","Level Access: LRR - Rocky Horror","Level Access: LRRR - Back To Basics","Level Access: LRRR - Explosive Action","Level Access: LRRR - Rock Hard","Level Access: LRRR - Rocky Horror","Level Access: LRRC - Back To Basics","Level Access: LRRC - Rock Hard","Level Access: LRRC - Rocky Horror","Level Access: BAZ - Back To Basics","Level Access: BAZ - Rock Hard","Level Access: BAZ - Rocky Horror","Level Access: BAZ - Slimey Simple"))
+        world.set_rule(slug_location, (Has("Can Breathe") & HasAny("Level Access: LRR - Back To Basics","Level Access: LRR - Rock Hard","Level Access: LRRR - Back To Basics","Level Access: LRRR - Rock Hard","Level Access: LRRR - Rocky Horror","Level Access: LRRC - Back To Basics","Level Access: LRRC - Rock Hard","Level Access: BAZ - Back To Basics","Level Access: BAZ - Rock Hard","Level Access: BAZ - Rocky Horror","Level Access: BAZ - Slimey Simple")))
     except:
         pass
     
