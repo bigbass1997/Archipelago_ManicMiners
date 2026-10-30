@@ -183,6 +183,7 @@ def validate_seed(self):
         cleanup_levels(self)
         initialise_levels_dir(self)
         initialise_auxiliary_data(self)
+        initialise_ap_save(self)
         path.write_text(remote_seed)
 
 class ManicMinersContext(SuperContext):
